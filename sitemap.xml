@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2017-08-08T02:59:00Z</lastmod>
+  <lastmod>2017-08-08T03:17:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
@@ -32,5 +32,9 @@
  <url>
   <loc>http://blog.bitson.com.ar/posts/posteo-de-prueba/</loc>
   <lastmod>2017-08-08T02:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
+  <lastmod>2017-08-08T03:17:00Z</lastmod>
  </url>
 </urlset>
