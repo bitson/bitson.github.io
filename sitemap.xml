@@ -7,50 +7,58 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.bitson.com.ar/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/2017/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2017-08-08T18:42:00Z</lastmod>
+  <lastmod>2017-08-08T18:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/</loc>
-  <lastmod>2017-08-08T18:42:00Z</lastmod>
+  <lastmod>2017-08-08T18:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/abrunacci/</loc>
-  <lastmod>2017-08-08T18:42:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/cooperativa-de-trabajo-bitson-ltda/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/ddebonis/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/authors/leandro-e-colombo-vina/</loc>
+  <lastmod>2017-08-08T18:56:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/ale-test/</loc>
-  <lastmod>2017-08-08T18:42:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/diego-post/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/posteo-de-prueba/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
-  <lastmod>2017-08-08T18:41:00Z</lastmod>
+  <lastmod>2017-08-08T18:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/posts/testing-workflow/</loc>
+  <lastmod>2017-08-08T18:56:00Z</lastmod>
  </url>
 </urlset>
