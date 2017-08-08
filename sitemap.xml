@@ -7,34 +7,42 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.bitson.com.ar/</loc>
-  <lastmod>2017-08-08T02:59:00Z</lastmod>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/2017/</loc>
-  <lastmod>2017-08-08T02:59:00Z</lastmod>
+  <lastmod>2017-08-08T18:26:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2017-08-08T03:17:00Z</lastmod>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/authors/</loc>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/authors/cooperativa-de-trabajo-bitson-ltda/</loc>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/authors/ddebonis/</loc>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2017-08-08T02:54:00Z</lastmod>
+  <lastmod>2017-08-08T18:26:00Z</lastmod>
  </url>
  <url>
-  <loc>http://blog.bitson.com.ar/galleries/</loc>
-  <lastmod>2017-08-08T02:54:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/listings/</loc>
-  <lastmod>2017-08-08T02:54:00Z</lastmod>
+  <loc>http://blog.bitson.com.ar/posts/diego-post/</loc>
+  <lastmod>2017-08-08T18:28:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/posteo-de-prueba/</loc>
-  <lastmod>2017-08-08T02:59:00Z</lastmod>
+  <lastmod>2017-08-08T18:26:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
-  <lastmod>2017-08-08T03:17:00Z</lastmod>
+  <lastmod>2017-08-08T18:26:00Z</lastmod>
  </url>
 </urlset>

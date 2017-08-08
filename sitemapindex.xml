@@ -6,15 +6,19 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://blog.bitson.com.ar/galleries/rss.xml</loc>
-  <lastmod>2017-08-08T02:54:00Z</lastmod>
+  <loc>http://blog.bitson.com.ar/authors/cooperativa-de-trabajo-bitson-ltda.xml</loc>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.com.ar/authors/ddebonis.xml</loc>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/rss.xml</loc>
-  <lastmod>2017-08-08T03:17:00Z</lastmod>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/sitemap.xml</loc>
-  <lastmod>2017-08-08T03:17:00Z</lastmod>
+  <lastmod>2017-08-08T18:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>
