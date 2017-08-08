@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Nikola stuff
+bitblog/cache/
+bitblog/output/
+bitblog/.doit.db*
+
