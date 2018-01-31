@@ -104,4 +104,4 @@ ENV/
 bitblog/cache/
 bitblog/output/
 bitblog/.doit.db*
-
+.idea/
