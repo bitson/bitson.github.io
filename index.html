@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/testing-workflow/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/empezando-con-pipenv/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,7 +63,69 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/testing-workflow/" class="u-url">testing workflow</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/empezando-con-pipenv/" class="u-url">Empezando con Pipenv</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/cooperativa-de-trabajo-bitson-ltda/">Cooperativa de Trabajo BITSON Ltda.</a>
+            </span></p>
+            <p class="dateline"><a href="posts/empezando-con-pipenv/" rel="bookmark"><time class="published dt-published" datetime="2018-01-31T12:26:18-03:00" title="2018-01-31 12:26">2018-01-31 12:26</time></a></p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>En este brevísimo artículo te explicamos cómo empezar a usar <code>pipenv</code>.</p>
+<h2>Instalado Pipenv</h2>
+<p><code>pipenv</code> es una herramienta para manejar paquetes y entornos virtuales de
+manera sencilla en tu entorno de desarrollo. Te recomiendo que le eches un ojo
+a la <a href="http://pipenv.readthedocs.io/en/latest/">Documentacion Oficila</a>.
+Ahora te voy a mostrar cómo instalar <code>pipenv</code> y cómo usarlo en tus proyectos.</p>
+<h3>Instalar Pipenv</h3>
+<p>La forma más fácil de instalar <code>pipenv</code> es a través de <code>pipsi</code>. Si no tenés
+<code>pipsi</code> instalado, lo podés instalar con:</p>
+<pre class="code literal-block"><span></span>$ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py <span class="p">|</span> python3
+</pre>
+
+
+<p>Para poder ejecutar desde la línea de comandos tenés que agregar a tu variable
+de entorno <code>PATH</code> la ruta donde está el ejecutable de <code>pipsi</code>.</p>
+<p>Con <code>bash</code>:</p>
+<pre class="code literal-block"><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/.local/bin/pipsi
+</pre>
+
+
+<p>Con <code>fish</code>:</p>
+<pre class="code literal-block"><span></span><span class="k">set</span> PATH <span class="nv">$PATH</span> ~/.local/bin/pipsi
+</pre>
+
+
+<p>Y después tenés que instalar <code>pew</code> y <code>pipenv</code>:</p>
+<pre class="code literal-block"><span></span>$ pipsi install pew
+$ pipsi install pipenv
+</pre>
+
+
+<h4>Título 3</h4>
+<ol>
+<li>Funciona</li>
+<li>No funciona</li>
+<li>Si! Funciona!!</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello World!)</span>
+</pre>
+
+
+<p><em>itálica</em></p>
+<p><strong>negrita</strong></p>
+<p><del>tachado</del></p>
+<p>Probando con un comando simple como <code>ls</code>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/testing-workflow/" class="u-url">testing workflow</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/leandro-e-colombo-vina/">Leandro E. Colombo Viña</a>
@@ -191,7 +253,7 @@ Escriba su publicación aquí.</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2017         <a href="mailto:info@bitson.com.ar">Cooperativa de Trabajo BITSON Ltda.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2018         <a href="mailto:info@bitson.com.ar">Cooperativa de Trabajo BITSON Ltda.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

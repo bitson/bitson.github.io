@@ -2,15 +2,22 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Nuestro Blog...">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publicaciones del año 2017 | BITSON's Blog</title>
+<title>galleries | BITSON's Blog</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="http://blog.bitson.com.ar/2017/">
-<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+<link rel="canonical" href="http://blog.bitson.com.ar/galleries/">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<style type="text/css">
+    .image-block {
+        display: inline-block;
+    }
+    .flowr_row {
+        width: 100%;
+    }
+    </style>
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -57,25 +64,14 @@
         <div class="row">
             
             
-<article class="listpage"><header><h1>Publicaciones del año 2017</h1>
-    </header><ul class="postlist">
-<li>
-<time class="listdate" datetime="2017-08-08T15:55:42-03:00" title="2017-08-08 15:55">2017-08-08 15:55</time><a href="../posts/testing-workflow/" class="listtitle">testing workflow</a>
-</li>
-        <li>
-<time class="listdate" datetime="2017-08-08T15:41:43-03:00" title="2017-08-08 15:41">2017-08-08 15:41</time><a href="../posts/ale-test/" class="listtitle">Ale Test</a>
-</li>
-        <li>
-<time class="listdate" datetime="2017-08-08T15:27:33-03:00" title="2017-08-08 15:27">2017-08-08 15:27</time><a href="../posts/diego-post/" class="listtitle">Diego</a>
-</li>
-        <li>
-<time class="listdate" datetime="2017-08-08T00:14:46-03:00" title="2017-08-08 00:14">2017-08-08 00:14</time><a href="../posts/probando-con-markdown/" class="listtitle">Probando con Markdown</a>
-</li>
-        <li>
-<time class="listdate" datetime="2017-08-07T23:56:08-03:00" title="2017-08-07 23:56">2017-08-07 23:56</time><a href="../posts/posteo-de-prueba/" class="listtitle">Posteo de prueba</a>
-</li>
-    </ul></article>
-</div>
+    
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li>galleries</li>
+</ul></nav><h1>galleries</h1>
+
+<div id="gallery_container"></div>
+
+        </div>
         <!--End of body content-->
 
         <footer id="footer">
@@ -89,6 +85,43 @@
             <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
     moment.locale("es");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+    </script><!-- end fancy dates --><script src="../assets/js/flowr.plugin.js"></script><script>
+jsonContent = [];
+$("#gallery_container").flowr({
+        data : jsonContent,
+        height : 180*.6,
+        padding: 5,
+        rows: -1,
+        render : function(params) {
+            // Just return a div, string or a dom object, anything works fine
+            img = $("<img />").attr({
+                'src': params.itemData.url_thumb,
+                'width' : params.width,
+                'height' : params.height
+            }).css('max-width', '100%');
+            link = $( "<a></a>").attr({
+                'href': params.itemData.url,
+                'class': 'image-reference'
+            });
+            div = $("<div />").addClass('image-block').attr({
+                'title': params.itemData.title,
+                'data-toggle': "tooltip",
+            });
+            link.append(img);
+            div.append(link);
+            div.hover(div.tooltip());
+            return div;
+        },
+        itemWidth : function(data) { return data.size.w; },
+        itemHeight : function(data) { return data.size.h; },
+        complete : function(params) {
+            if( jsonContent.length > params.renderedItems ) {
+                nextRenderList = jsonContent.slice( params.renderedItems );
+            }
+        }
+    });
+$("a.image-reference").colorbox({rel:"gal", maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+$('a.image-reference[href="'+window.location.hash.substring(1,1000)+'"]').click();
+</script>
 </body>
 </html>
