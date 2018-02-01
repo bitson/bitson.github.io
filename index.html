@@ -66,7 +66,7 @@
     <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/empezando-con-pipenv/" class="u-url">Empezando con Pipenv</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/cooperativa-de-trabajo-bitson-ltda/">Cooperativa de Trabajo BITSON Ltda.</a>
+                <a href="authors/lecovi/">lecovi</a>
             </span></p>
             <p class="dateline"><a href="posts/empezando-con-pipenv/" rel="bookmark"><time class="published dt-published" datetime="2018-01-31T12:26:18-03:00" title="2018-01-31 12:26">2018-01-31 12:26</time></a></p>
                 <p class="commentline">
@@ -83,6 +83,8 @@
 manera sencilla en tu entorno de desarrollo. Te recomiendo que le eches un ojo
 a la <a href="http://pipenv.readthedocs.io/en/latest/">Documentacion Oficila</a>.
 Ahora te voy a mostrar cómo instalar <code>pipenv</code> y cómo usarlo en tus proyectos.</p>
+<!-- TEASER_END -->
+
 <h3>Instalar Pipenv</h3>
 <p>La forma más fácil de instalar <code>pipenv</code> es a través de <code>pipsi</code>. Si no tenés
 <code>pipsi</code> instalado, lo podés instalar con:</p>
@@ -108,21 +110,25 @@ $ pipsi install pipenv
 </pre>
 
 
-<h4>Título 3</h4>
-<ol>
-<li>Funciona</li>
-<li>No funciona</li>
-<li>Si! Funciona!!</li>
-</ol>
-<pre class="code literal-block"><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello World!)</span>
-</pre>
-
-
-<p><em>itálica</em></p>
-<p><strong>negrita</strong></p>
-<p><del>tachado</del></p>
-<p>Probando con un comando simple como <code>ls</code>.</p>
+<h4>Comandos útiles</h4>
+<ul>
+<li>
+<code>pipenv --three install &lt;paquete&gt;</code>: instala <paquete> en el virtualenv.</paquete>
+</li>
+<li>
+<code>pipenv --three install -r &lt;archivo_de_requerimientos&gt;</code>: instala los requerimientos en el virtualenv.</li>
+<li>
+<code>pipenv shell</code>: activa el virtualenv en la shell.</li>
+<li>
+<code>pipenv run &lt;archivo&gt;</code>: ejecuta <archivo> desde el virtualenv.</archivo>
+</li>
+<li>
+<code>pipenv --rm</code>: borra el virtualenv.</li>
+<li>
+<code>pipenv --update</code>: actualiza <code>pip</code> &amp; <code>pipenv</code>.</li>
+<li>
+<code>pipenv --venv</code>: muestra el PATH del virtualenv.</li>
+</ul>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/testing-workflow/" class="u-url">testing workflow</a></h1>
