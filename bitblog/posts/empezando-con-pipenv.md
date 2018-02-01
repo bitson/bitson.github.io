@@ -7,7 +7,7 @@
 .. link: 
 .. description: Introducción a Pipenv
 .. type: text
-.. autor: lecovi
+.. author: lecovi 
 -->
 
 En este brevísimo artículo te explicamos cómo empezar a usar `pipenv`.
@@ -18,6 +18,8 @@ En este brevísimo artículo te explicamos cómo empezar a usar `pipenv`.
 manera sencilla en tu entorno de desarrollo. Te recomiendo que le eches un ojo
 a la [Documentacion Oficila](http://pipenv.readthedocs.io/en/latest/).
 Ahora te voy a mostrar cómo instalar `pipenv` y cómo usarlo en tus proyectos.
+
+<!-- TEASER_END -->
 
 ## Instalar Pipenv
 
@@ -46,21 +48,12 @@ $ pipsi install pew
 $ pipsi install pipenv
 ```
 
-### Título 3
+### Comandos útiles
 
-1. Funciona
-2. No funciona
-3. Si! Funciona!!
-
-```python
-def test():
-    print("Hello World!)
-```
-
-*itálica*
-
-**negrita**
-
-~~tachado~~
-
-Probando con un comando simple como `ls`.
+- `pipenv --three install <paquete>`: instala <paquete> en el virtualenv.
+- `pipenv --three install -r <archivo_de_requerimientos>`: instala los requerimientos en el virtualenv.
+- `pipenv shell`: activa el virtualenv en la shell.
+- `pipenv run <archivo>`: ejecuta <archivo> desde el virtualenv.
+- `pipenv --rm`: borra el virtualenv.
+- `pipenv --update`: actualiza `pip` & `pipenv`.
+- `pipenv --venv`: muestra el PATH del virtualenv.
