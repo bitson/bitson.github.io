@@ -23,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/authors/lecovi.xml</loc>
-  <lastmod>2018-02-08T01:48:00Z</lastmod>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/alias.xml</loc>
@@ -34,16 +34,24 @@
   <lastmod>2018-02-01T01:45:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/cat_devops-git.xml</loc>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.bitson.com.ar/categories/cat_tutorial-nginx-devops.xml</loc>
   <lastmod>2018-02-08T01:48:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/deploy.xml</loc>
-  <lastmod>2018-02-08T01:48:00Z</lastmod>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/devops.xml</loc>
-  <lastmod>2018-02-08T01:48:00Z</lastmod>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/git.xml</loc>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/nginx.xml</loc>
@@ -59,10 +67,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/rss.xml</loc>
-  <lastmod>2018-02-08T01:48:00Z</lastmod>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/sitemap.xml</loc>
-  <lastmod>2018-02-08T01:48:00Z</lastmod>
+  <lastmod>2018-02-08T02:15:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/alias-pretty-url-con-nginx/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/deployando-directamente-con-git/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,7 +63,95 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/alias-pretty-url-con-nginx/" class="u-url">Alias &amp; Pretty URL con Nginx</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/deployando-directamente-con-git/" class="u-url">Deployando directamente con git</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/lecovi/">lecovi</a>
+            </span></p>
+            <p class="dateline"><a href="posts/deployando-directamente-con-git/" rel="bookmark"><time class="published dt-published" datetime="2018-02-07T22:52:17-03:00" title="2018-02-07 22:52">2018-02-07 22:52</time></a></p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Hoy les quiero contar cómo se puede configurar <code>git</code> para que deployemos
+directamente con un <code>push</code> en nuestro server.</p>
+<h2>Entorno</h2>
+<p>Vamos a suponer que ya tenés tu sitio en un repositorio y que lo que estás
+haciendo ahora en tu ciclo de <em>deploy</em> es algo similar a esto:</p>
+<ol>
+<li>Hacés tus cambios en tu repo y commiteás a <strong>master</strong>.</li>
+<li>Te conectás por <code>ssh</code> a tu server y te parás en el directorio donde tenés tu
+   sitio</li>
+<li>Hacés un <code>git pull</code> para descargar tu nuevo sitio.</li>
+</ol>
+<p>Si bien no es algo complejo, puede llegar a ser medio tedioso. Y qué mejor si
+se puede hacer un deploy simplemente haciendo <code>git push</code>, no? xD.</p>
+<h2>Configuración</h2>
+<h3>Server</h3>
+<p>Vamos a suponer que estás sirviendo tus archivos con un Apache o un Nginx en el
+direcotorio <code>/home/bitson/mi_sitio/</code>. 
+Para poder llevar adelante esta configuración, vamos a separar por un lado los
+archivos del sitio y por el otro los archivos del control de versiones.
+Necesitamos tener un nuevo repo en <code>/home/bitson/mi_sitio.git</code>. Para eso nos
+conectamos al server por ssh como siempre y ejecutamos:</p>
+<pre class="code literal-block"><span></span>mkdir -p /home/bitson/mi_sitio.git
+<span class="nb">cd</span> /home/bitson/mi_sitio.git
+git init --bare
+</pre>
+
+
+<blockquote>
+<p>Con el parámetro <code>--bare</code> le decimos que no vamos a tener los archivos con
+código fuente, sólo los archivos <em>internos</em> de <code>git</code>.</p>
+</blockquote>
+<h4>Hooks</h4>
+<p>Ahora que tenemos el repositorio creado, tenemos que tener un directorio
+<code>hooks</code>. Ahí dentro vamos a crear un archivo que se llame <code>post-receive</code> con el
+con permisos de ejcución siguiente contenido:</p>
+<pre class="code literal-block"><span></span><span class="ch">#!/bin/sh</span>
+git --work-tree<span class="o">=</span>/home/bitson/mi_sitio --git-dir<span class="o">=</span>/home/bitson/mi_sitio.git checkout -f 
+</pre>
+
+
+<blockquote>
+<p>Para darle permisos de ejecución, corré el comando: <code>chmod a+x post-receive</code></p>
+</blockquote>
+<p>Ahora cuando hagamos un <code>push</code> a este repositorio en <code>mi_sitio.git</code> se va a
+ejecutar el <code>hook</code> que acabamos de crear en <code>post-receive</code>.</p>
+<h3>Máquina local</h3>
+<p>Ahora lo que tenés que hacer es agregar un repositorio remoto a tu repositorio
+local: </p>
+<pre class="code literal-block"><span></span>git remote add deploy ssh://usuario@tu_dominio.com/home/bitson/mi_sitio.git
+</pre>
+
+
+<p>Ahora trabajamos localmente y cuando queremos deployar lo que vamos a hacer es:</p>
+<pre class="code literal-block"><span></span>git push deploy master
+</pre>
+
+
+<p>Y <em>voilà!</em> Asunto resuelto.</p>
+<h2>Limpieza</h2>
+<p>Si tu entorno era similar a lo que describimos al principio del artículo, si te
+conectás al server, te parás en <code>/home/bitson/mi_sitio</code> y tirás un <code>git status</code>
+te va a decir que hubo cambios. Porque claramente ese repositorio no sabe que
+se actualizó... De hecho ya no necesitás tener ese repositorio porque los
+archivos de <code>git</code> los tenés en <code>/home/bitson/mi_sitio.git</code>. </p>
+<p>Así que lo que podés hacer para evitar confusiones es borrar el <code>.git</code> que
+tenés en <code>/home/bitson/mi_sitio</code>.</p>
+<pre class="code literal-block"><span></span>rm -rf /home/bitson/mi_sitio/.git
+</pre>
+
+
+<hr>
+<p>Fácil? Dejanos tu comentario</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/alias-pretty-url-con-nginx/" class="u-url">Alias &amp; Pretty URL con Nginx</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/lecovi/">lecovi</a>

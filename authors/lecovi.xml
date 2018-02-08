@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog (Publicaciones de lecovi)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link href="http://blog.bitson.com.ar/authors/lecovi.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 08 Feb 2018 01:48:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Alias &amp; Pretty URL con Nginx</title><link>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog (Publicaciones de lecovi)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link href="http://blog.bitson.com.ar/authors/lecovi.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 08 Feb 2018 02:15:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Deployando directamente con git</title><link>http://blog.bitson.com.ar/posts/deployando-directamente-con-git/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les quiero contar cómo se puede configurar &lt;code&gt;git&lt;/code&gt; para que deployemos
+directamente con un &lt;code&gt;push&lt;/code&gt; en nuestro server.&lt;/p&gt;
+&lt;h2&gt;Entorno&lt;/h2&gt;
+&lt;p&gt;Vamos a suponer que ya tenés tu sitio en un repositorio y que lo que estás
+haciendo ahora en tu ciclo de &lt;em&gt;deploy&lt;/em&gt; es algo similar a esto:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hacés tus cambios en tu repo y commiteás a &lt;strong&gt;master&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Te conectás por &lt;code&gt;ssh&lt;/code&gt; a tu server y te parás en el directorio donde tenés tu
+   sitio&lt;/li&gt;
+&lt;li&gt;Hacés un &lt;code&gt;git pull&lt;/code&gt; para descargar tu nuevo sitio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Si bien no es algo complejo, puede llegar a ser medio tedioso. Y qué mejor si
+se puede hacer un deploy simplemente haciendo &lt;code&gt;git push&lt;/code&gt;, no? xD.&lt;/p&gt;
+&lt;h2&gt;Configuración&lt;/h2&gt;
+&lt;h3&gt;Server&lt;/h3&gt;
+&lt;p&gt;Vamos a suponer que estás sirviendo tus archivos con un Apache o un Nginx en el
+direcotorio &lt;code&gt;/home/bitson/mi_sitio/&lt;/code&gt;. 
+Para poder llevar adelante esta configuración, vamos a separar por un lado los
+archivos del sitio y por el otro los archivos del control de versiones.
+Necesitamos tener un nuevo repo en &lt;code&gt;/home/bitson/mi_sitio.git&lt;/code&gt;. Para eso nos
+conectamos al server por ssh como siempre y ejecutamos:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;mkdir -p /home/bitson/mi_sitio.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; /home/bitson/mi_sitio.git
+git init --bare
+&lt;/pre&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Con el parámetro &lt;code&gt;--bare&lt;/code&gt; le decimos que no vamos a tener los archivos con
+código fuente, sólo los archivos &lt;em&gt;internos&lt;/em&gt; de &lt;code&gt;git&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Hooks&lt;/h4&gt;
+&lt;p&gt;Ahora que tenemos el repositorio creado, tenemos que tener un directorio
+&lt;code&gt;hooks&lt;/code&gt;. Ahí dentro vamos a crear un archivo que se llame &lt;code&gt;post-receive&lt;/code&gt; con el
+con permisos de ejcución siguiente contenido:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/sh&lt;/span&gt;
+git --work-tree&lt;span class="o"&gt;=&lt;/span&gt;/home/bitson/mi_sitio --git-dir&lt;span class="o"&gt;=&lt;/span&gt;/home/bitson/mi_sitio.git checkout -f 
+&lt;/pre&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;Para darle permisos de ejecución, corré el comando: &lt;code&gt;chmod a+x post-receive&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ahora cuando hagamos un &lt;code&gt;push&lt;/code&gt; a este repositorio en &lt;code&gt;mi_sitio.git&lt;/code&gt; se va a
+ejecutar el &lt;code&gt;hook&lt;/code&gt; que acabamos de crear en &lt;code&gt;post-receive&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Máquina local&lt;/h3&gt;
+&lt;p&gt;Ahora lo que tenés que hacer es agregar un repositorio remoto a tu repositorio
+local: &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git remote add deploy ssh://usuario@tu_dominio.com/home/bitson/mi_sitio.git
+&lt;/pre&gt;
+
+
+&lt;p&gt;Ahora trabajamos localmente y cuando queremos deployar lo que vamos a hacer es:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git push deploy master
+&lt;/pre&gt;
+
+
+&lt;p&gt;Y &lt;em&gt;voilà!&lt;/em&gt; Asunto resuelto.&lt;/p&gt;
+&lt;h2&gt;Limpieza&lt;/h2&gt;
+&lt;p&gt;Si tu entorno era similar a lo que describimos al principio del artículo, si te
+conectás al server, te parás en &lt;code&gt;/home/bitson/mi_sitio&lt;/code&gt; y tirás un &lt;code&gt;git status&lt;/code&gt;
+te va a decir que hubo cambios. Porque claramente ese repositorio no sabe que
+se actualizó... De hecho ya no necesitás tener ese repositorio porque los
+archivos de &lt;code&gt;git&lt;/code&gt; los tenés en &lt;code&gt;/home/bitson/mi_sitio.git&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Así que lo que podés hacer para evitar confusiones es borrar el &lt;code&gt;.git&lt;/code&gt; que
+tenés en &lt;code&gt;/home/bitson/mi_sitio&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;rm -rf /home/bitson/mi_sitio/.git
+&lt;/pre&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;Fácil? Dejanos tu comentario&lt;/p&gt;&lt;/div&gt;</description><category>deploy</category><category>devops</category><category>git</category><guid>http://blog.bitson.com.ar/posts/deployando-directamente-con-git/</guid><pubDate>Thu, 08 Feb 2018 01:52:17 GMT</pubDate></item><item><title>Alias &amp; Pretty URL con Nginx</title><link>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
 diferentes carpetas con archivos estáticos de tu sitio.&lt;/p&gt;
 &lt;h2&gt;Primer deploy&lt;/h2&gt;
 &lt;p&gt;Supongamos que tenemos un sitio estático, por ejemplo, el sitio institucional
