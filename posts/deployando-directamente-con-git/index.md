@@ -31,7 +31,7 @@ se puede hacer un deploy simplemente haciendo `git push`, no? xD.
 ## Server
 
 Vamos a suponer que estás sirviendo tus archivos con un Apache o un Nginx en el
-direcotorio `/home/bitson/mi_sitio/`. 
+directorio `/home/bitson/mi_sitio/`. 
 Para poder llevar adelante esta configuración, vamos a separar por un lado los
 archivos del sitio y por el otro los archivos del control de versiones.
 Necesitamos tener un nuevo repo en `/home/bitson/mi_sitio.git`. Para eso nos
