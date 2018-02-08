@@ -111,7 +111,7 @@ código fuente, sólo los archivos <em>internos</em> de <code>git</code>.</p>
 <h4>Hooks</h4>
 <p>Ahora que tenemos el repositorio creado, tenemos que tener un directorio
 <code>hooks</code>. Ahí dentro vamos a crear un archivo que se llame <code>post-receive</code> con el
-con permisos de ejcución siguiente contenido:</p>
+con permisos de ejecución siguiente contenido:</p>
 <pre class="code literal-block"><span></span><span class="ch">#!/bin/sh</span>
 git --work-tree<span class="o">=</span>/home/bitson/mi_sitio --git-dir<span class="o">=</span>/home/bitson/mi_sitio.git checkout -f 
 </pre>

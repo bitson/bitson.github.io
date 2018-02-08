@@ -50,7 +50,7 @@ git init --bare
 
 Ahora que tenemos el repositorio creado, tenemos que tener un directorio
 `hooks`. Ahí dentro vamos a crear un archivo que se llame `post-receive` con el
-con permisos de ejcución siguiente contenido:
+con permisos de ejecución siguiente contenido:
 
 ```bash
 #!/bin/sh
