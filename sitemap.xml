@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2018-02-01T01:32:00Z</lastmod>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/</loc>
@@ -47,11 +47,31 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2018-01-31T15:49:00Z</lastmod>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/alias/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/cat_dev-python/</loc>
   <lastmod>2018-01-31T15:49:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/cat_tutorial-nginx-devops/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/deploy/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/devops/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/nginx/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv/</loc>
@@ -68,6 +88,10 @@
  <url>
   <loc>http://blog.bitson.com.ar/posts/ale-test/</loc>
   <lastmod>2018-01-31T15:49:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</loc>
+  <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/diego-post/</loc>

@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/empezando-con-pipenv/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/alias-pretty-url-con-nginx/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,7 +63,118 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/empezando-con-pipenv/" class="u-url">Empezando con Pipenv</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/alias-pretty-url-con-nginx/" class="u-url">Alias &amp; Pretty URL con Nginx</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/lecovi/">lecovi</a>
+            </span></p>
+            <p class="dateline"><a href="posts/alias-pretty-url-con-nginx/" rel="bookmark"><time class="published dt-published" datetime="2018-02-07T22:24:22-03:00" title="2018-02-07 22:24">2018-02-07 22:24</time></a></p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
+diferentes carpetas con archivos estáticos de tu sitio.</p>
+<h2>Primer deploy</h2>
+<p>Supongamos que tenemos un sitio estático, por ejemplo, el sitio institucional
+de <a href="https://bitson.group">bitson</a>. Eso lo tenemos en un repo y es un conjunto
+de archivos de texto (HTML, js, css y demás) que conforman el sitio.</p>
+<blockquote>
+<p>Se le dice <strong>estático</strong> no porque esté <em>"quieto"</em> sino porque sólo contiene
+archivos de texto y no necesita correr un <em>backend</em> para funcionar.</p>
+</blockquote>
+<p>Supongamos que tenemos los archivos en https://github.com/bitson/sitio1.git
+clonamos el repo en el server y tendremos una configuración del Nginx que será
+algo similar a:</p>
+<pre class="code literal-block"><span></span>server <span class="o">{</span>
+    listen <span class="m">80</span><span class="p">;</span>
+    listen <span class="o">[</span>::<span class="o">]</span>:80<span class="p">;</span>
+    server_name bitson.group www.bitson.group<span class="p">;</span>
+    <span class="k">return</span> <span class="m">301</span> https://<span class="nv">$host</span>/<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+server <span class="o">{</span>
+    listen <span class="m">443</span> ssl<span class="p">;</span>
+    listen <span class="o">[</span>::<span class="o">]</span>:443 ssl<span class="p">;</span>
+
+    root /home/bitson/sitio1<span class="p">;</span>
+
+    server_name bitson.group www.bitson.group<span class="p">;</span>
+
+    location / <span class="o">{</span>
+        try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ <span class="o">=</span><span class="m">404</span><span class="p">;</span>
+    <span class="o">}</span>
+
+    ssl_certificate         /etc/letsencrypt/live/bitson.group/fullchain.pem<span class="p">;</span>
+    ssl_certificate_key     /etc/letsencrypt/live/bitson.group/privkey.pem<span class="p">;</span>
+<span class="o">}</span>
+</pre>
+
+
+<p>Esta configuración hace que todas las peticiones que lleguen vía HTTP sean
+redireccionadas al HTTPS y se sirvan del directorio <code>/home/bitson/sitio1</code> donde
+tenemos clonado el repo.</p>
+<blockquote>
+<p>Para los certificados usamos Let's Encrypt y esa es la ruta usual en donde
+se guardan en un sistema Debian.</p>
+</blockquote>
+<p>Además en esta configuración vemos una sentencia de <code>try_files</code> para la
+locación de la raíz (<code>/</code>). Lo que nos quiere decir esto es que cuando alquien
+haga una petición a, por ejemplo: <code>bitson.group/saraza</code> Nginx tiene que buscar
+si existe el archivo <code>/home/bitson/sitio1/saraza</code> o si existe el directorio
+<code>/home/bitson/sitio1/saraza/</code>. En caso de que no exista ninguno entonces el
+Nginx responderá con un 404, el código de HTTP que corresponde a <code>Not Found</code>.</p>
+<h2>Agregando el alias</h2>
+<p>Supongamos ahora que tenemos otro repositorio, por ejemplo,
+https://github.com/bitson/presentaciones.git y queremos publicarlo en el mismo
+servidor. Algo así como lo que podemos ver en
+<a href="https://bitson.group/slides/">bitson.group/slides</a>.</p>
+<p>Para no tener que publicarlo en otro server, podemos aprovechar un alias de
+Nginx. Suponiendo que tenemos ese repositorio en el server en
+<code>/home/bitson/presentaciones</code> tenemos que poner una configuración como:</p>
+<pre class="code literal-block"><span></span>server <span class="o">{</span>
+    listen <span class="m">443</span> ssl<span class="p">;</span>
+    listen <span class="o">[</span>::<span class="o">]</span>:443 ssl<span class="p">;</span>
+
+    root /home/bitson/sitio1<span class="p">;</span>
+
+    server_name bitson.group www.bitson.group<span class="p">;</span>
+
+    location / <span class="o">{</span>
+        try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ <span class="o">=</span><span class="m">404</span><span class="p">;</span>
+    <span class="o">}</span>
+
+    location /slides <span class="o">{</span>
+        <span class="nb">alias</span> /home/bitson/presentaciones<span class="p">;</span>
+    <span class="o">}</span>
+
+    ssl_certificate         /etc/letsencrypt/live/bitson.group/fullchain.pem<span class="p">;</span>
+    ssl_certificate_key     /etc/letsencrypt/live/bitson.group/privkey.pem<span class="p">;</span>
+<span class="o">}</span>
+</pre>
+
+
+<h2>Pretty URLs</h2>
+<p>Si queremos omitir tener que poner el <code>.html</code> en cada una de las URLs a las que
+queremos acceder en nuestro sitio. Sólo tenemos que agregar una sentencia de
+<code>try_files</code> en nuestra configuración. Por ejemlo:</p>
+<pre class="code literal-block"><span></span>    location /slides <span class="o">{</span>
+        <span class="nb">alias</span> /home/bitson/presentaciones<span class="p">;</span>
+        try_files <span class="nv">$uri</span> <span class="nv">$uri</span>.html <span class="o">=</span><span class="m">404</span><span class="p">;</span>
+    <span class="o">}</span>
+</pre>
+
+
+<p>Así, si queremos entrar a <code>https://bitson.group/slides/presentacion1.html</code>
+podremos hacerlo con sólo ir a <code>https://bitson.group/slides/presentacion1</code></p>
+<hr>
+<p>Espero que les haya gustado! Los leemos en los comentarios!</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/empezando-con-pipenv/" class="u-url">Empezando con Pipenv</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/lecovi/">lecovi</a>
