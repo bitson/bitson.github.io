@@ -47,7 +47,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2018-02-16T19:03:00Z</lastmod>
+  <lastmod>2018-02-16T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/alias/</loc>
@@ -78,6 +78,10 @@
   <lastmod>2018-02-16T18:42:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.bitson.com.ar/categories/dos/</loc>
+  <lastmod>2018-02-16T19:16:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.bitson.com.ar/categories/git/</loc>
   <lastmod>2018-02-16T18:42:00Z</lastmod>
  </url>
@@ -92,6 +96,14 @@
  <url>
   <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv/</loc>
   <lastmod>2018-02-16T18:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/tres/</loc>
+  <lastmod>2018-02-16T19:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/un/</loc>
+  <lastmod>2018-02-16T19:16:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/ale-test/</loc>

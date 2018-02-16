@@ -2,7 +2,7 @@
 .. title: Lo que quieras
 .. slug: lo-que-quieras
 .. date: 2018-02-16 15:50:50 UTC-03:00
-.. tags: 
+.. tags: un, dos, tres
 .. category: 
 .. link: 
 .. description: 
