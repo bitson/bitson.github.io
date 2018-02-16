@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2018-02-08T02:15:00Z</lastmod>
+  <lastmod>2018-02-16T18:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/</loc>
@@ -47,7 +47,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2018-02-08T02:15:00Z</lastmod>
+  <lastmod>2018-02-16T18:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/alias/</loc>
@@ -66,6 +66,10 @@
   <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
  <url>
+  <loc>http://blog.bitson.com.ar/categories/cat_tutorial/</loc>
+  <lastmod>2018-02-16T18:58:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://blog.bitson.com.ar/categories/deploy/</loc>
   <lastmod>2018-02-08T01:48:00Z</lastmod>
  </url>
@@ -80,6 +84,10 @@
  <url>
   <loc>http://blog.bitson.com.ar/categories/nginx/</loc>
   <lastmod>2018-02-08T01:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/nikola/</loc>
+  <lastmod>2018-02-16T18:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv/</loc>
@@ -120,6 +128,10 @@
  <url>
   <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
   <lastmod>2017-08-08T03:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/posts/testeando-nikola/</loc>
+  <lastmod>2018-02-16T18:58:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/testing-workflow/</loc>
