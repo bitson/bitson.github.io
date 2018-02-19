@@ -96,7 +96,9 @@
 <h3>Cómo crear un artículo para el blog de bitson</h3>
 <p>En esta oportunidad, vamos a hacerlo usando:</p>
 <ul>
-<li><a href="https://github.com/pypa/pipenv" title="Repositorio de pipenv">pipenv</a></li>
+<li>
+<a href="https://github.com/pypa/pipenv" title="Repositorio de pipenv">pipenv</a> (Para más información ver la guía <a href="http://blog.bitson.group/posts/empezando-con-pipenv/" title="Empezando con pipenv">Empezando con pipenv</a>
+</li>
 <li><a href="https://pages.github.com/" title="Páginas de GitHub">GitHub Pages</a></li>
 <li>
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown">Markdown</a> como lenguaje de marcado </li>
@@ -210,7 +212,9 @@
 <p><strong> INFO: auto: Watching files for changes...</strong></p>
 <p>Nikola nos informa que cada vez que el contenido se modifique, el servidor local intentará reiniciar, reflejando los cambios en el navegador.</p>
 <h2>Aplicando los cambios</h2>
-<p>Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos subir los archivos nuevos al repositorio en la rama <strong>src</strong> y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.</p>
+<p>Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:</p>
+<h2>pipenv run nikola github_deploy</h2>
+<p>lo que subirá los cambios al repositorio en la rama <strong>src</strong> y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.</p>
 <hr>
 <ul>
 <li>
