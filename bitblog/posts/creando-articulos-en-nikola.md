@@ -20,7 +20,7 @@ Hoy les presentamos nuestro primer post recursivo.
 
 En esta oportunidad, vamos a hacerlo usando:
 
-* [pipenv](https://github.com/pypa/pipenv "Repositorio de pipenv")
+* [pipenv](https://github.com/pypa/pipenv "Repositorio de pipenv") (Para más información ver la guía [Empezando con pipenv](http://blog.bitson.group/posts/empezando-con-pipenv/ "Empezando con pipenv")
 * [GitHub Pages](https://pages.github.com/ "Páginas de GitHub")
 * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Guía rápida de Markdown") como lenguaje de marcado 
 * [![nikola logo][logo-nikola]](https://getnikola.com/ "Sitio oficial de Nikola")
@@ -206,7 +206,11 @@ Nikola nos informa que cada vez que el contenido se modifique, el servidor local
 
 # Aplicando los cambios
 
-Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos subir los archivos nuevos al repositorio en la rama __src__ y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.
+Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:
+
+# pipenv run nikola github_deploy
+
+lo que subirá los cambios al repositorio en la rama __src__ y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.
 
 
 
