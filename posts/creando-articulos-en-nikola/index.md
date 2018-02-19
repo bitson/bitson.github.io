@@ -15,7 +15,6 @@ Hoy les presentamos nuestro primer post recursivo.
 ## Cómo crear un artículo para el blog de bitson
 
 
-
 [logo-nikola]: https://getnikola.com/assets/img/logo.png "Logo de Nikola"
 
 Ingredientes:
