@@ -18,7 +18,7 @@ Hoy les presentamos nuestro primer post recursivo.
 
 [logo-nikola]: https://getnikola.com/assets/img/logo.png "Logo de Nikola"
 
-En esta oportunidad, vamos a hacerlo usando:
+Ingredientes:
 
 * [pipenv](https://github.com/pypa/pipenv "Repositorio de pipenv") (Para más información ver la guía [Empezando con pipenv](http://blog.bitson.group/posts/empezando-con-pipenv/ "Empezando con pipenv"))
 * [GitHub Pages](https://pages.github.com/ "Páginas de GitHub")
