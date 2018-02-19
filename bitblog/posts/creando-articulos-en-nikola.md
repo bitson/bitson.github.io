@@ -218,9 +218,11 @@ lo que subirá los cambios al repositorio en la rama __src__ y GitHub Pages se e
 
 ---
 
-* PD: [guthub.com](http://guthub.com "GitHub mal escrito") redirecciona a [github.com](http://github.com "GitHub bien escrito") 
+PD: Hallazgos completamente inútiles aparecidos durante la redacción de la nota
 
-* PD2: pipenv --jumbotron 
+* [guthub.com](http://guthub.com "GitHub mal escrito") redirecciona a [github.com](http://github.com "GitHub bien escrito") 
+
+* Animate a ejecutar __pipenv --jumbotron__
 
 
 
