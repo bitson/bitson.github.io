@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>BITSON's Blog (Publicaciones de @nespino)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link rel="self" href="http://blog.bitson.com.ar/authors/nespino.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Feb 2018 15:59:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>BITSON's Blog (Publicaciones de @nespino)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link type="application/rss+xml" href="http://blog.bitson.com.ar/authors/nespino.xml" rel="self"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Feb 2018 16:02:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
 &lt;h3&gt;Cómo crear un artículo para el blog de bitson&lt;/h3&gt;
 &lt;p&gt;En esta oportunidad, vamos a hacerlo usando:&lt;/p&gt;
 &lt;ul&gt;
@@ -124,11 +124,12 @@
 &lt;/blockquote&gt;
 &lt;h3&gt;¡Éxito!&lt;/h3&gt;
 &lt;hr&gt;
+&lt;p&gt;PD: Hallazgos completamente inútiles aparecidos durante la redacción de la nota&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;PD: &lt;a href="http://guthub.com" title="GitHub mal escrito"&gt;guthub.com&lt;/a&gt; redirecciona a &lt;a href="http://github.com" title="GitHub bien escrito"&gt;github.com&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://guthub.com" title="GitHub mal escrito"&gt;guthub.com&lt;/a&gt; redirecciona a &lt;a href="http://github.com" title="GitHub bien escrito"&gt;github.com&lt;/a&gt; &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;PD2: pipenv --jumbotron &lt;/p&gt;
+&lt;p&gt;Animate a ejecutar &lt;strong&gt;pipenv --jumbotron&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;</description><category>blog</category><category>nikola</category><guid>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</guid><pubDate>Fri, 16 Feb 2018 19:10:50 GMT</pubDate></item></channel></rss>
