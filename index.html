@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/testeando-nikola/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/creando-articulos-en-nikola/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,12 +63,12 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/testeando-nikola/" class="u-url">testeando nikola</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/creando-articulos-en-nikola/" class="u-url">Creando artículos en Nikola</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/lecovi/">lecovi</a>
+                <a href="authors/nespino/">@nespino</a>
             </span></p>
-            <p class="dateline"><a href="posts/testeando-nikola/" rel="bookmark"><time class="published dt-published" datetime="2018-02-16T15:49:42-03:00" title="2018-02-16 15:49">2018-02-16 15:49</time></a></p>
+            <p class="dateline"><a href="posts/creando-articulos-en-nikola/" rel="bookmark"><time class="published dt-published" datetime="2018-02-16T16:10:50-03:00" title="2018-02-16 16:10">2018-02-16 16:10</time></a></p>
                 <p class="commentline">
         
 
@@ -77,10 +77,134 @@
 </div>
     </header><div class="e-content entry-content">
     <div>
-<p>Escriba su publicación aquí.</p>
-<h2>Título</h2>
-<p>Nuevo párrafo</p>
-<p><strong>pero a mi me anda pipenv</strong></p>
+<p>Hoy les presentamos nuestro primer post recursivo. </p>
+<h3>Cómo crear un artículo para el blog de bitson</h3>
+<p>En esta oportunidad, vamos a hacerlo usando:</p>
+<ul>
+<li><a href="https://github.com/pypa/pipenv" title="Repositorio de pipenv">pipenv</a></li>
+<li><a href="https://pages.github.com/" title="Páginas de GitHub">GitHub Pages</a></li>
+<li>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown">Markdown</a> como lenguaje de marcado </li>
+<li><a href="https://getnikola.com/" title="Sitio oficial de Nikola"><img alt="nikola logo" src="https://getnikola.com/assets/img/logo.png" title="Logo de Nikola"></a></li>
+</ul>
+<p>Sin más preámbulo, dejo la receta a continuación... </p>
+<h2>Configurando el entorno pipenv</h2>
+<p>Primero, nos aseguramos de tener <a href="https://bryson3gps.wordpress.com/2017/11/08/stop-everything-start-using-pipenv/" title="Cómo instalar pipenv">pipenv instalado</a>. Resulta práctico disponer del comando pipenv desde cualquier ruta, por lo que sugerimos agregar la ubicación de la misma a la variable de entorno PATH en el archivo .bashrc (.zshrc, o el que corresponda al shell que usen). Para saber dónde está ubicado pipenv podemos ejecutar el siguiente comando desde la consola:</p>
+<p><strong>which pipenv</strong></p>
+<blockquote>
+<p>/home/nespino/.local/bin/pipenv</p>
+</blockquote>
+<p>Por lo que la línea de código para agregar pipenv al PATH sería: </p>
+<p><strong>export PATH=$PATH:~/.local/bin</strong> </p>
+<h2>Clonando nuestro repositorio de GitHub Pages</h2>
+<p>Una vez configurado el entorno pipenv, procedemos a clonar el <a href="https://github.com/bitson/bitson.github.io.git" title="Repositorio del blog de bitson">repositorio</a> donde se alojan todas las entradas de nuestro blog.</p>
+<p><strong>git clone https://github.com/bitson/bitson.github.io.git</strong></p>
+<p>No necesitamos permisos especiales para clonarlo, pero no podremos subir el nuevo contenido del blog sin estar debidamente autorizado.</p>
+<h3>IMPORTANTE</h3>
+<p>Debemos usar la rama <strong>src</strong>, en donde tenemos disponible los archivos necesarios para instalar Nikola y todas los artículos del blog.</p>
+<p><strong>git checkout src</strong></p>
+<h2>Instalando Nikola</h2>
+<p>Dentro del mismo, en la carpeta <strong>bitblog</strong> se encuentra el archivo <strong>Pipfile</strong>, que es el que nos permitirá instalar <a href="https://getnikola.com/" title="Sitio oficial de Nikola"><strong>Nikola</strong></a> a través del siguiente comando en consola:</p>
+<p><strong>pipenv --three install</strong></p>
+<p>El parámetro <strong>--three</strong> indica que vamos a usar la versión 3 de Python. En caso de omitirlo, usaremos la versión que esté configurado por defecto en nuestro sistema. </p>
+<hr>
+<p><strong>Nota:</strong> Es posible las dependencias que tengamos en el sistema choquen con las que están declaradas en el archivo Pipfile.lock. En ese caso, podemos ignorar este archivo durante la instalación usando el comando:</p>
+<p><strong>pipenv --three install --skip-lock</strong></p>
+<hr>
+<p><strong>Otra nota:</strong></p>
+<p>Es posible que el instalador de pipenv nos devuelva la siguiente advertencia:</p>
+<blockquote>
+<p>Warning: Your Pipfile requires python_version 3.6, but you are using 3.5.2 (/home/n/./b/bin/python).</p>
+<p>$ pipenv check will surely fail.</p>
+</blockquote>
+<p>No es algo de qué preocuparse.</p>
+<hr>
+<h4>Instalación en curso...</h4>
+<blockquote>
+<p>Virtualenv location: /home/nespino/.virtualenvs/bitblog-Dccxvb6W</p>
+<p>Installing dependencies from Pipfile...</p>
+<p>🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 1/1 — 00:01:23</p>
+<p>To activate this project's virtualenv, run the following:</p>
+<p>$ pipenv shell</p>
+</blockquote>
+<p>¡Éxito! Sólo nos falta verificar que Nikola esté funcionando correctamente. </p>
+<p><strong>pipenv run nikola auto</strong></p>
+<p>En mi caso, al ejecutar ese comando recibo un Traceback que termina en</p>
+<blockquote>
+<p>OSError: [Errno 98] La dirección ya se está usando</p>
+</blockquote>
+<p>Lo que significa que el puerto usado por defecto (8000) está ocupado. Para especificar el puerto a usar basta con agregar <strong>-p <puerto></puerto></strong> al final del comando. En el ejemplo, usaremos el puerto 8010.</p>
+<blockquote>
+<p>➜  bitblog git:(src) ✗ pipenv run nikola auto -p 8010</p>
+<p>Scanning posts........done!</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: Watching files for changes...</p>
+<p>[2018-02-16T20:03:24Z] INFO: ws4py: Using epoll</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: Serving HTTP on 127.0.0.1 port 8010...</p>
+<p>[2018-02-16T20:03:24Z] INFO: ws4py: Managing websocket [Local =&gt; 127.0.0.1:8010 | Remote =&gt; 127.0.0.1:56708]</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: &lt;--- {'command': 'hello', 'protocols': ['http://livereload.com/protocols/official-6', 'http://livereload.com/protocols/official-7'], 'snipver': 1, 'ver': '2.2.1'}</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: ---&gt; {"command": "hello", "protocols": ["http://livereload.com/protocols/official-7"], "serverName": "nikola-livereload"}</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: &lt;--- {'command': 'info', 'plugins': {'less': {'version': '1.0', 'disable': False}}, 'url': 'http://localhost:8010/'}</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: <strong>*</strong>* Browser connected: http://localhost:8010/</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: <strong>*</strong>* sending 0 pending messages</p>
+</blockquote>
+<h2>Voilá!</h2>
+<p>Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a <a href="http://localhost:8010/" title="8010 o el puerto en el que esté corriendo Nikola">http://localhost:8010/</a> y buscar esta misma <a href="http://blog.bitson.group/posts/creando-articulos-en-nikola/" title="Haga clic aquí para sentir el efecto recursivo en tu propias venas">entrada</a>. Todo este procedimiento para llegar al tan deseado momento...</p>
+<h2>Creando artículos en Nikola</h2>
+<p>Para crear una nueva entrada en el blog, nos posicionamos en el directorio <strong>bitblog</strong> y ejecutamos:</p>
+<p><strong>pipenv run nikola new_post -f markdown</strong></p>
+<p>Sin desperdiciar un segundo, Nikola nos pedirá un título para el artículo...</p>
+<blockquote>
+<p>Creating New Post</p>
+<hr>
+<p>Title: Creando artículos en Nikola</p>
+<p>Scanning posts........done!</p>
+<p>[2018-02-16T19:10:50Z] INFO: new_post: Your post's text is at: posts/creando-articulos-en-nikola.md</p>
+<p>➜  bitblog git:(src) ✗ ls</p>
+</blockquote>
+<hr>
+<p>Con el parámetro <strong>-f markdown</strong> estamos especificando que el formato de marcado será <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown">Markdown</a>. Si no lo especificamos, Nikola usará por defecto <a href="https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst" title='Guía rápida de reStructuredText). Al día de la fecha, [Nikola soporta](https://getnikola.com/handbook.html#id17 "Lista de lenguajes soportados por Nikola'>reStructuredText</a> reStructuredText, Markdown, Jupyter (IPython) Notebooks y HTML, entre otras. </p>
+<p><strong>Nota:</strong> El mismo <a href="https://getnikola.com/blog/" title="Blog de Nikola">blog de Nikola creado con Nikola</a> tiene una <a href="https://getnikola.com/blog/markdown-can-affect-performance.html" title="Nota sobre el rendimiento de Markdown">nota</a> sobre el rendimiento del Markdown con respecto a otros lenguajes de formateo.</p>
+<hr>
+<p>Estamos listos para redactar la publicación...</p>
+<blockquote>
+<p><strong>Your post's text is at: posts/creando-articulos-en-nikola.md</strong> </p>
+</blockquote>
+<p>Abrimos el archivo que Nikola nos generó automáticamente y podemos ver que incluye un encabezado donde principalmente podemos:</p>
+<ul>
+<li>Cambiarle fecha y título a la entrada</li>
+<li>Agregarle tags separados por coma y definirle categorías</li>
+<li>Agregar una descripción</li>
+<li>Declarar quién es el autor</li>
+</ul>
+<p>Para esto último, alcanza con agregar la línea <strong>.. author: @nespino</strong> al final del encabezado. Lo que debería quedar algo similar a:</p>
+<blockquote>
+<p>&lt;!--</p>
+<p>.. title: Creando artículos en Nikola</p>
+<p>.. slug: creando-articulos-en-nikola</p>
+<p>.. date: 2018-02-16 16:10:50 UTC-03:00</p>
+<p>.. tags: nikola, blog</p>
+<p>.. category: </p>
+<p>.. link: </p>
+<p>.. description: Cómo crear un artículo para el blog de bitson con Nikola</p>
+<p>.. type: text</p>
+<p>.. author: @nespino</p>
+<p>--&gt;</p>
+<p>Escribe tu publicación aquí.</p>
+</blockquote>
+<p>De acá en adelante es fácil. Escribimos la entrada y guardamos el archivo. </p>
+<p><strong> INFO: auto: Watching files for changes...</strong></p>
+<p>Nikola nos informa que cada vez que el contenido se modifique, el servidor local intentará reiniciar, reflejando los cambios en el navegador.</p>
+<h2>Aplicando los cambios</h2>
+<p>Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos subir los archivos nuevos al repositorio en la rama <strong>src</strong> y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.</p>
+<hr>
+<ul>
+<li>
+<p>PD: <a href="http://guthub.com" title="GitHub mal escrito">guthub.com</a> redirecciona a <a href="http://github.com" title="GitHub bien escrito">github.com</a> </p>
+</li>
+<li>
+<p>PD2: pipenv --jumbotron </p>
+</li>
+</ul>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/deployando-directamente-con-git/" class="u-url">Deployando directamente con git</a></h1>
@@ -348,101 +472,6 @@ $ pipsi install pipenv
 <li>
 <code>pipenv --venv</code>: muestra el PATH del virtualenv.</li>
 </ul>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/testing-workflow/" class="u-url">testing workflow</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/leandro-e-colombo-vina/">Leandro E. Colombo Viña</a>
-            </span></p>
-            <p class="dateline"><a href="posts/testing-workflow/" rel="bookmark"><time class="published dt-published" datetime="2017-08-08T15:55:42-03:00" title="2017-08-08 15:55">2017-08-08 15:55</time></a></p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<h2>Testing</h2>
-<p>Probando publicación.
-Escriba su publicación aquí.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/diego-post/" class="u-url">Diego</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/ddebonis/">ddebonis</a>
-            </span></p>
-            <p class="dateline"><a href="posts/diego-post/" rel="bookmark"><time class="published dt-published" datetime="2017-08-08T15:27:33-03:00" title="2017-08-08 15:27">2017-08-08 15:27</time></a></p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <p>LALALAL</p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/probando-con-markdown/" class="u-url">Probando con Markdown</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/cooperativa-de-trabajo-bitson-ltda/">Cooperativa de Trabajo BITSON Ltda.</a>
-            </span></p>
-            <p class="dateline"><a href="posts/probando-con-markdown/" rel="bookmark"><time class="published dt-published" datetime="2017-08-08T00:14:46-03:00" title="2017-08-08 00:14">2017-08-08 00:14</time></a></p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Escriba su publicación aquí.</p>
-<h2>Título 1</h2>
-<p>Probando el Markdown con Nikola</p>
-<h3>Título 2</h3>
-<p>Un nuevo ítem</p>
-<ul>
-<li>Item 1</li>
-<li>Item 2</li>
-</ul>
-<h4>Título 3</h4>
-<ol>
-<li>Funciona</li>
-<li>No funciona</li>
-<li>Si! Funciona!!</li>
-</ol>
-<pre class="code literal-block"><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello World!)</span>
-</pre>
-
-
-<p><em>itálica</em></p>
-<p><strong>negrita</strong></p>
-<p><del>tachado</del></p>
-<p>Probando con un comando simple como <code>ls</code>.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/posteo-de-prueba/" class="u-url">Posteo de prueba</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/cooperativa-de-trabajo-bitson-ltda/">Cooperativa de Trabajo BITSON Ltda.</a>
-            </span></p>
-            <p class="dateline"><a href="posts/posteo-de-prueba/" rel="bookmark"><time class="published dt-published" datetime="2017-08-07T23:56:08-03:00" title="2017-08-07 23:56">2017-08-07 23:56</time></a></p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Un artículo de prueba escrito en rst.</p>
-<div class="section" id="segundo-titulo">
-<h2>Segundo título</h2>
-<p>Probando un nuevo título.</p>
-</div>
 </div>
     </div>
     </article>

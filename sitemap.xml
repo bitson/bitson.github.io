@@ -7,142 +7,90 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.bitson.com.ar/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/2017/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/2018/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2018-02-16T19:17:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/abrunacci/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/cooperativa-de-trabajo-bitson-ltda/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/ddebonis/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/leandro-e-colombo-vina/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/lecovi/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/authors/nespino/</loc>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/</loc>
-  <lastmod>2018-02-16T19:16:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/alias/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/categories/blog/</loc>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/cat_dev-python/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/cat_devops-git/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/cat_tutorial-nginx-devops/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/categories/cat_tutorial/</loc>
-  <lastmod>2018-02-16T19:03:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/deploy/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/devops/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/categories/dos/</loc>
-  <lastmod>2018-02-16T19:16:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/git/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/nginx/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/nikola/</loc>
-  <lastmod>2018-02-16T19:03:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/categories/tres/</loc>
-  <lastmod>2018-02-16T19:16:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/categories/un/</loc>
-  <lastmod>2018-02-16T19:16:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/ale-test/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</loc>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/deployando-directamente-con-git/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/diego-post/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/posts/empezando-con-pipenv/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/lo-que-quieras/</loc>
-  <lastmod>2018-02-16T18:50:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/posteo-de-prueba/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/testeando-nikola/</loc>
-  <lastmod>2018-02-16T19:03:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/testing-workflow/</loc>
-  <lastmod>2018-02-16T18:42:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
 </urlset>
