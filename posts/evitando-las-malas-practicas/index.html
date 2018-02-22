@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evitando las malas prácticas en Python | BITSON's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Abrunacci">
+<link rel="prev" href="../creando-articulos-en-nikola/" title="Creando artículos en Nikola" type="text/html">
+<meta property="og:site_name" content="BITSON's Blog">
+<meta property="og:title" content="Evitando las malas prácticas en Python">
+<meta property="og:url" content="http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/">
+<meta property="og:description" content='Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
+"leves" a nivel programación pero que a la hora de inspeccionar nuestro codigo y ver si cumple co'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-02-21T22:57:25-03:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Mostrar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://blog.bitson.com.ar/">
+
+                <span id="blog-title">BITSON's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../../categories/">Etiquetas</a>
+                </li>
+<li>
+<a href="../../rss.xml">Canal RSS</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Código fuente</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Evitando las malas prácticas en Python</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../authors/abrunacci/">Abrunacci</a>
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2018-02-21T22:57:25-03:00" itemprop="datePublished" title="2018-02-21 22:57">2018-02-21 22:57</time></a></p>
+                <p class="commentline">
+        
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
+"leves" a nivel programación pero que a la hora de inspeccionar nuestro codigo y ver si cumple con las 
+<a href="https://www.fing.edu.uy/inco/cursos/fpr/wiki/index.php/Python_PEP8">reglas PEP8</a> nos encontramos con 
+la sorpresa de que dudosamente una parte del código escrito logra aprobar el "examen".</p>
+<p>A continuación un breve listado de cosas que podés estar haciendo mal sin saber.   </p>
+<div class="img-with-text" style="text-align:justify; width: 720px;">
+    <img src="https://static.simpsonswiki.com/images/4/46/KnifeSafetyBook.png" alt="10 'SI' y 500 'NO' de la seguridad con las navajas" style="margin:0; display:block;"><p><code>No niego ni confirmo haber escrito este post solo para utlizar esta imágen.</code></p>
+</div>
+
+<ul>
+<li>
+<h3><em>Real programmers don't use TABs</em></h3>
+</li>
+</ul>
+<blockquote>
+<p>O si, pero decidanse por uno y sigan siempre con ese. 4 espacios o TABs, pero si vamos variando las identaciones 
+   de nuestros modulos con unos y otros, no estariamos cumpliendo con las primeras dos reglas de PEP8</p>
+</blockquote>
+<ul>
+<li>
+<h3><em>Respete los espacios</em></h3>
+</li>
+</ul>
+<blockquote>
+<p>Evite dejar espacios en blanco en las siguientes situaciones.</p>
+</blockquote>
+<pre class="code literal-block"><span></span>  - Dentro de paréntesis curvos, llaves, o paréntesis rectos.
+  - Antes de una coma o punto y coma.
+  - Antes del paréntesis que abre la lista de argumentos en el llamado a una función.
+  - Más de un espacio alrededor de una asignación del operador para alinearlo con otro.
+</pre>
+
+
+<ul>
+<li>
+<h3><em>79 Máxima</em></h3>
+</li>
+</ul>
+<p>A la hora de codear en Python debemos tener en cuenta el largo de las lineas ya que, como bien lo dice <a href=".">el zen de python</a>
+   la legibilidad cuenta.</p>
+<p>Y para que podamos tener codigo mas legible, PEP8 recomienda que el máximo de caracteres por linea sean 79</p>
+<ul>
+<li>
+<h3><em>KISS</em></h3>
+</li>
+</ul>
+<p>Keep it simple, <del>stupid</del> Sir.  </p>
+<blockquote>
+<p>Las sentencias compuestas (varias instrucciones en la misma línea) son generalmente tomadas como malas prácticas de programación.</p>
+</blockquote>
+<p>Aunque a veces está bien poner if/for/while con una pequeña instrucción en la misma línea, no hacer esto para las declaraciones con múltiples instrucciones.</p>
+<ul>
+<li>
+<h3><em>Usted tiene 1934 actualizaciones pendientes...</em></h3>
+</li>
+</ul>
+<p>El código debería estar comentado y que esos comentarios no contradigan lo que la función esta haciendo. 
+   El código mal comentado es peor que el que no lo está. Procuren mantener actualizado los comentarios para que cualquiera
+   que lo lea lo pueda interpretar correctamente y no tenga que adivinar que es lo que hace cada función</p>
+<p>Eso es todo por ahora, mas adelante subiré otros consejos sobre Python.</p>
+<p>Saludos!</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../creando-articulos-en-nikola/" rel="prev" title="Creando artículos en Nikola">Publicación anterior</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comentarios</h2>
+        
+        
+
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:info@bitson.com.ar">Cooperativa de Trabajo BITSON Ltda.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("es");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

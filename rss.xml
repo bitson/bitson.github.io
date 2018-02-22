@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link rel="self" href="http://blog.bitson.com.ar/rss.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Feb 2018 16:55:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link href="http://blog.bitson.com.ar/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 22 Feb 2018 03:04:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Evitando las malas prácticas en Python</title><link>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</link><dc:creator>Abrunacci</dc:creator><description>&lt;div&gt;&lt;p&gt;Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
+"leves" a nivel programación pero que a la hora de inspeccionar nuestro codigo y ver si cumple con las 
+&lt;a href="https://www.fing.edu.uy/inco/cursos/fpr/wiki/index.php/Python_PEP8"&gt;reglas PEP8&lt;/a&gt; nos encontramos con 
+la sorpresa de que dudosamente una parte del código escrito logra aprobar el "examen".&lt;/p&gt;
+&lt;p&gt;A continuación un breve listado de cosas que podés estar haciendo mal sin saber.   &lt;/p&gt;
+&lt;div class="img-with-text" style="text-align:justify; width: 720px;"&gt;
+    &lt;img src="https://static.simpsonswiki.com/images/4/46/KnifeSafetyBook.png" alt="10 'SI' y 500 'NO' de la seguridad con las navajas" style="margin:0; display:block;"&gt;
+    &lt;p&gt;&lt;code&gt;No niego ni confirmo haber escrito este post solo para utlizar esta imágen.&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;&lt;em&gt;Real programmers don't use TABs&lt;/em&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;O si, pero decidanse por uno y sigan siempre con ese. 4 espacios o TABs, pero si vamos variando las identaciones 
+   de nuestros modulos con unos y otros, no estariamos cumpliendo con las primeras dos reglas de PEP8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;&lt;em&gt;Respete los espacios&lt;/em&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Evite dejar espacios en blanco en las siguientes situaciones.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  - Dentro de paréntesis curvos, llaves, o paréntesis rectos.
+  - Antes de una coma o punto y coma.
+  - Antes del paréntesis que abre la lista de argumentos en el llamado a una función.
+  - Más de un espacio alrededor de una asignación del operador para alinearlo con otro.
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;&lt;em&gt;79 Máxima&lt;/em&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A la hora de codear en Python debemos tener en cuenta el largo de las lineas ya que, como bien lo dice &lt;a href="http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/"&gt;el zen de python&lt;/a&gt;
+   la legibilidad cuenta.&lt;/p&gt;
+&lt;p&gt;Y para que podamos tener codigo mas legible, PEP8 recomienda que el máximo de caracteres por linea sean 79&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;&lt;em&gt;KISS&lt;/em&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keep it simple, &lt;del&gt;stupid&lt;/del&gt; Sir.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Las sentencias compuestas (varias instrucciones en la misma línea) son generalmente tomadas como malas prácticas de programación.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Aunque a veces está bien poner if/for/while con una pequeña instrucción en la misma línea, no hacer esto para las declaraciones con múltiples instrucciones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;&lt;em&gt;Usted tiene 1934 actualizaciones pendientes...&lt;/em&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El código debería estar comentado y que esos comentarios no contradigan lo que la función esta haciendo. 
+   El código mal comentado es peor que el que no lo está. Procuren mantener actualizado los comentarios para que cualquiera
+   que lo lea lo pueda interpretar correctamente y no tenga que adivinar que es lo que hace cada función&lt;/p&gt;
+&lt;p&gt;Eso es todo por ahora, mas adelante subiré otros consejos sobre Python.&lt;/p&gt;
+&lt;p&gt;Saludos!&lt;/p&gt;&lt;/div&gt;</description><guid>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</guid><pubDate>Thu, 22 Feb 2018 01:57:25 GMT</pubDate></item><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
 &lt;h3&gt;Cómo crear un artículo para el blog de bitson&lt;/h3&gt;
 &lt;p&gt;Ingredientes:&lt;/p&gt;
 &lt;ul&gt;
