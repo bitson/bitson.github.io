@@ -1,135 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link rel="self" href="http://blog.bitson.com.ar/rss.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Tue, 27 Feb 2018 21:47:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Empezando con Android y React-Native</title><link>http://blog.bitson.com.ar/posts/empezando-con-android-y-react-native/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a configurar el ambiente en linux para empezar a programar aplicaciones
-en react-native para android (iOS queda fuera por razones obvias :grimacing:)&lt;/p&gt;
-&lt;h3&gt;Requisitos:&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link type="application/rss+xml" rel="self" href="http://blog.bitson.com.ar/rss.xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Mar 2018 20:31:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Empezando a usar Google AdWords</title><link>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;El día de hoy vamos a ver cómo empezar a usar &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.&lt;/p&gt;
+&lt;p&gt;Para empezar, les dejo el número de teléfono gratuito para asistencia a cuentas con inversiones de bajo monto (al día del a fecha, inversiones menores a $2500 ARS mensuales): &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0800-222-4664&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Si la inversión supera ese monto, el número entonces será:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;0800-666-1866 ó 0800-666-0668&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A continuación, el tutorial empleará el signo $ para referirse a ARS (Pesos Argentinos)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Empezando a usar Google AdWords&lt;/h3&gt;
+&lt;p&gt;Nos llegó por correo tradicional a las oficinas de Bitson, un código que otorgaba $700 de crédito en Adwords, con el único requisito de hacer un pago previo de $300. Pero como estábamos de suerte, también le llegó otro a @lecovi, donde el monto para el mismo requisito era de $175. Se pueden imaginar cuál de los dos usamos, de todas formas el camino a recorrer es exactamente igual.&lt;/p&gt;
+&lt;p&gt;El código:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AHT9T-KURGR-A9MP&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Las condiciones detalladas:&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;Internet (claramente).&lt;/li&gt;
-&lt;li&gt;Conocimientos minimos sobre variables de entorno (como setearlas).&lt;/li&gt;
-&lt;li&gt;Paciencia.&lt;/li&gt;
+&lt;li&gt;Activar o reactivar una cuenta en Google AdWords&lt;/li&gt;
+&lt;li&gt;Antes de los 14 días de dicha activación, ingresar el código en el &lt;a href="https://adwords.google.com/aw/promotions" title="Ingresar cupones de descuento"&gt;apartado correspondiente&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Usar $175 en publicidad&lt;/li&gt;
+&lt;li&gt;Abonar esos $175 a través de Banelco, PagoMisCuentas, tarjeta de débito o crédito (&lt;a href="https://billing.google.com/payments/u/0/paymentsinfofinder" title="Información de &amp;gt;pago"&gt;https://billing.google.com/payments/u/0/paymentsinfofinder&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Esperar 5 días hábiles hasta que se acredite el beneficio, del cual cabe destacar, que el sistema no dará aviso.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;1: Instalar Java&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Abrimos la terminal e instalamos java (version 8).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get update
-sudo apt-get install openjdk-8-jdk
-&lt;/pre&gt;
-
-
-&lt;p&gt;Una vez finalizado de instalar ejecutamos&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;java -version&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Para ver si instalo correctamente y deberiamos ver algo similar a esto&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;openjdk version "1.8.0_151"
-OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-1~deb9u1-b12)
-OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
-&lt;/pre&gt;
-
-
-&lt;h3&gt;2: Descargar e Instalar Android Studio&lt;/h3&gt;
-&lt;p&gt;Paso simple vamos a este &lt;a href="https://developer.android.com/studio/index.html?hl=es-419"&gt;link&lt;/a&gt; y descargamos
-Android Studio (for linux).
-Una vez que lo bajamos, extraemos la carpeta en &lt;code&gt;/opt/&lt;/code&gt; y dentro de la carpeta &lt;code&gt;android-studio&lt;/code&gt; ejecutamos el archivo &lt;code&gt;studio.sh&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Seleccionar la opcion que queramos si queremos importar configuraciones de instalaciones previas de Android Studio o no, click en OK.&lt;/p&gt;
-&lt;p&gt;Aca es donde deciamos que habia que tener paciencia, el wizard de instalacion de Android Studio te va a guiar el resto del proceso, el cual incluye la descarga del SDK (Software Development Kit), componentes que son necesarios para el desarrollo de apps. Parece que se va a trabar pero simplemente hay que esperar a que baje todos los archivos, va a depender mucho de tu velocidad de internet.&lt;/p&gt;
-&lt;h3&gt;2.1: Librerias para PCs de 64-bit&lt;/h3&gt;
-&lt;p&gt;Si tenes una pc con un SO de 64-bits tenes que instalarte estas librerias para poder trabajar.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-&lt;/pre&gt;
-
-
-&lt;h3&gt;3: Descarga version de SDK en AS&lt;/h3&gt;
-&lt;p&gt;Abrimos el android studio, creamos un proyecto (esto es obligatorio, pero no le den demasiada importancia no vamos a usarlo). Dejamos trabajar al IDE y en la consola vemos que nos va a pedir de updatar &lt;code&gt;gradle&lt;/code&gt;, hacemos click e instalamos. Una vez terminado de instalar, vamos a &lt;code&gt;Tools &amp;gt; Android &amp;gt; SDK Manager&lt;/code&gt; ahi vamos a seleccionar la version de Android con la que queremos trabajar (yo elijo la version 6 uds pueden elegir la que quieran). Despues vamos a la tab &lt;code&gt;SDK Tools&lt;/code&gt; y nos fijamos que esten chequeadas las opciones &lt;code&gt;Android SDK Tools&lt;/code&gt; y &lt;code&gt;Android SDK Platform-Tools&lt;/code&gt; de no estarlas las chequeamos, e instalamos ambas o la que falte.&lt;/p&gt;
-&lt;h3&gt;4: Variables de entorno&lt;/h3&gt;
-&lt;p&gt;Vamos a setear las variables de entorno para "decirle" al sistema donde ir a buscar las SDK-Tools.
-Abrimos la terminal y escribimos:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-&lt;/pre&gt;
-
-
-&lt;p&gt;Si queres que queden fijas en la terminal modifica tu archivo &lt;code&gt;~/.bashrc&lt;/code&gt; agregando esas 3 lineas al final y reiniciando la consola.
-Para testear si expusimos bien las variables en una terminal ejecutamos el comando&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;adb --version&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;El comando adb es una herramienta dentro de los SDK-Tools simplemente vamos a ver si encuentra ese archivo pidiendole la version, la salida deberia verse parecida a esta:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Android Debug Bridge version 1.0.39
-Version 0.0.1-4500957
-Installed as /home/{USER}/Android/Sdk/platform-tools/adb
-&lt;/pre&gt;
-
-
-&lt;h3&gt;5: Android Virtual Device Manager&lt;/h3&gt;
-&lt;p&gt;El Android Studio cuenta con un emulador de android que podemos ejecutar en la PC, muy util para desarrollar y debuguear. Dentro del AS vamos a &lt;code&gt;Tools &amp;gt; Android &amp;gt; AVD Manager&lt;/code&gt; y cliqueamos &lt;code&gt;Create Virtual Device&lt;/code&gt; esto va a crear un nuevo emulador, seleccionan el tipo de dispositivo que quieren, la version de Android (instalada previamente en el paso 3). Una vez creada van a ver en la lista de dispositivos que se encuentra el suyo y a la derecha dentro de la columna &lt;code&gt;Actions&lt;/code&gt; hay un boton de play que les permite ejecutarla.&lt;/p&gt;
-&lt;h3&gt;5.1: Detalle sobre AVD&lt;/h3&gt;
-&lt;p&gt;El emulador consume mucha RAM, lo cual va a ser que se realentice el proceso de buildear y de ejecutar la aplicacion, tambien presenta problemas en placas de video. Por ejemplo yo tengo una placa nVidia y para poder correr el AVD en mi maquina tuve que instalarme los drivers de linux de lo contrario el emulador abria y cerraba automaticamente. Les dejo el &lt;a href="https://wiki.debian.org/es/NvidiaGraphicsDrivers"&gt;link&lt;/a&gt; para instalar los drivers de nVidia en debian, para los drivers de otras placas de video consulten con nuestro buen amigo google.&lt;/p&gt;
-&lt;h3&gt;6: Node.js &amp;amp; npm&lt;/h3&gt;
-&lt;p&gt;Ya tenemos instalado y corriendo nuestro emulador de android en nuestra pc ahora bien la pregunta del millon...Como arrancamos a programar?
-Simple, tenemos que bajarnos (para variar) &lt;code&gt;nodejs&lt;/code&gt; y &lt;code&gt;npm&lt;/code&gt;, son programas que nos van a permitir compilar nuestro codigo en JS y ejecutarlo como si fuera nativo, manos a la obra!
-Para node vamos a la terminal de linux y ejecutamos:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-sudo apt-get install -y nodejs
-&lt;/pre&gt;
-
-
-&lt;p&gt;Eso basta para tener &lt;code&gt;node&lt;/code&gt; y &lt;code&gt;npm&lt;/code&gt; (node package manager) instalados en tu PC, para comprobarlo hacemos
-&lt;code&gt;node -v &amp;amp;&amp;amp; npm -v&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;La salida deberia ser similar a:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;v6.13.0
-3.10.10
-&lt;/pre&gt;
-
-
-&lt;h3&gt;7: create-react-native-app&lt;/h3&gt;
-&lt;p&gt;Muy bien, continuando con nuestro brevisimo post, en la terminal hacemos un &lt;code&gt;sudo npm i -g create-react-native-app&lt;/code&gt; lo cual va a instalar un paquete de node de forma global (por eso sudo y por eso -g), para facilitarnos la creacion desde 0 de un proyecto en react native, dejo el &lt;a href="https://github.com/react-community/create-react-native-app"&gt;link&lt;/a&gt; para que puedan ver el readme e interiorizarse mas si quieren.&lt;/p&gt;
-&lt;h3&gt;8: Ejecucion&lt;/h3&gt;
-&lt;p&gt;Una vez instalado el paquete vamos al destino donde querramos instalar el proyecto y en una terminal hacemos &lt;code&gt;create-react-native-app rn-app&lt;/code&gt; eso nos va a crear una app llamada rn-app (uds le pueden poner el nombre que quieran). Va a tardar un rato (otra vez), pero una vez que termine ya estamos listos para trabajar. Entramos a la carpeta &lt;code&gt;cd rn-app&lt;/code&gt; y ejecutamos &lt;code&gt;npm start&lt;/code&gt; en una consola y en otra &lt;code&gt;npm run android&lt;/code&gt; si tenemos el emulador abierto la aplicacion se va a ejecutar en el mismo, sino va a fallar y salir.&lt;/p&gt;
-&lt;h3&gt;8.1: Ejecucion en dispositivo&lt;/h3&gt;
-&lt;p&gt;Para este paso vamos a necesitar un cable usb y un celular (con android obviamente).
-Vamos a habilitar el debug con USB en el celular, para eso hay que tener las opciones de desarrollador activadas, eso lo hacemos yendo a &lt;code&gt;Configuracion &amp;gt; Acerca de&lt;/code&gt; y cliqueamos el numero de build 7 veces, despues volvemos a configuracion y vamos a tener las &lt;code&gt;Opciones de Desarrollador&lt;/code&gt;, entramos y habilitamos el "Debug por USB".&lt;/p&gt;
-&lt;p&gt;Enchufamos el celular a la computadora y seleccionamos la opcion de transferir fotos via PTP.&lt;/p&gt;
-&lt;p&gt;En la terminal ejecutamos &lt;code&gt;lsusb&lt;/code&gt; y obtenemos algo similar a esto:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Bus 002 Device 007: ID 1004:631d LG Electronics, Inc. Optimus Android Phone (Camera/PTP Mode)
-Bus 002 Device 003: ID 1a81:1006 Holtek Semiconductor, Inc.
-Bus 002 Device 002: ID 8087:0020 Intel Corp. Integrated Rate Matching Hub
-Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 001 Device 003: ID 04f2:b1d6 Chicony Electronics Co., Ltd CNF9055 Toshiba Webcam
-Bus 001 Device 002: ID 8087:0020 Intel Corp. Integrated Rate Matching Hub
-Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-&lt;/pre&gt;
-
-
-&lt;p&gt;Esta claro que mi celular es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ID 1004:631d LG Electronics, Inc. Optimus Android Phone (Camera/PTP Mode)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;De la linea de arriba agarramos los primeros 4 digitos del dispositivo:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;1004:631d&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En este caso &lt;code&gt;1004&lt;/code&gt; es el identificador para LG.&lt;/p&gt;
-&lt;p&gt;Ingresamos lo siguiente en la consola:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;echo SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0666", GROUP="plugdev" | sudo tee /etc/udev/rules.d/51-android-usb.rules
-&lt;/pre&gt;
-
-
-&lt;p&gt;Por ultimo hacemos un check para ver si el adb lo detecta en la consola:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;adb devices&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Y deberiamos ver algo similar (depende del dispositivo que tengan)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;List of devices attached
-LGD62093133844  device
-&lt;/pre&gt;
-
-
-&lt;p&gt;Ahora puden hacer en la carpeta de su &lt;code&gt;rn-app&lt;/code&gt; &lt;code&gt;npm run android&lt;/code&gt; y la aplicacion se va a abrir en su celular. COPADO!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AdWords tampoco emitirá ninguna clase de aviso cuando se acabe el crédito promocional, es necesario revisar periódicamente la cuenta para no generar deudas indeseables.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;También es posible que ingresemos a un nuevo programa llamado AdWords Express. Tiene las mismas funciones y costos que AdWords tradicional, pero la interfaz gráfica es muchísimo más sencilla. ¡Altamente recomendado para principiantes!&lt;/p&gt;
 &lt;hr&gt;
-
-&lt;p&gt;Gracias por leer, cualquier consulta la pueden dejar escrita en el blog y la contestamos.&lt;/p&gt;
-&lt;p&gt;Saludos,&lt;/p&gt;
-&lt;p&gt;D.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;hr&gt;
-Fuentes y ayudas:
+&lt;h3&gt;Configuración de la primer campaña en Google AdWords Express&lt;/h3&gt;
+&lt;p&gt;Estos son los datos que nos fueron requeridos. Es bastante intuitivo, y algunos no requieren explicación adicional...&lt;/p&gt;
+&lt;p&gt;Sitio a difundir: &lt;br&gt;
+(La &lt;a href="https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme" title="Significado de URL..."&gt;URL&lt;/a&gt; del sitio que queremos promocionar) &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://bitson.group/cursos/" title="Cursos de bitson"&gt;https://bitson.group/cursos/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Objetivo: &lt;br&gt;
+(Qué es lo que esperamos que pase en nuestro sitio)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Acción en el sitio web (registro en el formulario)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Radio de acción:&lt;br&gt;
+(¿Dónde queremos que se muestre nuestro anuncio?)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mostrar el anuncio en un radio de 15km desde la empresa&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para esto, se puede definir una dirección específica o vincular directamente con &lt;a href="https://www.google.es/intl/es/business/" title="Google My Business"&gt;Google My Business&lt;/a&gt;, que tomará la dirección automáticamente.
+En base a esta configuración, AdWords nos presenta la siguiente estimación:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El tamaño de la audiencia potencial, será entonces de 18.424.498 personas por mes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Esto significa que se prevé que 18 millones de personas verán el anuncio. ¿Y tenemos que pagar por todo esto? Por supuesto que no, sólo pagaremos por cada click. A este costo se lo define como &lt;a href="https://support.google.com/adwords/answer/116495" title="Costo por click"&gt;CPC&lt;/a&gt; (Costo por click o Cost per click). Este valor está determinado por el ranking de nuestro anuncio y la oferta para el mismo tipo de anuncio en la misma región. En definitiva, este valor lo va a definir Google, y no podemos tomar control sobre eso, pero sí podemos limitar cuánto estamos dispuestos a pagar por ese click. En función de ese límite, se establecerá este ranking, lo que definirá en qué orden será mostrado en el navegador junto a las publicidades de la competencia. A todo este proceso complejo se lo llama subasta. Cuando muchos anunciantes compiten por la misma aparición de publicidad, AdWords seleccionará y mostrará únicamente a los anuncios de mayor ranking.&lt;/p&gt;
+&lt;p&gt;En adelante, para acceder al panel de control, podemos hacerlo a través de &lt;a href="https://adwords.google.com/express/plus/" title="Panel de Control de Google AdWords Express"&gt;https://adwords.google.com/express/plus/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Definiendo el producto&lt;/h2&gt;
+&lt;p&gt;Se promociona: &lt;br&gt;
+(¿Qué clase de producto o servicio estamos ofreciendo?)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Curso de programación&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mostrar anuncio a personas que busquen:&lt;br&gt;
+(Listado de categorías relativas a nuestro producto o servicio)&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://source.android.com/setup/initializing"&gt;Establishing a build enviorment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://developer.android.com/studio/install.html"&gt;Install android studio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://stackoverflow.com/questions/26256279/how-to-set-android-home-path-in-ubuntu-please-provide-the-steps"&gt;Este link de stackoferflow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://nodejs.org/es/download/package-manager/#distribuciones-de-linux-basadas-en-debian-y-ubuntu"&gt;Instalar node&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>http://blog.bitson.com.ar/posts/empezando-con-android-y-react-native/</guid><pubDate>Tue, 27 Feb 2018 21:43:18 GMT</pubDate></item><item><title>Evitando las malas prácticas en Python</title><link>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</link><dc:creator>Abrunacci</dc:creator><description>&lt;div&gt;&lt;p&gt;Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
+&lt;li&gt;Curso de Programación&lt;/li&gt;
+&lt;li&gt;Introducción a la programación web&lt;/li&gt;
+&lt;li&gt;Informática y Programación&lt;/li&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Gracias a la información brindada, Google AdWords filtrará a los destinatarios de nuestro anuncio, de manera de no desperdiciar clicks (que paguemos por aquellas personas curiosas que entran sólo para ver qué es) y para no llenar las búsquedas de Google con publicidad no relevante para quien esté navegando.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El tamaño de la audiencia potencial, será entonces de 11.516 personas por mes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Diseño del anuncio:&lt;br&gt;
+(Dentro del formato ofrecido por AdWords, contamos con 3 renglones para atraer a nuestros clientes hacia nuestro sitio)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Aprendé Python en bitson - Sumate a los que saben
+Anuncio bitson.group
+Aprovechá el año y arrancá en Febrero! Precio promocional&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lo que nos da como resultado:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitson.group/cursos" title="Cursos en bitson"&gt;&lt;img alt="adwords curso bitson python" src="http://blog.bitson.group/assets/img/posts/adwords.png" title="Anuncio de Curso de Python en bitson"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;¿Cuanto vamos a invertir?&lt;/h2&gt;
+&lt;p&gt;Como primera prueba, decidimos invertir lo mínimo requerido para acceder a la asistencia telefónica, $2500 ARS mensuales. Por menos de ese valor la ayuda que recibís por teléfono es mínima, por el contrario, a partir de ese valor de inversión la asistencia es muy completa y por demás, agradable.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Inversión $82,24 ARS$ al día de media ($2500 al meś de máximo)
+Rendimiento estimado: 996 - 1669 visualizaciones, 244 - 409 clics&lt;/p&gt;
+&lt;p&gt;Cuándo pagas
+Solo pagarás cuando alguien haga clic en tu anuncio o llame a tu empresa.&lt;/p&gt;
+&lt;p&gt;Cuánto cuesta
+Cada clic tiene un coste distinto, pero no gastarás más del presupuesto mensual que hayas establecido.&lt;/p&gt;
+&lt;p&gt;Qué ocurre si cambias de idea
+Prueba a publicar el anuncio sin compromiso, ya que puedes cambiar el presupuesto o cancelar su publicación en cualquier momento.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para facilitar los pagos, dejé registrada una tarjeta de crédito, de manera que los pagos se hagan en forma automática. También es posible entrar a la sección de Facturación y emitir los pagos manualmente.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Les recomendamos aumentar el seguimiento sobre nuestra publicación, conectando nuestro sitio con &lt;a href="https://www.google.com/analytics/" title="Google Analytics"&gt;Google Analytics&lt;/a&gt;, usando el tag que ofrece Adwords Express.&lt;/p&gt;
+&lt;h2&gt;¿Cómo hacer para recibir el dinero promocional?&lt;/h2&gt;
+&lt;p&gt;En nuestro caso, pasadas las 48hs de haber el pago mínimo requerido para la activación del cupón promocional ($175 ARS), nos apareció el crédito de $700 ARS en nuestra cuenta. &lt;/p&gt;
+&lt;p&gt;¡OJO! Uno debe ser responsable a la hora de armar las campañas. Lo mejor es darles una fecha de comienzo y una de finalización, contemplando el costo diario, de manera que sepamos de antemano cuánto dinero estamos dispuestos a invertir en publicidad. Para Google AdWords, es suficiente con que hayan hecho click en nuestro anuncio para cargarlo en nuestra cuenta. ¿Es confiable? Podríamos decir que sí. El mismo AdWords te ofrece la posibilidad de analizar desde donde viene el tráfico, y armar estadísticas basado en distintos paramétros. Hay mucho para investigar al respecto, y muchas consideraciones a la hora de armar una campaña.&lt;/p&gt;
+&lt;p&gt;Así fue que dimos nuestro primer curso en &lt;a href="https://bitson.group" title="bitson"&gt;bitson&lt;/a&gt;, y que lo publicitamos a través de &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>adwords</category><category>comunicacion</category><category>google</category><guid>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords/</guid><pubDate>Thu, 01 Mar 2018 17:24:36 GMT</pubDate></item><item><title>Evitando las malas prácticas en Python</title><link>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</link><dc:creator>Abrunacci</dc:creator><description>&lt;div&gt;&lt;p&gt;Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
 "leves" a nivel programación pero que a la hora de inspeccionar nuestro código y ver si cumple con las 
 &lt;a href="https://www.fing.edu.uy/inco/cursos/fpr/wiki/index.php/Python_PEP8"&gt;reglas PEP8&lt;/a&gt; nos encontramos con 
 la sorpresa de que dudosamente una parte del código escrito logra aprobar el "examen".&lt;/p&gt;
