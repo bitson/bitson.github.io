@@ -99,7 +99,7 @@ Lo que nos da como resultado:<br /><br />
 
 [![adwords curso bitson python][adwords-cursos-bitson]](https://bitson.group/cursos "Cursos en bitson")
 
-[adwords-cursos-bitson]: http://blog.bitson.group/assets/img/posts/adwords.png "Anuncio de Curso de Python en bitson"
+[adwords-cursos-bitson]: /img/adwords.png "Anuncio de Curso de Python en bitson"
 
 
 ------------------------
