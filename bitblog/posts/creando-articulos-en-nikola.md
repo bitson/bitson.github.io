@@ -243,8 +243,6 @@ Una vez que tengamos esta declaración (que no generará nada por pantalla) podr
 __\!\[description alt imagen asistencia discapacidad visual yapa optimiza seo][identificador-del-recurso-de-imagen]__
 
 
-Notarán
-
 ---
 
 # Aplicando los cambios
