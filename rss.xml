@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link type="application/rss+xml" href="http://blog.bitson.com.ar/rss.xml" rel="self"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Fri, 02 Mar 2018 18:04:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Empezando a usar Google AdWords</title><link>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;El día de hoy vamos a ver cómo empezar a usar &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link href="http://blog.bitson.com.ar/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Fri, 02 Mar 2018 19:05:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Empezando a usar Google AdWords</title><link>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;El día de hoy vamos a ver cómo empezar a usar &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.&lt;/p&gt;
 &lt;p&gt;Para empezar, les dejo el número de teléfono gratuito para asistencia a cuentas con inversiones de bajo monto (al día del a fecha, inversiones menores a $2500 ARS mensuales): &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;0800-222-4664&lt;/p&gt;
@@ -168,7 +168,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 &lt;li&gt;&lt;a href="https://github.com/pypa/pipenv" title="Repositorio de pipenv"&gt;pipenv&lt;/a&gt; (Para más información ver la guía &lt;a href="http://blog.bitson.group/posts/empezando-con-pipenv/" title="Empezando con pipenv"&gt;Empezando con pipenv&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://pages.github.com/" title="Páginas de GitHub"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown"&gt;Markdown&lt;/a&gt; como lenguaje de marcado &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://getnikola.com/" title="Sitio oficial de Nikola"&gt;&lt;img alt="nikola logo" src="https://getnikola.com/assets/img/logo.png" title="Logo de Nikola"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://getnikola.com/" title="Sitio oficial de Nikola"&gt;&lt;img alt="nikola logo" src="http://blog.bitson.com.ar/img/logo_nikola.png" title="Logo de Nikola"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sin más preámbulo, dejo la receta a continuación... &lt;/p&gt;
 &lt;h2&gt;Configurando el entorno pipenv&lt;/h2&gt;
@@ -277,6 +277,40 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 &lt;p&gt;De acá en adelante es fácil. Escribimos la entrada y guardamos el archivo. &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt; INFO: auto: Watching files for changes...&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Nikola nos informa que cada vez que el contenido se modifique, el servidor local intentará reiniciar, reflejando los cambios en el navegador.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Símbolos básicos del markdown&lt;/h2&gt;
+&lt;p&gt;Les dejo una síntesis de los elementos de markdown usados para la creación de esta nota:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;_Este renglón fue escrito envuelto entre dos guiones bajos seguidos&lt;/em&gt;&lt;/strong&gt;_ &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; Este renglón comienza con cuatro símbolos de mayor (&amp;gt;&amp;gt;&amp;gt;&amp;gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;# Este título empieza con almohadilla (hasthag, símbolo de numeral, ta-te-tí...)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Este renglón está en cursiva&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="explicacion grafica recursiva" src="http://blog.bitson.com.ar/img/explicacion_grafica_recursiva.png" title="Explicación gráfica recursiva"&gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt; # __no tan importante__ ![recurso] Nosotros somos símbolos libres (estamos escapados)&lt;/p&gt;
+&lt;p&gt;Este separador de línea de acá abajo se hace poniendo tres guiones seguidos (---)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Insertando imágenes&lt;/h2&gt;
+&lt;p&gt;Para agregar imágenes a nuestra publicación podemos hacerlo a través de su URL accesible desde internet o bien copiando la imagen a la carpeta:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;bitblog/files/img/ejemplo.png&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;De esta manera podremos declararla usando el siguiente formato: &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[identificador-del-recurso-de-imagen]: /img/ejemplo.png "Título de la imagen"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Esto es, el identificador de la imagen entre corchetes, seguido de dos puntos, la URL de la imagen (que en este caso empieza con / porque saldrá
+ de la carpeta files/img/ previamente cargada en nuestro repositorio de GitHub Pages) y entre comillas el título de la imagen, el que aparecerá 
+al posicionar el cursor del mouse sobre la misma. &lt;/p&gt;
+&lt;p&gt;Una vez que tengamos esta declaración (que no generará nada por pantalla) podremos insertar la imagen cuantas veces queramos, con un ! seguido de
+ las palabras alternativas entre corchetes, y pegado al identificador de la imagen entre corchetes, como muestra la siguiente línea:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;![description alt imagen asistencia discapacidad visual yapa optimiza seo][identificador-del-recurso-de-imagen]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Notarán&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2&gt;Aplicando los cambios&lt;/h2&gt;
 &lt;p&gt;Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:&lt;/p&gt;
 &lt;h2&gt;pipenv run nikola github_deploy&lt;/h2&gt;

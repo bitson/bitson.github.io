@@ -282,7 +282,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 <li><a href="https://pages.github.com/" title="Páginas de GitHub">GitHub Pages</a></li>
 <li>
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown">Markdown</a> como lenguaje de marcado </li>
-<li><a href="https://getnikola.com/" title="Sitio oficial de Nikola"><img alt="nikola logo" src="https://getnikola.com/assets/img/logo.png" title="Logo de Nikola"></a></li>
+<li><a href="https://getnikola.com/" title="Sitio oficial de Nikola"><img alt="nikola logo" src="img/logo_nikola.png" title="Logo de Nikola"></a></li>
 </ul>
 <p>Sin más preámbulo, dejo la receta a continuación... </p>
 <h2>Configurando el entorno pipenv</h2>
@@ -391,6 +391,40 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 <p>De acá en adelante es fácil. Escribimos la entrada y guardamos el archivo. </p>
 <p><strong> INFO: auto: Watching files for changes...</strong></p>
 <p>Nikola nos informa que cada vez que el contenido se modifique, el servidor local intentará reiniciar, reflejando los cambios en el navegador.</p>
+<hr>
+<h2>Símbolos básicos del markdown</h2>
+<p>Les dejo una síntesis de los elementos de markdown usados para la creación de esta nota:</p>
+<p><strong><em>_Este renglón fue escrito envuelto entre dos guiones bajos seguidos</em></strong>_ </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>&gt;&gt;&gt;&gt; Este renglón comienza con cuatro símbolos de mayor (&gt;&gt;&gt;&gt;)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2># Este título empieza con almohadilla (hasthag, símbolo de numeral, ta-te-tí...)</h2>
+<p><em>Este renglón está en cursiva</em></p>
+<p><img alt="explicacion grafica recursiva" src="img/explicacion_grafica_recursiva.png" title="Explicación gráfica recursiva"></p>
+<p>&gt; # __no tan importante__ ![recurso] Nosotros somos símbolos libres (estamos escapados)</p>
+<p>Este separador de línea de acá abajo se hace poniendo tres guiones seguidos (---)</p>
+<hr>
+<h2>Insertando imágenes</h2>
+<p>Para agregar imágenes a nuestra publicación podemos hacerlo a través de su URL accesible desde internet o bien copiando la imagen a la carpeta:</p>
+<blockquote>
+<p>bitblog/files/img/ejemplo.png</p>
+</blockquote>
+<p>De esta manera podremos declararla usando el siguiente formato: </p>
+<p><strong>[identificador-del-recurso-de-imagen]: /img/ejemplo.png "Título de la imagen"</strong></p>
+<p>Esto es, el identificador de la imagen entre corchetes, seguido de dos puntos, la URL de la imagen (que en este caso empieza con / porque saldrá
+ de la carpeta files/img/ previamente cargada en nuestro repositorio de GitHub Pages) y entre comillas el título de la imagen, el que aparecerá 
+al posicionar el cursor del mouse sobre la misma. </p>
+<p>Una vez que tengamos esta declaración (que no generará nada por pantalla) podremos insertar la imagen cuantas veces queramos, con un ! seguido de
+ las palabras alternativas entre corchetes, y pegado al identificador de la imagen entre corchetes, como muestra la siguiente línea:</p>
+<p><strong>![description alt imagen asistencia discapacidad visual yapa optimiza seo][identificador-del-recurso-de-imagen]</strong></p>
+<p>Notarán</p>
+<hr>
 <h2>Aplicando los cambios</h2>
 <p>Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:</p>
 <h2>pipenv run nikola github_deploy</h2>
