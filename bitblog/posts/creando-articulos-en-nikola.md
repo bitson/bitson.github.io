@@ -15,7 +15,7 @@ Hoy les presentamos nuestro primer post recursivo.
 ## Cómo crear un artículo para el blog de bitson
 
 
-[logo-nikola]: https://getnikola.com/assets/img/logo.png "Logo de Nikola"
+[logo-nikola]: /img/logo_nikola.png "Logo de Nikola"
 
 Ingredientes:
 
@@ -202,6 +202,50 @@ De acá en adelante es fácil. Escribimos la entrada y guardamos el archivo.
 __ INFO: auto: Watching files for changes...__
 
 Nikola nos informa que cada vez que el contenido se modifique, el servidor local intentará reiniciar, reflejando los cambios en el navegador.
+
+--- 
+
+# Símbolos básicos del markdown
+
+Les dejo una síntesis de los elementos de markdown usados para la creación de esta nota:
+
+____Este renglón fue escrito envuelto entre dos guiones bajos seguidos____ 
+>>>> \>\>\>\> Este renglón comienza con cuatro símbolos de mayor (>>>>)
+# # Este título empieza con almohadilla (hasthag, símbolo de numeral, ta-te-tí...)
+*Este renglón está en cursiva*
+[explicacion-grafica-recursiva]: /img/explicacion_grafica_recursiva.png "Explicación gráfica recursiva"
+![explicacion grafica recursiva][explicacion-grafica-recursiva]
+
+\> \# \__no tan importante__ \!\[recurso] Nosotros somos símbolos libres (estamos escapados)
+
+Este separador de línea de acá abajo se hace poniendo tres guiones seguidos (---)
+
+---
+
+
+# Insertando imágenes
+
+Para agregar imágenes a nuestra publicación podemos hacerlo a través de su URL accesible desde internet o bien copiando la imagen a la carpeta:
+
+> bitblog/files/img/ejemplo.png
+
+De esta manera podremos declararla usando el siguiente formato: 
+
+__\[identificador-del-recurso-de-imagen]: /img/ejemplo.png "Título de la imagen"__
+
+Esto es, el identificador de la imagen entre corchetes, seguido de dos puntos, la URL de la imagen (que en este caso empieza con / porque saldrá
+ de la carpeta files/img/ previamente cargada en nuestro repositorio de GitHub Pages) y entre comillas el título de la imagen, el que aparecerá 
+al posicionar el cursor del mouse sobre la misma. 
+
+Una vez que tengamos esta declaración (que no generará nada por pantalla) podremos insertar la imagen cuantas veces queramos, con un ! seguido de
+ las palabras alternativas entre corchetes, y pegado al identificador de la imagen entre corchetes, como muestra la siguiente línea:
+
+__\!\[description alt imagen asistencia discapacidad visual yapa optimiza seo][identificador-del-recurso-de-imagen]__
+
+
+Notarán
+
+---
 
 # Aplicando los cambios
 
