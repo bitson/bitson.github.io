@@ -1,16 +1,16 @@
 <!--
-.. title: Empezando a usar Google AdWords
-.. slug: empezando-a-usar-google-adwords
+.. title: Empezando a usar Google AdWords Express
+.. slug: empezando-a-usar-google-adwords-express
 .. date: 2018-03-01 14:24:36 UTC-03:00
-.. tags: adwords, google, comunicacion, seo
+.. tags: adwordsexpress, google, comunicacion, sem, publicidad, marketing
 .. category: comunicacion
 .. link: 
-.. description: Empezando a usar Google AdWords para nuestras campañas
+.. description: Empezando a usar Google AdWords Express para nuestras campañas
 .. type: text
 .. author: @nespino
 -->
 
-El día de hoy vamos a ver cómo empezar a usar [Google AdWords](https://adwords.google.com/ "Google AdWords"), aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.
+El día de hoy vamos a ver cómo empezar a usar [Google AdWords Express](https://adwords.google.com/express "Google AdWords Express"), aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.
 
 Para empezar, les dejo el número de teléfono gratuito para asistencia a cuentas con inversiones de bajo monto (al día del a fecha, inversiones menores a $2500 ARS mensuales): 
 
@@ -23,7 +23,7 @@ Si la inversión supera ese monto, el número entonces será:
 __A continuación, el tutorial empleará el signo $ para referirse a ARS (Pesos Argentinos)__
 
 
-## Empezando a usar Google AdWords
+## Empezando a usar Google AdWords Express
 
 Nos llegó por correo tradicional a las oficinas de Bitson, un código que otorgaba $700 de crédito en Adwords, con el único requisito de hacer un pago previo de $300. Pero como estábamos de suerte, también le llegó otro a @lecovi, donde el monto para el mismo requisito era de $175. Se pueden imaginar cuál de los dos usamos, de todas formas el camino a recorrer es exactamente igual.
 
@@ -109,15 +109,22 @@ Lo que nos da como resultado:<br /><br />
 Como primera prueba, decidimos invertir lo mínimo requerido para acceder a la asistencia telefónica, $2500 ARS mensuales. Por menos de ese valor la ayuda que recibís por teléfono es mínima, por el contrario, a partir de ese valor de inversión la asistencia es muy completa y por demás, agradable.
 
 > Inversión $82,24 ARS$ al día de media ($2500 al meś de máximo)
+
 > Rendimiento estimado: 996 - 1669 visualizaciones, 244 - 409 clics
-> 
+
+> <br />
 > Cuándo pagas
+
 > Solo pagarás cuando alguien haga clic en tu anuncio o llame a tu empresa.
- 
+
+> <br />
 > Cuánto cuesta
+
 > Cada clic tiene un coste distinto, pero no gastarás más del presupuesto mensual que hayas establecido.
  
+><br />
 > Qué ocurre si cambias de idea
+
 > Prueba a publicar el anuncio sin compromiso, ya que puedes cambiar el presupuesto o cancelar su publicación en cualquier momento.
 
 
