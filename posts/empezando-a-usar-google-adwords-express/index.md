@@ -132,7 +132,7 @@ Para facilitar los pagos, dejé registrada una tarjeta de crédito, de manera qu
 
 ---------------------
 
-Les recomendamos aumentar el seguimiento sobre nuestra publicación, conectando nuestro sitio con [Google Analytics](https://www.google.com/analytics/ "Google Analytics"), usando el tag que ofrece Adwords Express. Para una mejor medición de nuestro sitio les recomedamos utilizar el [Píxel de seguimiento](https://developers.google.com/analytics/resources/concepts/gaConceptsTrackingOverview?hl=es-419 "Píxel de seguimiento").
+Les recomendamos aumentar el seguimiento sobre nuestra publicación, conectando nuestro sitio con [Google Analytics](https://www.google.com/analytics/ "Google Analytics"), usando el tag que ofrece Adwords Express. Para una mejor medición de nuestro sitio les recomendamos utilizar el [Píxel de seguimiento](https://developers.google.com/analytics/resources/concepts/gaConceptsTrackingOverview?hl=es-419 "Píxel de seguimiento").
 
 # ¿Cómo hacer para recibir el dinero promocional?
 
