@@ -19,11 +19,15 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/authors/nespino.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/adwords.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/adwordsexpress.xml</loc>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/alias.xml</loc>
@@ -35,7 +39,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/cat_comunicacion.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/cat_dev-python.xml</loc>
@@ -51,7 +55,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/comunicacion.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/deploy.xml</loc>
@@ -67,7 +71,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/google.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/marketing.xml</loc>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/categories/nginx.xml</loc>
@@ -78,19 +86,27 @@
   <lastmod>2018-03-02T19:35:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/publicidad.xml</loc>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv.xml</loc>
   <lastmod>2018-02-19T15:51:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://blog.bitson.com.ar/categories/sem.xml</loc>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://blog.bitson.com.ar/categories/seo.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/rss.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.com.ar/sitemap.xml</loc>
-  <lastmod>2018-03-05T03:25:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </sitemap>
 </sitemapindex>
