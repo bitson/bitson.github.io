@@ -2,7 +2,7 @@
 .. title: Empezando a usar Google AdWords
 .. slug: empezando-a-usar-google-adwords
 .. date: 2018-03-01 14:24:36 UTC-03:00
-.. tags: adwords, google, comunicacion
+.. tags: adwords, google, comunicacion, seo
 .. category: comunicacion
 .. link: 
 .. description: Empezando a usar Google AdWords para nuestras campañas
