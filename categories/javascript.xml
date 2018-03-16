@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>BITSON's Blog (Publicaciones sobre javascript)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://blog.bitson.com.ar/categories/javascript.xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Mar 2018 17:18:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Debugueando react-native en Android</title><link>http://blog.bitson.com.ar/posts/debugueando-react-native-en-android/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a mostrar herramientas para debuguear la aplicacion que estemos desarrollando en react-native, igual que en mi post anterior voy a mostrar como hacerlo en linux.&lt;/p&gt;
+&lt;h3&gt;Requisitos&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Internet (claramente).&lt;/li&gt;
+&lt;li&gt;Tener una aplicacion en react-native (de ser posible la del post anterior, paso el &lt;a href="http://blog.bitson.group/posts/empezando-con-android-y-react-native/"&gt;link&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Paciencia.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Manos a la obra&lt;/h3&gt;
+&lt;p&gt;Abrimos el Android Studio, vamos a &lt;code&gt;tools &amp;gt; AVD Manager&lt;/code&gt; y corremos un emulador de Android.&lt;/p&gt;
+&lt;p&gt;Una vez que tengamos el emulador corriendo abrimos en una terminal el directorio donde tengamos nuestra app. En este caso seguimos usando la &lt;code&gt;rn-app&lt;/code&gt; que hicimos el post anterior. Una vez en el directorio ejecutamos &lt;code&gt;npm run android&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez que la aplicacion se haya abierto en el emulador hacemos &lt;code&gt;ctrl + m&lt;/code&gt; eso va a abrir una serie de opciones, ya iremos explicando una por una (aunque hayan opciones bastante obvias). Hacemos click en &lt;code&gt;Debug JS Remotely&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Eso lo que va hacer es abrirnos una tab en chrome/firefox con una texto parecido a este:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;React Native JS code runs as a web worker inside this tab.
+
+Press Ctrl⇧J to open Developer Tools. Enable Pause On Caught Exceptions for a better debugging experience.
+
+You may also install the standalone version of React Developer Tools to inspect the React component hierarchy, their props, and state.
+
+Status: Debugger session #0 active.
+&lt;/pre&gt;
+
+
+&lt;p&gt;Abrimos la consola del explorador con la tecla &lt;code&gt;F12&lt;/code&gt; y vemos que dice&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Running application "rnapp" with appParams: {"rootTag":11}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+&lt;/pre&gt;
+
+
+&lt;p&gt;Eso quiere decir que nuestro navegador ya esta "escuchando" a la aplicacion de react-native. Lo que podemos hacer para probarlo es ir al archivo &lt;code&gt;app.js&lt;/code&gt; y dentro de la funcion &lt;code&gt;render()&lt;/code&gt; hacer un simple &lt;code&gt;console.log('testing debug...');&lt;/code&gt; eso se va a mostrar en la consola de su explorador.&lt;/p&gt;
+&lt;p&gt;Pero vamos un poco mas alla, creemos un boton y veamoslo funcionar un poco mas copado.&lt;/p&gt;
+&lt;p&gt;Vamos a poner un &lt;code&gt;Button&lt;/code&gt; en nuestra app y ver por consola un mensaje que se escribe cuando hacemos click. En esta parte vamos a copiar y pegar el codigo, ya haremos un post explicando componentes y funciones.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;React&lt;/span&gt; &lt;span class="nn"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'react'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;StyleSheet&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;View&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Button&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;'react-native'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;App&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;React&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Component&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;testDebug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;console&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'testing debug'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;render&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;View&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;container&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Open&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;working&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Changes&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="nb"&gt;reload&lt;/span&gt;&lt;span class="o"&gt;.&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;Shake&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;phone&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;developer&lt;/span&gt; &lt;span class="n"&gt;menu&lt;/span&gt;&lt;span class="o"&gt;.&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Button&lt;/span&gt;
+              &lt;span class="n"&gt;onPress&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testDebug&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+              &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Press Me!"&lt;/span&gt;
+              &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"#841584"&lt;/span&gt;
+              &lt;span class="n"&gt;accessibilityLabel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Learn more about this purple button"&lt;/span&gt;
+            &lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;View&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="n"&gt;styles&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StyleSheet&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="n"&gt;container&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;flex&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;backgroundColor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'#fff'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;alignItems&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;justifyContent&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'center'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Simplemente lo que hace este mini codigo, es mostrar un mensaje en el press(click) del boton de nuestra app. Ahora cada vez que cliqueamos podemos ver por consola que se muestra un mensaje que dice &lt;code&gt;testing debug&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Otras herramientas&lt;/h3&gt;
+&lt;p&gt;Contamos con una herramienta similar a la consola, pero que corre independientemente del navegador, &lt;a href="https://github.com/jhen0409/react-native-debugger"&gt;react-native-debugger&lt;/a&gt;.
+Vamos a la parte de Installation al link que dice &lt;code&gt;releases&lt;/code&gt;, y nos bajamos la version para linux.&lt;/p&gt;
+&lt;p&gt;Cerramos la tab donde estabamos debugueando anteriormente y volvemos a hacer &lt;code&gt;ctrl + M&lt;/code&gt; para desactivar el &lt;code&gt;Debug JS Remotely&lt;/code&gt;.
+Vamos a la carpeta donde haya descargado, extraemos el zip y abrimos el archivo &lt;code&gt;React Native Debugger&lt;/code&gt;. Vamos a ver que es similar al inspector de elementos de chrome. Repetimos los pasos pero con la aplicacion abierta y vemos que ahora el mensaje nos lo tira en la consola del &lt;code&gt;React Native Debugger&lt;/code&gt;.
+Lo que es interesante de esta aplicacion es que en el panel de abajo a la izquierda podemos ver el arbol del "DOM" (no es un DOM exactamente pero es simil) y podemos editar al vuelo las propiedades lo cual nos ahorra mucho tiempo de prueba y recarga.
+Por ejemplo vayamos al &lt;code&gt;&amp;lt;Button&amp;gt;&lt;/code&gt; dentro del explorador de elementos y cambiemos la propiedad &lt;code&gt;color&lt;/code&gt; a &lt;code&gt;#333&lt;/code&gt; veamos como el boton cambia de color, tambien podemos hacer "click" (press) y ver como nuestro mensaje sale por la consola.&lt;/p&gt;
+&lt;p&gt;Muy bien, ya tenemos la aplicacion instalada y las herramientas para debuguearla, FELICITACIONES!&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Gracias por leer, cualquier consulta la pueden dejar escrita en el blog y la contestamos.&lt;/p&gt;
+&lt;p&gt;Saludos,&lt;/p&gt;
+&lt;p&gt;D.&lt;/p&gt;&lt;/div&gt;</description><category>android</category><category>javascript</category><category>react</category><category>react-native</category><guid>http://blog.bitson.com.ar/posts/debugueando-react-native-en-android/</guid><pubDate>Fri, 16 Mar 2018 16:24:15 GMT</pubDate></item></channel></rss>

@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/cooperativismo-software-libre-y-feminismo/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/debugueando-react-native-en-android/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,7 +63,101 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/cooperativismo-software-libre-y-feminismo/" class="u-url">Cooperativismo, Software Libre y Feminismo</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/debugueando-react-native-en-android/" class="u-url">Debugueando react-native en Android</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/d/">D</a>
+            </span></p>
+            <p class="dateline"><a href="posts/debugueando-react-native-en-android/" rel="bookmark"><time class="published dt-published" datetime="2018-03-16T13:24:15-03:00" title="2018-03-16 13:24">2018-03-16 13:24</time></a></p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>En este post vamos a mostrar herramientas para debuguear la aplicacion que estemos desarrollando en react-native, igual que en mi post anterior voy a mostrar como hacerlo en linux.</p>
+<h3>Requisitos</h3>
+<ul>
+<li>Internet (claramente).</li>
+<li>Tener una aplicacion en react-native (de ser posible la del post anterior, paso el <a href="http://blog.bitson.group/posts/empezando-con-android-y-react-native/">link</a>).</li>
+<li>Paciencia.</li>
+</ul>
+<h3>Manos a la obra</h3>
+<p>Abrimos el Android Studio, vamos a <code>tools &gt; AVD Manager</code> y corremos un emulador de Android.</p>
+<p>Una vez que tengamos el emulador corriendo abrimos en una terminal el directorio donde tengamos nuestra app. En este caso seguimos usando la <code>rn-app</code> que hicimos el post anterior. Una vez en el directorio ejecutamos <code>npm run android</code>.</p>
+<p>Una vez que la aplicacion se haya abierto en el emulador hacemos <code>ctrl + m</code> eso va a abrir una serie de opciones, ya iremos explicando una por una (aunque hayan opciones bastante obvias). Hacemos click en <code>Debug JS Remotely</code>.</p>
+<p>Eso lo que va hacer es abrirnos una tab en chrome/firefox con una texto parecido a este:</p>
+<pre class="code literal-block"><span></span>React Native JS code runs as a web worker inside this tab.
+
+Press Ctrl⇧J to open Developer Tools. Enable Pause On Caught Exceptions for a better debugging experience.
+
+You may also install the standalone version of React Developer Tools to inspect the React component hierarchy, their props, and state.
+
+Status: Debugger session #0 active.
+</pre>
+
+
+<p>Abrimos la consola del explorador con la tecla <code>F12</code> y vemos que dice</p>
+<pre class="code literal-block"><span></span>Running application "rnapp" with appParams: {"rootTag":11}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+</pre>
+
+
+<p>Eso quiere decir que nuestro navegador ya esta "escuchando" a la aplicacion de react-native. Lo que podemos hacer para probarlo es ir al archivo <code>app.js</code> y dentro de la funcion <code>render()</code> hacer un simple <code>console.log('testing debug...');</code> eso se va a mostrar en la consola de su explorador.</p>
+<p>Pero vamos un poco mas alla, creemos un boton y veamoslo funcionar un poco mas copado.</p>
+<p>Vamos a poner un <code>Button</code> en nuestra app y ver por consola un mensaje que se escribe cuando hacemos click. En esta parte vamos a copiar y pegar el codigo, ya haremos un post explicando componentes y funciones.</p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">React</span> <span class="nn">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kn">import</span> <span class="p">{</span> <span class="n">StyleSheet</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">View</span><span class="p">,</span> <span class="n">Button</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">'react-native'</span><span class="p">;</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="k">class</span> <span class="nc">App</span> <span class="n">extends</span> <span class="n">React</span><span class="o">.</span><span class="n">Component</span> <span class="p">{</span>
+    <span class="n">testDebug</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">'testing debug'</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="n">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="n">View</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="n">styles</span><span class="o">.</span><span class="n">container</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Open</span> <span class="n">up</span> <span class="n">App</span><span class="o">.</span><span class="n">js</span> <span class="n">to</span> <span class="n">start</span> <span class="n">working</span> <span class="n">on</span> <span class="n">your</span> <span class="n">app</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Changes</span> <span class="n">you</span> <span class="n">make</span> <span class="n">will</span> <span class="n">automatically</span> <span class="nb">reload</span><span class="o">.&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">Text</span><span class="o">&gt;</span><span class="n">Shake</span> <span class="n">your</span> <span class="n">phone</span> <span class="n">to</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">developer</span> <span class="n">menu</span><span class="o">.&lt;/</span><span class="n">Text</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">Button</span>
+              <span class="n">onPress</span><span class="o">=</span><span class="p">{</span><span class="n">this</span><span class="o">.</span><span class="n">testDebug</span><span class="p">}</span>
+              <span class="n">title</span><span class="o">=</span><span class="s2">"Press Me!"</span>
+              <span class="n">color</span><span class="o">=</span><span class="s2">"#841584"</span>
+              <span class="n">accessibilityLabel</span><span class="o">=</span><span class="s2">"Learn more about this purple button"</span>
+            <span class="o">/&gt;</span>
+      <span class="o">&lt;/</span><span class="n">View</span><span class="o">&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">const</span> <span class="n">styles</span> <span class="o">=</span> <span class="n">StyleSheet</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+  <span class="n">container</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">backgroundColor</span><span class="p">:</span> <span class="s1">'#fff'</span><span class="p">,</span>
+    <span class="n">alignItems</span><span class="p">:</span> <span class="s1">'center'</span><span class="p">,</span>
+    <span class="n">justifyContent</span><span class="p">:</span> <span class="s1">'center'</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</pre>
+
+
+<p>Simplemente lo que hace este mini codigo, es mostrar un mensaje en el press(click) del boton de nuestra app. Ahora cada vez que cliqueamos podemos ver por consola que se muestra un mensaje que dice <code>testing debug</code>.</p>
+<h3>Otras herramientas</h3>
+<p>Contamos con una herramienta similar a la consola, pero que corre independientemente del navegador, <a href="https://github.com/jhen0409/react-native-debugger">react-native-debugger</a>.
+Vamos a la parte de Installation al link que dice <code>releases</code>, y nos bajamos la version para linux.</p>
+<p>Cerramos la tab donde estabamos debugueando anteriormente y volvemos a hacer <code>ctrl + M</code> para desactivar el <code>Debug JS Remotely</code>.
+Vamos a la carpeta donde haya descargado, extraemos el zip y abrimos el archivo <code>React Native Debugger</code>. Vamos a ver que es similar al inspector de elementos de chrome. Repetimos los pasos pero con la aplicacion abierta y vemos que ahora el mensaje nos lo tira en la consola del <code>React Native Debugger</code>.
+Lo que es interesante de esta aplicacion es que en el panel de abajo a la izquierda podemos ver el arbol del "DOM" (no es un DOM exactamente pero es simil) y podemos editar al vuelo las propiedades lo cual nos ahorra mucho tiempo de prueba y recarga.
+Por ejemplo vayamos al <code>&lt;Button&gt;</code> dentro del explorador de elementos y cambiemos la propiedad <code>color</code> a <code>#333</code> veamos como el boton cambia de color, tambien podemos hacer "click" (press) y ver como nuestro mensaje sale por la consola.</p>
+<p>Muy bien, ya tenemos la aplicacion instalada y las herramientas para debuguearla, FELICITACIONES!</p>
+<hr>
+<p>Gracias por leer, cualquier consulta la pueden dejar escrita en el blog y la contestamos.</p>
+<p>Saludos,</p>
+<p>D.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/cooperativismo-software-libre-y-feminismo/" class="u-url">Cooperativismo, Software Libre y Feminismo</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/cuberti/">cuberti</a>
