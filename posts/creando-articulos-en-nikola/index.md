@@ -101,9 +101,9 @@ En mi caso, al ejecutar ese comando recibo un Traceback que termina en
 
 > OSError: [Errno 98] La dirección ya se está usando
 
-Lo que significa que el puerto usado por defecto (8000) está ocupado. Para especificar el puerto a usar basta con agregar __-p <puerto>__ al final del comando. En el ejemplo, usaremos el puerto 8010.
+Lo que significa que el puerto usado por defecto (8000) está ocupado. Para especificar el puerto a usar basta con agregar __-p <puerto>__ al final del comando. En el ejemplo, usaremos el puerto 8001.
 
-> ➜  bitblog git:(src) ✗ pipenv run nikola auto -p 8010
+> ➜  bitblog git:(src) ✗ pipenv run nikola auto -p 8001
 
 > Scanning posts........done!
 
@@ -111,28 +111,33 @@ Lo que significa que el puerto usado por defecto (8000) está ocupado. Para espe
 
 > [2018-02-16T20:03:24Z] INFO: ws4py: Using epoll
 
-> [2018-02-16T20:03:24Z] INFO: auto: Serving HTTP on 127.0.0.1 port 8010...
+> [2018-02-16T20:03:24Z] INFO: auto: Serving HTTP on 127.0.0.1 port 8001...
 
-> [2018-02-16T20:03:24Z] INFO: ws4py: Managing websocket [Local => 127.0.0.1:8010 | Remote => 127.0.0.1:56708]
+> [2018-02-16T20:03:24Z] INFO: ws4py: Managing websocket [Local => 127.0.0.1:8001 | Remote => 127.0.0.1:56708]
 
 > [2018-02-16T20:03:24Z] INFO: auto: <--- {'command': 'hello', 'protocols': ['http://livereload.com/protocols/official-6', 'http://livereload.com/protocols/official-7'], 'snipver': 1, 'ver': '2.2.1'}
 
 > [2018-02-16T20:03:24Z] INFO: auto: ---> {"command": "hello", "protocols": ["http://livereload.com/protocols/official-7"], "serverName": "nikola-livereload"}
+<a name="voila" title="Usado solamente para el efecto recursivo"></a>
+>
+> [2018-02-16T20:03:24Z] INFO: auto: <--- {'command': 'info', 'plugins': {'less': {'version': '1.0', 'disable': False}}, 'url': 'http://localhost:8001/'}
 
-> [2018-02-16T20:03:24Z] INFO: auto: <--- {'command': 'info', 'plugins': {'less': {'version': '1.0', 'disable': False}}, 'url': 'http://localhost:8010/'}
-
-> [2018-02-16T20:03:24Z] INFO: auto: ****** Browser connected: http://localhost:8010/
+> [2018-02-16T20:03:24Z] INFO: auto: ****** Browser connected: http://localhost:8001/
 
 > [2018-02-16T20:03:24Z] INFO: auto: ****** sending 0 pending messages
 
 
 # Voilá!
 
-Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a [http://localhost:8010/](http://localhost:8010/ "8010 o el puerto en el que esté corriendo Nikola") y buscar esta misma [entrada](http://blog.bitson.group/posts/creando-articulos-en-nikola/ "Haga clic aquí para sentir el efecto recursivo en tu propias venas"). Todo este procedimiento para llegar al tan deseado momento...
+Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a [http://localhost:8001/](http://localhost:8001/ "8001 o el puerto en el que esté corriendo Nikola") y buscar esta misma [entrada](/posts/creando-articulos-en-nikola/#voila "Haga clic aquí para sentir el efecto recursivo en sus propias venas"). Todo este procedimiento para llegar al tan deseado momento...
 
 # Creando artículos en Nikola
 
-Para crear una nueva entrada en el blog, nos posicionamos en el directorio __bitblog__ y ejecutamos:
+Antes de crear una nueva entrada, es *muy* importante tener el blog local actualizado, para no perder los últimos cambios ni generar conflictos con las ramas. Para esto basta con ejecutar:
+
+__git pull__
+
+Ahora sí, para crear una nueva entrada en el blog, nos posicionamos en el directorio __bitblog__ y ejecutamos:
 
 __pipenv run nikola new_post -f markdown__
 
@@ -246,6 +251,7 @@ __\!\[description alt imagen asistencia discapacidad visual yapa optimiza seo][i
 ---
 
 # Aplicando los cambios
+#
 
 Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:
 
@@ -253,6 +259,7 @@ Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea corr
 
 lo que subirá los cambios al repositorio en la rama __src__ y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.
 
+#
 > [2018-02-19T15:58:09Z] INFO: github_deploy: Successful deployment
 
 ## ¡Éxito!

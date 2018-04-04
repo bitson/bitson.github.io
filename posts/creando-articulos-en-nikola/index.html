@@ -150,24 +150,27 @@
 <blockquote>
 <p>OSError: [Errno 98] La dirección ya se está usando</p>
 </blockquote>
-<p>Lo que significa que el puerto usado por defecto (8000) está ocupado. Para especificar el puerto a usar basta con agregar <strong>-p <puerto></puerto></strong> al final del comando. En el ejemplo, usaremos el puerto 8010.</p>
+<p>Lo que significa que el puerto usado por defecto (8000) está ocupado. Para especificar el puerto a usar basta con agregar <strong>-p <puerto></puerto></strong> al final del comando. En el ejemplo, usaremos el puerto 8001.</p>
 <blockquote>
-<p>➜  bitblog git:(src) ✗ pipenv run nikola auto -p 8010</p>
+<p>➜  bitblog git:(src) ✗ pipenv run nikola auto -p 8001</p>
 <p>Scanning posts........done!</p>
 <p>[2018-02-16T20:03:24Z] INFO: auto: Watching files for changes...</p>
 <p>[2018-02-16T20:03:24Z] INFO: ws4py: Using epoll</p>
-<p>[2018-02-16T20:03:24Z] INFO: auto: Serving HTTP on 127.0.0.1 port 8010...</p>
-<p>[2018-02-16T20:03:24Z] INFO: ws4py: Managing websocket [Local =&gt; 127.0.0.1:8010 | Remote =&gt; 127.0.0.1:56708]</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: Serving HTTP on 127.0.0.1 port 8001...</p>
+<p>[2018-02-16T20:03:24Z] INFO: ws4py: Managing websocket [Local =&gt; 127.0.0.1:8001 | Remote =&gt; 127.0.0.1:56708]</p>
 <p>[2018-02-16T20:03:24Z] INFO: auto: &lt;--- {'command': 'hello', 'protocols': ['http://livereload.com/protocols/official-6', 'http://livereload.com/protocols/official-7'], 'snipver': 1, 'ver': '2.2.1'}</p>
-<p>[2018-02-16T20:03:24Z] INFO: auto: ---&gt; {"command": "hello", "protocols": ["http://livereload.com/protocols/official-7"], "serverName": "nikola-livereload"}</p>
-<p>[2018-02-16T20:03:24Z] INFO: auto: &lt;--- {'command': 'info', 'plugins': {'less': {'version': '1.0', 'disable': False}}, 'url': 'http://localhost:8010/'}</p>
-<p>[2018-02-16T20:03:24Z] INFO: auto: <strong>*</strong>* Browser connected: http://localhost:8010/</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: ---&gt; {"command": "hello", "protocols": ["http://livereload.com/protocols/official-7"], "serverName": "nikola-livereload"}
+<a name="voila" title="Usado solamente para el efecto recursivo"></a></p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: &lt;--- {'command': 'info', 'plugins': {'less': {'version': '1.0', 'disable': False}}, 'url': 'http://localhost:8001/'}</p>
+<p>[2018-02-16T20:03:24Z] INFO: auto: <strong>*</strong>* Browser connected: http://localhost:8001/</p>
 <p>[2018-02-16T20:03:24Z] INFO: auto: <strong>*</strong>* sending 0 pending messages</p>
 </blockquote>
 <h2>Voilá!</h2>
-<p>Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a <a href="http://localhost:8010/" title="8010 o el puerto en el que esté corriendo Nikola">http://localhost:8010/</a> y buscar esta misma <a href="http://blog.bitson.group/posts/creando-articulos-en-nikola/" title="Haga clic aquí para sentir el efecto recursivo en tu propias venas">entrada</a>. Todo este procedimiento para llegar al tan deseado momento...</p>
+<p>Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a <a href="http://localhost:8001/" title="8001 o el puerto en el que esté corriendo Nikola">http://localhost:8001/</a> y buscar esta misma <a href="#voila" title="Haga clic aquí para sentir el efecto recursivo en sus propias venas">entrada</a>. Todo este procedimiento para llegar al tan deseado momento...</p>
 <h2>Creando artículos en Nikola</h2>
-<p>Para crear una nueva entrada en el blog, nos posicionamos en el directorio <strong>bitblog</strong> y ejecutamos:</p>
+<p>Antes de crear una nueva entrada, es <em>muy</em> importante tener el blog local actualizado, para no perder los últimos cambios ni generar conflictos con las ramas. Para esto basta con ejecutar:</p>
+<p><strong>git pull</strong></p>
+<p>Ahora sí, para crear una nueva entrada en el blog, nos posicionamos en el directorio <strong>bitblog</strong> y ejecutamos:</p>
 <p><strong>pipenv run nikola new_post -f markdown</strong></p>
 <p>Sin desperdiciar un segundo, Nikola nos pedirá un título para el artículo...</p>
 <blockquote>
@@ -245,9 +248,11 @@ al posicionar el cursor del mouse sobre la misma. </p>
 <p><strong>![description alt imagen asistencia discapacidad visual yapa optimiza seo][identificador-del-recurso-de-imagen]</strong></p>
 <hr>
 <h2>Aplicando los cambios</h2>
+<h2></h2>
 <p>Una vez que hayamos terminado de redactar la nota y verifiquemos que se vea correctamente, sólo debemos ejecutar el comando:</p>
 <h2>pipenv run nikola github_deploy</h2>
 <p>lo que subirá los cambios al repositorio en la rama <strong>src</strong> y GitHub Pages se encargará de mostrarlo en la dirección que tengamos configurada.</p>
+<h2></h2>
 <blockquote>
 <p>[2018-02-19T15:58:09Z] INFO: github_deploy: Successful deployment</p>
 </blockquote>
