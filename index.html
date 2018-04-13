@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/debugueando-react-native-en-android/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/acceso-root-ssh-desde-ip-o-dominio/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -63,7 +63,72 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/debugueando-react-native-en-android/" class="u-url">Debugueando react-native en Android</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/acceso-root-ssh-desde-ip-o-dominio/" class="u-url">Acceso root SSH desde IP o dominio</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/lecovi/">lecovi</a>
+            </span></p>
+            <p class="dateline"><a href="posts/acceso-root-ssh-desde-ip-o-dominio/" rel="bookmark"><time class="published dt-published" datetime="2018-04-13T10:15:07-03:00" title="2018-04-13 10:15">2018-04-13 10:15</time></a></p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Hace poco con la coope nos mudamos y tuvimos que cambiar el ISP (<em>Internet
+Service Provider</em>) y eso motivó a que tuviéramos que hacer algunos cambios, en
+muchos aspectos pero no viene al caso, puntualmente en el server que tenemos
+dentro de la ofi.
+Tuve que desempastarme un poco y volver a leer el manual de <strong>ssh</strong> para
+recordar algunas cuestiones que les comparto a continuación.</p>
+<h2>Archivo de configuración</h2>
+<p>El <em>daemon</em> de SSH lee el archivo de configuración que está en
+<code>/etc/ssh/sshd_config</code>. Este archivo tiene muchíiiiiiiisimas opciones de
+configuración.</p>
+<h3>Match</h3>
+<p>Lo interesante de este archivo de configuración es que acepta configuraciones
+condicionales. Es decir, si se cumple una condición específica, se modifican
+las opciones de configuración en cuestión.</p>
+<p>Por ejemplo, es normal no permitir el acceso SSH como root desde cualquier
+lado. En Debian, cuando instalás el servidor SSH es una opción por defecto.
+Sólo podés acceder por SSH a la máquina con un usuario sin privilegios.</p>
+<p>Pero podrías querer entrar por ejemplo desde una máquina local. Para eso usamos
+las opciones de configuración condicionales.</p>
+<pre class="code literal-block"><span></span>Match Address 192.168.1.50
+    PermitRootLogin yes
+</pre>
+
+
+<p>En este caso, lo que estamos indicando es que si el acceso SSH proviene desde
+la IP 192.168.1.50 dejamos que se acceda como el usuario root. Esto es muy
+útil para cuando queremos configurar acceso rápido desde máquinas "confiables".
+Es decir, terminales que nosotros solemos utilizar, son de nuestra propiedad o
+resultan conocidas.</p>
+<p>También existe la posibilidad de asignarlo a través de un dominio. En cuyo caso
+la opción de configuración será:</p>
+<pre class="code literal-block"><span></span>Match Host foo.bitson.group
+    PermitRootLogin yes
+</pre>
+
+
+<p>Sólo nos resta reiniciar el servicio de SSH para que el <em>daemon</em> tome los
+cambios.</p>
+<pre class="code literal-block"><span></span>systemctl restart ssh
+</pre>
+
+
+<p>Espero que les haya sido útil. Nos vemos en la próxima!</p>
+<h4>Enlaces de interés</h4>
+<ul>
+<li><a href="https://linux.die.net/man/5/sshd_config">Manual Config SSH</a></li>
+<li><a href="https://www.cyberciti.biz/faq/match-address-sshd_config-allow-root-loginfrom-one_ip_address-on-linux-unix/">How to allow root login from one IP address with ssh public keys only</a></li>
+<li><a href="https://stackpointer.io/unix/linux-allow-ssh-root-login-specific-ip/618/">Allow SSH Root Login From Specific IP</a></li>
+</ul>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/debugueando-react-native-en-android/" class="u-url">Debugueando react-native en Android</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/d/">D</a>

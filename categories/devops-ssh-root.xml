@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog (Publicaciones sobre devops ssh root)</title><link>http://blog.bitson.com.ar/</link><description></description><atom:link href="http://blog.bitson.com.ar/categories/devops-ssh-root.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Apr 2018 13:53:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Acceso root SSH desde IP o dominio</title><link>http://blog.bitson.com.ar/posts/acceso-root-ssh-desde-ip-o-dominio/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace poco con la coope nos mudamos y tuvimos que cambiar el ISP (&lt;em&gt;Internet
+Service Provider&lt;/em&gt;) y eso motivó a que tuviéramos que hacer algunos cambios, en
+muchos aspectos pero no viene al caso, puntualmente en el server que tenemos
+dentro de la ofi.
+Tuve que desempastarme un poco y volver a leer el manual de &lt;strong&gt;ssh&lt;/strong&gt; para
+recordar algunas cuestiones que les comparto a continuación.&lt;/p&gt;
+&lt;h2&gt;Archivo de configuración&lt;/h2&gt;
+&lt;p&gt;El &lt;em&gt;daemon&lt;/em&gt; de SSH lee el archivo de configuración que está en
+&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;. Este archivo tiene muchíiiiiiiisimas opciones de
+configuración.&lt;/p&gt;
+&lt;h3&gt;Match&lt;/h3&gt;
+&lt;p&gt;Lo interesante de este archivo de configuración es que acepta configuraciones
+condicionales. Es decir, si se cumple una condición específica, se modifican
+las opciones de configuración en cuestión.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, es normal no permitir el acceso SSH como root desde cualquier
+lado. En Debian, cuando instalás el servidor SSH es una opción por defecto.
+Sólo podés acceder por SSH a la máquina con un usuario sin privilegios.&lt;/p&gt;
+&lt;p&gt;Pero podrías querer entrar por ejemplo desde una máquina local. Para eso usamos
+las opciones de configuración condicionales.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Match Address 192.168.1.50
+    PermitRootLogin yes
+&lt;/pre&gt;
+
+
+&lt;p&gt;En este caso, lo que estamos indicando es que si el acceso SSH proviene desde
+la IP 192.168.1.50 dejamos que se acceda como el usuario root. Esto es muy
+útil para cuando queremos configurar acceso rápido desde máquinas "confiables".
+Es decir, terminales que nosotros solemos utilizar, son de nuestra propiedad o
+resultan conocidas.&lt;/p&gt;
+&lt;p&gt;También existe la posibilidad de asignarlo a través de un dominio. En cuyo caso
+la opción de configuración será:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Match Host foo.bitson.group
+    PermitRootLogin yes
+&lt;/pre&gt;
+
+
+&lt;p&gt;Sólo nos resta reiniciar el servicio de SSH para que el &lt;em&gt;daemon&lt;/em&gt; tome los
+cambios.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;systemctl restart ssh
+&lt;/pre&gt;
+
+
+&lt;p&gt;Espero que les haya sido útil. Nos vemos en la próxima!&lt;/p&gt;
+&lt;h4&gt;Enlaces de interés&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://linux.die.net/man/5/sshd_config"&gt;Manual Config SSH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cyberciti.biz/faq/match-address-sshd_config-allow-root-loginfrom-one_ip_address-on-linux-unix/"&gt;How to allow root login from one IP address with ssh public keys only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://stackpointer.io/unix/linux-allow-ssh-root-login-specific-ip/618/"&gt;Allow SSH Root Login From Specific IP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>devops ssh root</category><guid>http://blog.bitson.com.ar/posts/acceso-root-ssh-desde-ip-o-dominio/</guid><pubDate>Fri, 13 Apr 2018 13:15:07 GMT</pubDate></item></channel></rss>
