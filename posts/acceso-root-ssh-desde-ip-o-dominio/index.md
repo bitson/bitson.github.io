@@ -10,12 +10,17 @@
 .. author: lecovi
 -->
 
+![Image](/img/coding-computer-hacker-97077.jpg)
+
 Hace poco con la coope nos mudamos y tuvimos que cambiar el ISP (*Internet
 Service Provider*) y eso motivó a que tuviéramos que hacer algunos cambios, en
 muchos aspectos pero no viene al caso, puntualmente en el server que tenemos
 dentro de la ofi.
 Tuve que desempastarme un poco y volver a leer el manual de **ssh** para
 recordar algunas cuestiones que les comparto a continuación.
+
+<!-- TEASER_END -->
+
 
 # Archivo de configuración
 

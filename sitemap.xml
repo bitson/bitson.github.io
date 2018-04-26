@@ -10,27 +10,19 @@
   <lastmod>2018-04-26T20:03:00Z</lastmod>
  </url>
  <url>
-  <loc>http://blog.bitson.com.ar/2017/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
   <loc>http://blog.bitson.com.ar/2018/</loc>
   <lastmod>2018-01-31T21:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/archive.html</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <lastmod>2018-04-26T20:22:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <lastmod>2018-04-26T20:04:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/abrunacci/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/cooperativa-de-trabajo-bitson-ltda/</loc>
   <lastmod>2018-01-31T21:31:00Z</lastmod>
  </url>
  <url>
@@ -40,14 +32,6 @@
  <url>
   <loc>http://blog.bitson.com.ar/authors/d/</loc>
   <lastmod>2018-04-26T20:03:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/ddebonis/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/authors/leandro-e-colombo-vina/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.com.ar/authors/lecovi/</loc>
@@ -178,10 +162,6 @@
   <lastmod>2018-04-26T20:03:00Z</lastmod>
  </url>
  <url>
-  <loc>http://blog.bitson.com.ar/posts/ale-test/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
   <loc>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</loc>
   <lastmod>2018-04-26T20:03:00Z</lastmod>
  </url>
@@ -202,10 +182,6 @@
   <lastmod>2018-04-26T20:03:00Z</lastmod>
  </url>
  <url>
-  <loc>http://blog.bitson.com.ar/posts/diego-post/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
   <loc>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords-express/</loc>
   <lastmod>2018-04-26T20:03:00Z</lastmod>
  </url>
@@ -220,17 +196,5 @@
  <url>
   <loc>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</loc>
   <lastmod>2018-04-26T20:03:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/posteo-de-prueba/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/probando-con-markdown/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
- </url>
- <url>
-  <loc>http://blog.bitson.com.ar/posts/testing-workflow/</loc>
-  <lastmod>2018-01-31T21:31:00Z</lastmod>
  </url>
 </urlset>

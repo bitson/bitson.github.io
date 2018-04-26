@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BITSON's Blog</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
+<meta name="theme-color" content="#236ab7">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.com.ar/">
@@ -76,57 +76,16 @@
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
+<p><img alt="Image" src="img/coding-computer-hacker-97077.jpg"></p>
 <p>Hace poco con la coope nos mudamos y tuvimos que cambiar el ISP (<em>Internet
 Service Provider</em>) y eso motivó a que tuviéramos que hacer algunos cambios, en
 muchos aspectos pero no viene al caso, puntualmente en el server que tenemos
 dentro de la ofi.
 Tuve que desempastarme un poco y volver a leer el manual de <strong>ssh</strong> para
 recordar algunas cuestiones que les comparto a continuación.</p>
-<h2>Archivo de configuración</h2>
-<p>El <em>daemon</em> de SSH lee el archivo de configuración que está en
-<code>/etc/ssh/sshd_config</code>. Este archivo tiene muchíiiiiiiisimas opciones de
-configuración.</p>
-<h3>Match</h3>
-<p>Lo interesante de este archivo de configuración es que acepta configuraciones
-condicionales. Es decir, si se cumple una condición específica, se modifican
-las opciones de configuración en cuestión.</p>
-<p>Por ejemplo, es normal no permitir el acceso SSH como root desde cualquier
-lado. En Debian, cuando instalás el servidor SSH es una opción por defecto.
-Sólo podés acceder por SSH a la máquina con un usuario sin privilegios.</p>
-<p>Pero podrías querer entrar por ejemplo desde una máquina local. Para eso usamos
-las opciones de configuración condicionales.</p>
-<pre class="code literal-block"><span></span>Match Address 192.168.1.50
-    PermitRootLogin yes
-</pre>
-
-
-<p>En este caso, lo que estamos indicando es que si el acceso SSH proviene desde
-la IP 192.168.1.50 dejamos que se acceda como el usuario root. Esto es muy
-útil para cuando queremos configurar acceso rápido desde máquinas "confiables".
-Es decir, terminales que nosotros solemos utilizar, son de nuestra propiedad o
-resultan conocidas.</p>
-<p>También existe la posibilidad de asignarlo a través de un dominio. En cuyo caso
-la opción de configuración será:</p>
-<pre class="code literal-block"><span></span>Match Host foo.bitson.group
-    PermitRootLogin yes
-</pre>
-
-
-<p>Sólo nos resta reiniciar el servicio de SSH para que el <em>daemon</em> tome los
-cambios.</p>
-<pre class="code literal-block"><span></span>systemctl restart ssh
-</pre>
-
-
-<p>Espero que les haya sido útil. Nos vemos en la próxima!</p>
-<h4>Enlaces de interés</h4>
-<ul>
-<li><a href="https://linux.die.net/man/5/sshd_config">Manual Config SSH</a></li>
-<li><a href="https://www.cyberciti.biz/faq/match-address-sshd_config-allow-root-loginfrom-one_ip_address-on-linux-unix/">How to allow root login from one IP address with ssh public keys only</a></li>
-<li><a href="https://stackpointer.io/unix/linux-allow-ssh-root-login-specific-ip/618/">Allow SSH Root Login From Specific IP</a></li>
-</ul>
+<p class="more"><a href="posts/acceso-root-ssh-desde-ip-o-dominio/">Leer más…</a></p>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/debugueando-react-native-en-android/" class="u-url">Debugueando react-native en Android</a></h1>
@@ -142,7 +101,7 @@ cambios.</p>
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>En este post vamos a mostrar herramientas para debuguear la aplicacion que estemos desarrollando en react-native, igual que en mi post anterior voy a mostrar como hacerlo en linux.</p>
 <h3>Requisitos</h3>
@@ -237,7 +196,7 @@ Por ejemplo vayamos al <code>&lt;Button&gt;</code> dentro del explorador de elem
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <h2>Cooperativismo, software libre y feminismo.</h2>
 <p>Uno crece en un entorno delimitado y pareciera que siempre tiene que mantenerse dentro de esos parámetros. ¿Acaso no se ve como un logro que un niñx pueda pintar dentro de los bordes? ¿Es realmente un triunfo propio? ¿De la sociedad? ¿Es un simple proceso de aprendizaje?</p>
@@ -266,7 +225,7 @@ Por ejemplo vayamos al <code>&lt;Button&gt;</code> dentro del explorador de elem
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>El día de hoy vamos a ver cómo empezar a usar <a href="https://adwords.google.com/express" title="Google AdWords Express">Google AdWords Express</a>, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.</p>
 <p>Para empezar, les dejo el número de teléfono gratuito para asistencia a cuentas con inversiones de bajo monto (al día del a fecha, inversiones menores a $2500 ARS mensuales): </p>
@@ -389,7 +348,7 @@ Qué ocurre si cambias de idea</p>
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>En este post vamos a configurar el ambiente en linux para empezar a programar aplicaciones
 en react-native para android (iOS queda fuera por razones obvias :grimacing:)</p>
@@ -537,7 +496,7 @@ Fuentes y ayudas:
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
 "leves" a nivel programación pero que a la hora de inspeccionar nuestro código y ver si cumple con las 
@@ -615,7 +574,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>Hoy les presentamos nuestro primer post recursivo. </p>
 <h3>Cómo crear un artículo para el blog de bitson</h3>
@@ -806,7 +765,7 @@ al posicionar el cursor del mouse sobre la misma. </p>
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>Hoy les quiero contar cómo se puede configurar <code>git</code> para que deployemos
 directamente con un <code>push</code> en nuestro server.</p>
@@ -895,7 +854,7 @@ tenés en <code>/home/bitson/mi_sitio</code>.</p>
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
 diferentes carpetas con archivos estáticos de tu sitio.</p>
@@ -1007,7 +966,7 @@ podremos hacerlo con sólo ir a <code>https://bitson.group/slides/presentacion1<
 
         </p>
 </div>
-    </header><div class="e-content entry-content">
+    </header><div class="p-summary entry-summary">
     <div>
 <p>En este brevísimo artículo te explicamos cómo empezar a usar <code>pipenv</code>.</p>
 <h2>Instalado Pipenv</h2>
@@ -1015,52 +974,7 @@ podremos hacerlo con sólo ir a <code>https://bitson.group/slides/presentacion1<
 manera sencilla en tu entorno de desarrollo. Te recomiendo que le eches un ojo
 a la <a href="http://pipenv.readthedocs.io/en/latest/">Documentacion Oficila</a>.
 Ahora te voy a mostrar cómo instalar <code>pipenv</code> y cómo usarlo en tus proyectos.</p>
-<!-- TEASER_END -->
-
-<h3>Instalar Pipenv</h3>
-<p>La forma más fácil de instalar <code>pipenv</code> es a través de <code>pipsi</code>. Si no tenés
-<code>pipsi</code> instalado, lo podés instalar con:</p>
-<pre class="code literal-block"><span></span>$ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py <span class="p">|</span> python3
-</pre>
-
-
-<p>Para poder ejecutar desde la línea de comandos tenés que agregar a tu variable
-de entorno <code>PATH</code> la ruta donde está el ejecutable de <code>pipsi</code>.</p>
-<p>Con <code>bash</code>:</p>
-<pre class="code literal-block"><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/.local/bin/pipsi
-</pre>
-
-
-<p>Con <code>fish</code>:</p>
-<pre class="code literal-block"><span></span><span class="k">set</span> PATH <span class="nv">$PATH</span> ~/.local/bin/pipsi
-</pre>
-
-
-<p>Y después tenés que instalar <code>pew</code> y <code>pipenv</code>:</p>
-<pre class="code literal-block"><span></span>$ pipsi install pew
-$ pipsi install pipenv
-</pre>
-
-
-<h4>Comandos útiles</h4>
-<ul>
-<li>
-<code>pipenv --three install &lt;paquete&gt;</code>: instala <paquete> en el virtualenv.</paquete>
-</li>
-<li>
-<code>pipenv --three install -r &lt;archivo_de_requerimientos&gt;</code>: instala los requerimientos en el virtualenv.</li>
-<li>
-<code>pipenv shell</code>: activa el virtualenv en la shell.</li>
-<li>
-<code>pipenv run &lt;archivo&gt;</code>: ejecuta <archivo> desde el virtualenv.</archivo>
-</li>
-<li>
-<code>pipenv --rm</code>: borra el virtualenv.</li>
-<li>
-<code>pipenv --update</code>: actualiza <code>pip</code> &amp; <code>pipenv</code>.</li>
-<li>
-<code>pipenv --venv</code>: muestra el PATH del virtualenv.</li>
-</ul>
+<p class="more"><a href="posts/empezando-con-pipenv/">Leer más…</a></p>
 </div>
     </div>
     </article>
