@@ -75,4 +75,4 @@ Luego de esto, vamos a copiar y a pegar el siguiente código, despues de la etiq
 
 
 
-Esto es todo lo que necesitamos para realizar el seguimiento en nuestros sitios, controlando publicaciones e interacciones de nuestros vistantes, solo necesitamos hacer uso del código que nos brinda facebook y google analytics.
+Esto es todo lo que necesitamos para realizar el seguimiento en nuestros sitios, controlando publicaciones e interacciones de nuestros visitantes, solo necesitamos hacer uso del código que nos brinda facebook y google analytics.

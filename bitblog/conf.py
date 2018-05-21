@@ -18,15 +18,16 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Cooperativa de Trabajo BITSON Ltda."  # (translatable)
-BLOG_TITLE = "BITSON's Blog"  # (translatable)
+BLOG_TITLE = "Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva."  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://blog.bitson.com.ar/"
+SITE_URL = "http://blog.bitson.group/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://blog.bitson.com.ar/"
-BLOG_EMAIL = "info@bitson.com.ar"
-BLOG_DESCRIPTION = "Nuestro Blog..."  # (translatable)
+BLOG_EMAIL = "info@bitson.group"
+BLOG_DESCRIPTION = " Blog..."  # (translatable)
+
 
 # Nikola is multilingual!
 #
@@ -141,7 +142,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "canterville"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -1291,13 +1292,13 @@ UNSLUGIFY_TITLES = True
 # Uncomment and modify to following lines to match your accounts.
 # Images displayed come from the `previewimage` meta tag.
 # You can specify the card type by using the `card` parameter in TWITTER_CARD.
-# TWITTER_CARD = {
-#     # 'use_twitter_cards': True,  # enable Twitter Cards
-#     # 'card': 'summary',          # Card type, you can also use 'summary_large_image',
-#                                   # see https://dev.twitter.com/cards/types
-#     # 'site': '@website',         # twitter nick for the website
-#     # 'creator': '@username',     # Username for the content creator / author.
-# }
+#   TWITTER_CARD = {
+#   'use_twitter_cards': True,  # enable Twitter Cards / Open Graph
+#  'site': '@bitsonArgentina',  # twitter nick for the website
+#  'site:id':422000229 ,  # Same as site, but the website's Twitter user ID instead.
+#   'creator': '@bitsonArgentina',  # Username for the content creator / author.
+#   'creator:id':422000229  ,  # Same as creator, but the Twitter user's ID.
+#   }
 
 # If webassets is installed, bundle JS and CSS into single files to make
 # site loading faster in a HTTP/1.1 environment but is not recommended for
@@ -1359,7 +1360,12 @@ UNSLUGIFY_TITLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+#        'TWITTER_URL': 'https://twitter.com/getnikola',
+ #       'GITHUB_URL': 'https://github.com/getnikola',
+        'BANNER_URL': '/assets/img/logotipo.svg',
+         'logo_url': '/assets/img/bitson.png'
+}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
