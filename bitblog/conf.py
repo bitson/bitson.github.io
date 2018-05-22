@@ -18,7 +18,8 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Cooperativa de Trabajo BITSON Ltda."  # (translatable)
-BLOG_TITLE = "BITSON's Blog"  # (translatable)
+BLOG_TITLE = ""  # (translatable)
+LOGO_URL = 'https://getnikola.com/assets/img/bitson.png'
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://blog.bitson.com.ar/"
@@ -26,7 +27,7 @@ SITE_URL = "http://blog.bitson.com.ar/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://blog.bitson.com.ar/"
 BLOG_EMAIL = "info@bitson.com.ar"
-BLOG_DESCRIPTION = "Nuestro Blog..."  # (translatable)
+BLOG_DESCRIPTION = "Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -141,7 +142,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "canterville"
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -1359,7 +1360,10 @@ UNSLUGIFY_TITLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+GLOBAL_CONTEXT = {
+    'BANNER_URL': '/assets/img/logotipo.svg',
+    
+}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
