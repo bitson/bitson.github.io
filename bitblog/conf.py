@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Cooperativa de Trabajo BITSON Ltda."  # (translatable)
-BLOG_TITLE = "Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva."  # (translatable)
+BLOG_TITLE = "Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva."  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://blog.bitson.group/"
