@@ -1364,7 +1364,7 @@ GLOBAL_CONTEXT = {
 #        'TWITTER_URL': 'https://twitter.com/getnikola',
  #       'GITHUB_URL': 'https://github.com/getnikola',
         'BANNER_URL': '/assets/img/logotipo.svg',
-         'logo_url': '/assets/img/bitson.png'
+#         'logo_url': '/assets/img/bitson.png'
 }
 
 # Add functions here and they will be called with template
