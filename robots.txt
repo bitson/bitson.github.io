@@ -1,4 +1,4 @@
-Sitemap: http://blog.bitson.com.ar/sitemapindex.xml
+Sitemap: http://blog.bitson.group/sitemapindex.xml
 
 User-Agent: *
-Host: blog.bitson.com.ar
+Host: blog.bitson.group

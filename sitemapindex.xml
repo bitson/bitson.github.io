@@ -6,143 +6,151 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://blog.bitson.com.ar/authors/abrunacci.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/abrunacci.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/authors/cuberti.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/cooperativa-de-trabajo-bitson-ltda.xml</loc>
+  <lastmod>2018-05-21T18:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/authors/d.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/cuberti.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/authors/lecovi.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/d.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/authors/nespino.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/lecovi.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/adwordsexpress.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/malecuervo.xml</loc>
+  <lastmod>2018-05-22T02:45:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/alias.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/authors/nespino.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/android.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/adwordsexpress.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/blog.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/alias.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_comunicacion.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/android.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_dev-python.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/blog.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_devops-git.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_comunicacion.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_opinion-valores-convicciones.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_dev-python.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_tutorial-nginx-devops.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_devops-git.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cat_tutorial-ssh.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_opinion-valores-convicciones.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/comunicacion.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_tutorial-nginx-devops.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/cooperativismo.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cat_tutorial-ssh.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/deploy.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/comunicacion.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/devops-ssh-root.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/cooperativismo.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/devops.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/deploy.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/feminismo.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/devops-ssh-root.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/git.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/devops.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/google.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/feminismo.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/javascript.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/git.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/marketing.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/google.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/nginx.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/javascript.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/nikola.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/marketing.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/publicidad.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/nginx.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/python-pipenv-virtualenv.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/nikola.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/react-native.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/publicidad.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/react.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/python-pipenv-virtualenv.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/sem.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/react-native.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/categories/software-libre.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/react.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/rss.xml</loc>
-  <lastmod>2018-04-26T20:03:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/sem.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://blog.bitson.com.ar/sitemap.xml</loc>
-  <lastmod>2018-04-26T20:22:00Z</lastmod>
+  <loc>http://blog.bitson.group/categories/software-libre.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.group/rss.xml</loc>
+  <lastmod>2018-05-23T18:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.bitson.group/sitemap.xml</loc>
+  <lastmod>2018-05-23T18:26:00Z</lastmod>
  </sitemap>
 </sitemapindex>

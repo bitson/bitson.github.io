@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>BITSON's Blog</title><link>http://blog.bitson.com.ar/</link><description>Nuestro Blog...</description><atom:link href="http://blog.bitson.com.ar/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.com.ar"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Apr 2018 20:43:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Acceso root SSH desde IP o dominio</title><link>http://blog.bitson.com.ar/posts/acceso-root-ssh-desde-ip-o-dominio/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Image" src="http://blog.bitson.com.ar/img/coding-computer-hacker-97077.jpg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.</title><link>http://blog.bitson.group/</link><description> Blog...</description><atom:link rel="self" href="http://blog.bitson.group/rss.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.group"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 May 2018 18:19:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Píxel de seguimiento</title><link>http://blog.bitson.group/posts/pixel-de-seguimiento/</link><dc:creator>@maleCuervo</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post voy a mostrar como agregar un píxel de Facebook y Google Analitycs a nuestro sitio web.&lt;/p&gt;
+&lt;p&gt;¿Qué son y para qué sirven los píxeles de seguimiento?&lt;/p&gt;
+&lt;p&gt;Los píxeles de seguimiento son una herramienta de análisis con la que podemos medir la eficacia de nuestras publicacines y entender las acciones que las personas realizan en nuestro sitio web.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Agregando píxel de Facebook&lt;/h2&gt;
+&lt;p&gt;Agregar el píxel de facebook a nuestra web es relativamente sencillo, basta con seguir los pasos que están en la propia documentación de facebook. Aquí les mostraremos ese paso a paso.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/intro-pixel.png"&gt;&lt;/p&gt;
+&lt;p&gt;1) Vamos a la pestaña píxeles del administrador de anuncios, hacemos click en crear píxel e inmediatamente nos pide asignarle un nombre identificador, en este caso nuestro píxel se llama &lt;strong&gt;bitson.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/confi-pixel.png"&gt;&lt;/p&gt;
+&lt;p&gt;2) Acontinuación ingresamos a las configuraciones del píxel y hacemos click en "instala el código manualmente".&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/instalacion-manual.png"&gt;&lt;/p&gt;
+&lt;p&gt;3) En este momento nos muestra la pantalla con los pasos para terminar la configración.
+Seleccionamos el código que nos brinda la configuración y lo pegamos en el encabezado de nuestras páginas, a las que le haremos seguimiento.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/script-facebook.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Agregando píxel de Google Analytics&lt;/h2&gt;
+&lt;p&gt;Para agregar este píxel debemos ingresar a: &lt;a href="https://developers.google.com/analytics" title="Google Analytics"&gt;Google Analytics&lt;/a&gt; aquí encontraremos las diferentes opciones de configuración que nos brinda esta herramienta, debemos elegir la opción de: &lt;strong&gt;Configurar Google Analytics&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/google-analytics.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Cuando accedemos con esta opción, acontinuación nos muestra que configuración esta disponible para ser usada. En nuestro caso vamos a usar la opción gtag.js.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/gtag.png"&gt;&lt;/p&gt;
+&lt;p&gt;Luego de esto, vamos a copiar el siguiente código, este fragmento que copiamos debe ser insertado después de la etiquet &lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; en todas las páginas de nuestro sitio web.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imagen" src="http://blog.bitson.group/img/pixel/script-google.png"&gt;&lt;/p&gt;
+&lt;p&gt;Esto es todo lo que necesitamos para realizar el seguimiento en nuestros sitios, controlando publicaciones e interacciones de nuestros visitantes, solo necesitamos hacer uso del código que nos brinda Facebook y Google Analytics.&lt;/p&gt;&lt;/div&gt;</description><guid>http://blog.bitson.group/posts/pixel-de-seguimiento/</guid><pubDate>Mon, 21 May 2018 18:34:00 GMT</pubDate></item><item><title>Acceso root SSH desde IP o dominio</title><link>http://blog.bitson.group/posts/acceso-root-ssh-desde-ip-o-dominio/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Image" src="http://blog.bitson.group/img/coding-computer-hacker-97077.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Hace poco con la coope nos mudamos y tuvimos que cambiar el ISP (&lt;em&gt;Internet
 Service Provider&lt;/em&gt;) y eso motivó a que tuviéramos que hacer algunos cambios, en
 muchos aspectos pero no viene al caso, puntualmente en el server que tenemos
 dentro de la ofi.
 Tuve que desempastarme un poco y volver a leer el manual de &lt;strong&gt;ssh&lt;/strong&gt; para
 recordar algunas cuestiones que les comparto a continuación.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.bitson.com.ar/posts/acceso-root-ssh-desde-ip-o-dominio/"&gt;Leer más…&lt;/a&gt; (quedan 1 minutos de lectura)&lt;/p&gt;&lt;/div&gt;</description><category>devops ssh root</category><guid>http://blog.bitson.com.ar/posts/acceso-root-ssh-desde-ip-o-dominio/</guid><pubDate>Fri, 13 Apr 2018 13:15:07 GMT</pubDate></item><item><title>Debugueando react-native en Android</title><link>http://blog.bitson.com.ar/posts/debugueando-react-native-en-android/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a mostrar herramientas para debuguear la aplicacion que estemos desarrollando en react-native, igual que en mi post anterior voy a mostrar como hacerlo en linux.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.bitson.group/posts/acceso-root-ssh-desde-ip-o-dominio/"&gt;Leer más…&lt;/a&gt; (quedan 1 minutos de lectura)&lt;/p&gt;&lt;/div&gt;</description><category>devops ssh root</category><guid>http://blog.bitson.group/posts/acceso-root-ssh-desde-ip-o-dominio/</guid><pubDate>Fri, 13 Apr 2018 13:15:07 GMT</pubDate></item><item><title>Debugueando react-native en Android</title><link>http://blog.bitson.group/posts/debugueando-react-native-en-android/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a mostrar herramientas para debuguear la aplicacion que estemos desarrollando en react-native, igual que en mi post anterior voy a mostrar como hacerlo en linux.&lt;/p&gt;
 &lt;h3&gt;Requisitos&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Internet (claramente).&lt;/li&gt;
@@ -84,7 +106,7 @@ Por ejemplo vayamos al &lt;code&gt;&amp;lt;Button&amp;gt;&lt;/code&gt; dentro de
 
 &lt;p&gt;Gracias por leer, cualquier consulta la pueden dejar escrita en el blog y la contestamos.&lt;/p&gt;
 &lt;p&gt;Saludos,&lt;/p&gt;
-&lt;p&gt;D.&lt;/p&gt;&lt;/div&gt;</description><category>android</category><category>javascript</category><category>react</category><category>react-native</category><guid>http://blog.bitson.com.ar/posts/debugueando-react-native-en-android/</guid><pubDate>Fri, 16 Mar 2018 16:24:15 GMT</pubDate></item><item><title>Cooperativismo, Software Libre y Feminismo</title><link>http://blog.bitson.com.ar/posts/cooperativismo-software-libre-y-feminismo/</link><dc:creator>cuberti</dc:creator><description>&lt;div&gt;&lt;h2&gt;Cooperativismo, software libre y feminismo.&lt;/h2&gt;
+&lt;p&gt;D.&lt;/p&gt;&lt;/div&gt;</description><category>android</category><category>javascript</category><category>react</category><category>react-native</category><guid>http://blog.bitson.group/posts/debugueando-react-native-en-android/</guid><pubDate>Fri, 16 Mar 2018 16:24:15 GMT</pubDate></item><item><title>Cooperativismo, Software Libre y Feminismo</title><link>http://blog.bitson.group/posts/cooperativismo-software-libre-y-feminismo/</link><dc:creator>cuberti</dc:creator><description>&lt;div&gt;&lt;h2&gt;Cooperativismo, software libre y feminismo.&lt;/h2&gt;
 &lt;p&gt;Uno crece en un entorno delimitado y pareciera que siempre tiene que mantenerse dentro de esos parámetros. ¿Acaso no se ve como un logro que un niñx pueda pintar dentro de los bordes? ¿Es realmente un triunfo propio? ¿De la sociedad? ¿Es un simple proceso de aprendizaje?&lt;/p&gt;
 &lt;p&gt;Asociarnos a una Cooperativa implicó un proceso de resignificación de nuestra vida laboral. Incluso, y con el perdón de los amigos y familias, esos límites entre “el horario de oficina” y “casa” se fueron borrando. Creemos en un sistema solidario, donde las verticalidades son solo un fantasma, donde la asamblea arrasa con la meritocracia, donde la lucha es continua. Creemos en nosotros y no como una mínima parte de un sistema sino como seres libres y pensantes.&lt;/p&gt;
 &lt;p&gt;Convicción desde nuestro punto de vista es implicancia.&lt;/p&gt;
@@ -95,7 +117,7 @@ Por ejemplo vayamos al &lt;code&gt;&amp;lt;Button&amp;gt;&lt;/code&gt; dentro de
 &lt;p&gt;Convicción desde nuestro punto de vista es implicancia.&lt;/p&gt;
 &lt;p&gt;Al día de hoy, se calcula que en el sector de producción de software apenas el 20% son mujeres. Y esta desigualdad es aún más fuerte cuando hablamos de software libre donde la participación femenina es del 2% ¡Queremos que este porcentaje cambie! &lt;/p&gt;
 &lt;p&gt;Hoy y siempre vamos a luchar por nuestros ideales. ¡Libertad, igualdad, inclusión, solidaridad y diversidad!&lt;/p&gt;
-&lt;p&gt;¡Creemos en esta forma y queremos ver un mundo así!&lt;/p&gt;&lt;/div&gt;</description><category>cooperativismo</category><category>feminismo</category><category>software libre</category><guid>http://blog.bitson.com.ar/posts/cooperativismo-software-libre-y-feminismo/</guid><pubDate>Thu, 08 Mar 2018 18:48:31 GMT</pubDate></item><item><title>Empezando a usar Google AdWords Express</title><link>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords-express/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;El día de hoy vamos a ver cómo empezar a usar &lt;a href="https://adwords.google.com/express" title="Google AdWords Express"&gt;Google AdWords Express&lt;/a&gt;, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.&lt;/p&gt;
+&lt;p&gt;¡Creemos en esta forma y queremos ver un mundo así!&lt;/p&gt;&lt;/div&gt;</description><category>cooperativismo</category><category>feminismo</category><category>software libre</category><guid>http://blog.bitson.group/posts/cooperativismo-software-libre-y-feminismo/</guid><pubDate>Thu, 08 Mar 2018 18:48:31 GMT</pubDate></item><item><title>Empezando a usar Google AdWords Express</title><link>http://blog.bitson.group/posts/empezando-a-usar-google-adwords-express/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;El día de hoy vamos a ver cómo empezar a usar &lt;a href="https://adwords.google.com/express" title="Google AdWords Express"&gt;Google AdWords Express&lt;/a&gt;, aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.&lt;/p&gt;
 &lt;p&gt;Para empezar, les dejo el número de teléfono gratuito para asistencia a cuentas con inversiones de bajo monto (al día del a fecha, inversiones menores a $2500 ARS mensuales): &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;0800-222-4664&lt;/p&gt;
@@ -176,7 +198,7 @@ Anuncio bitson.group
 Aprovechá el año y arrancá en Febrero! Precio promocional&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Lo que nos da como resultado:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitson.group/cursos" title="Cursos en bitson"&gt;&lt;img alt="adwords curso bitson python" src="http://blog.bitson.com.ar/img/adwords.png" title="Anuncio de Curso de Python en bitson"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitson.group/cursos" title="Cursos en bitson"&gt;&lt;img alt="adwords curso bitson python" src="http://blog.bitson.group/img/adwords.png" title="Anuncio de Curso de Python en bitson"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;¿Cuanto vamos a invertir?&lt;/h2&gt;
 &lt;p&gt;Como primera prueba, decidimos invertir lo mínimo requerido para acceder a la asistencia telefónica, $2500 ARS mensuales. Por menos de ese valor la ayuda que recibís por teléfono es mínima, por el contrario, a partir de ese valor de inversión la asistencia es muy completa y por demás, agradable.&lt;/p&gt;
@@ -199,7 +221,7 @@ Qué ocurre si cambias de idea&lt;/p&gt;
 &lt;h2&gt;¿Cómo hacer para recibir el dinero promocional?&lt;/h2&gt;
 &lt;p&gt;En nuestro caso, pasadas las 48hs de haber el pago mínimo requerido para la activación del cupón promocional ($175 ARS), nos apareció el crédito de $700 ARS en nuestra cuenta. &lt;/p&gt;
 &lt;p&gt;¡OJO! Uno debe ser responsable a la hora de armar las campañas. Lo mejor es darles una fecha de comienzo y una de finalización, contemplando el costo diario, de manera que sepamos de antemano cuánto dinero estamos dispuestos a invertir en publicidad. Para Google AdWords, es suficiente con que hayan hecho click en nuestro anuncio para cargarlo en nuestra cuenta. ¿Es confiable? Podríamos decir que sí. El mismo AdWords te ofrece la posibilidad de analizar desde donde viene el tráfico, y armar estadísticas basado en distintos paramétros. Hay mucho para investigar al respecto, y muchas consideraciones a la hora de armar una campaña.&lt;/p&gt;
-&lt;p&gt;Así fue que dimos nuestro primer curso en &lt;a href="https://bitson.group" title="bitson"&gt;bitson&lt;/a&gt;, y que lo publicitamos a través de &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>adwordsexpress</category><category>comunicacion</category><category>google</category><category>marketing</category><category>publicidad</category><category>sem</category><guid>http://blog.bitson.com.ar/posts/empezando-a-usar-google-adwords-express/</guid><pubDate>Thu, 01 Mar 2018 17:24:36 GMT</pubDate></item><item><title>Empezando con Android y React-Native</title><link>http://blog.bitson.com.ar/posts/empezando-con-android-y-react-native/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a configurar el ambiente en linux para empezar a programar aplicaciones
+&lt;p&gt;Así fue que dimos nuestro primer curso en &lt;a href="https://bitson.group" title="bitson"&gt;bitson&lt;/a&gt;, y que lo publicitamos a través de &lt;a href="https://adwords.google.com/" title="Google AdWords"&gt;Google AdWords&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>adwordsexpress</category><category>comunicacion</category><category>google</category><category>marketing</category><category>publicidad</category><category>sem</category><guid>http://blog.bitson.group/posts/empezando-a-usar-google-adwords-express/</guid><pubDate>Thu, 01 Mar 2018 17:24:36 GMT</pubDate></item><item><title>Empezando con Android y React-Native</title><link>http://blog.bitson.group/posts/empezando-con-android-y-react-native/</link><dc:creator>D</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post vamos a configurar el ambiente en linux para empezar a programar aplicaciones
 en react-native para android (iOS queda fuera por razones obvias :grimacing:)&lt;/p&gt;
 &lt;h3&gt;Requisitos:&lt;/h3&gt;
 &lt;ul&gt;
@@ -329,7 +351,7 @@ Fuentes y ayudas:
 &lt;li&gt;&lt;a href="https://developer.android.com/studio/install.html"&gt;Install android studio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://stackoverflow.com/questions/26256279/how-to-set-android-home-path-in-ubuntu-please-provide-the-steps"&gt;Este link de stackoferflow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://nodejs.org/es/download/package-manager/#distribuciones-de-linux-basadas-en-debian-y-ubuntu"&gt;Instalar node&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>http://blog.bitson.com.ar/posts/empezando-con-android-y-react-native/</guid><pubDate>Tue, 27 Feb 2018 21:43:18 GMT</pubDate></item><item><title>Evitando las malas prácticas en Python</title><link>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</link><dc:creator>Abrunacci</dc:creator><description>&lt;div&gt;&lt;p&gt;Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://blog.bitson.group/posts/empezando-con-android-y-react-native/</guid><pubDate>Tue, 27 Feb 2018 21:43:18 GMT</pubDate></item><item><title>Evitando las malas prácticas en Python</title><link>http://blog.bitson.group/posts/evitando-las-malas-practicas/</link><dc:creator>Abrunacci</dc:creator><description>&lt;div&gt;&lt;p&gt;Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
 "leves" a nivel programación pero que a la hora de inspeccionar nuestro código y ver si cumple con las 
 &lt;a href="https://www.fing.edu.uy/inco/cursos/fpr/wiki/index.php/Python_PEP8"&gt;reglas PEP8&lt;/a&gt; nos encontramos con 
 la sorpresa de que dudosamente una parte del código escrito logra aprobar el "examen".&lt;/p&gt;
@@ -390,14 +412,14 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
    El código mal comentado es peor que el que no lo está. Procuren mantener actualizados los comentarios para que cualquiera
    que lo lea lo pueda interpretar correctamente y no tenga que adivinar qué es lo que hace cada función.&lt;/p&gt;
 &lt;p&gt;Eso es todo por ahora, más adelante subiré otros consejos sobre Python.&lt;/p&gt;
-&lt;p&gt;Saludos!&lt;/p&gt;&lt;/div&gt;</description><guid>http://blog.bitson.com.ar/posts/evitando-las-malas-practicas/</guid><pubDate>Thu, 22 Feb 2018 01:57:25 GMT</pubDate></item><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
+&lt;p&gt;Saludos!&lt;/p&gt;&lt;/div&gt;</description><guid>http://blog.bitson.group/posts/evitando-las-malas-practicas/</guid><pubDate>Thu, 22 Feb 2018 01:57:25 GMT</pubDate></item><item><title>Creando artículos en Nikola</title><link>http://blog.bitson.group/posts/creando-articulos-en-nikola/</link><dc:creator>@nespino</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les presentamos nuestro primer post recursivo. &lt;/p&gt;
 &lt;h3&gt;Cómo crear un artículo para el blog de bitson&lt;/h3&gt;
 &lt;p&gt;Ingredientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/pypa/pipenv" title="Repositorio de pipenv"&gt;pipenv&lt;/a&gt; (Para más información ver la guía &lt;a href="http://blog.bitson.group/posts/empezando-con-pipenv/" title="Empezando con pipenv"&gt;Empezando con pipenv&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://pages.github.com/" title="Páginas de GitHub"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Guía rápida de Markdown"&gt;Markdown&lt;/a&gt; como lenguaje de marcado &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://getnikola.com/" title="Sitio oficial de Nikola"&gt;&lt;img alt="nikola logo" src="http://blog.bitson.com.ar/img/logo_nikola.png" title="Logo de Nikola"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://getnikola.com/" title="Sitio oficial de Nikola"&gt;&lt;img alt="nikola logo" src="http://blog.bitson.group/img/logo_nikola.png" title="Logo de Nikola"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sin más preámbulo, dejo la receta a continuación... &lt;/p&gt;
 &lt;h2&gt;Configurando el entorno pipenv&lt;/h2&gt;
@@ -461,7 +483,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 &lt;p&gt;[2018-02-16T20:03:24Z] INFO: auto: &lt;strong&gt;*&lt;/strong&gt;* sending 0 pending messages&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Voilá!&lt;/h2&gt;
-&lt;p&gt;Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a &lt;a href="http://localhost:8001/" title="8001 o el puerto en el que esté corriendo Nikola"&gt;http://localhost:8001/&lt;/a&gt; y buscar esta misma &lt;a href="http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/#voila" title="Haga clic aquí para sentir el efecto recursivo en sus propias venas"&gt;entrada&lt;/a&gt;. Todo este procedimiento para llegar al tan deseado momento...&lt;/p&gt;
+&lt;p&gt;Nikola está listo para ser usado. Para ver el estado actual del blog, ingresar a &lt;a href="http://localhost:8001/" title="8001 o el puerto en el que esté corriendo Nikola"&gt;http://localhost:8001/&lt;/a&gt; y buscar esta misma &lt;a href="http://blog.bitson.group/posts/creando-articulos-en-nikola/#voila" title="Haga clic aquí para sentir el efecto recursivo en sus propias venas"&gt;entrada&lt;/a&gt;. Todo este procedimiento para llegar al tan deseado momento...&lt;/p&gt;
 &lt;h2&gt;Creando artículos en Nikola&lt;/h2&gt;
 &lt;p&gt;Antes de crear una nueva entrada, es &lt;em&gt;muy&lt;/em&gt; importante tener el blog local actualizado, para no perder los últimos cambios ni generar conflictos con las ramas. Para esto basta con ejecutar:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;git pull&lt;/strong&gt;&lt;/p&gt;
@@ -524,7 +546,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
 &lt;/blockquote&gt;
 &lt;h2&gt;# Este título empieza con almohadilla (hasthag, símbolo de numeral, ta-te-tí...)&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Este renglón está en cursiva&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="explicacion grafica recursiva" src="http://blog.bitson.com.ar/img/explicacion_grafica_recursiva.png" title="Explicación gráfica recursiva"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="explicacion grafica recursiva" src="http://blog.bitson.group/img/explicacion_grafica_recursiva.png" title="Explicación gráfica recursiva"&gt;&lt;/p&gt;
 &lt;p&gt;&amp;gt; # __no tan importante__ ![recurso] Nosotros somos símbolos libres (estamos escapados)&lt;/p&gt;
 &lt;p&gt;Este separador de línea de acá abajo se hace poniendo tres guiones seguidos (---)&lt;/p&gt;
 &lt;hr&gt;
@@ -561,7 +583,7 @@ al posicionar el cursor del mouse sobre la misma. &lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Animate a ejecutar &lt;strong&gt;pipenv --jumbotron&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>blog</category><category>nikola</category><guid>http://blog.bitson.com.ar/posts/creando-articulos-en-nikola/</guid><pubDate>Fri, 16 Feb 2018 19:10:50 GMT</pubDate></item><item><title>Deployando directamente con git</title><link>http://blog.bitson.com.ar/posts/deployando-directamente-con-git/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les quiero contar cómo se puede configurar &lt;code&gt;git&lt;/code&gt; para que deployemos
+&lt;/ul&gt;&lt;/div&gt;</description><category>blog</category><category>nikola</category><guid>http://blog.bitson.group/posts/creando-articulos-en-nikola/</guid><pubDate>Fri, 16 Feb 2018 19:10:50 GMT</pubDate></item><item><title>Deployando directamente con git</title><link>http://blog.bitson.group/posts/deployando-directamente-con-git/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy les quiero contar cómo se puede configurar &lt;code&gt;git&lt;/code&gt; para que deployemos
 directamente con un &lt;code&gt;push&lt;/code&gt; en nuestro server.&lt;/p&gt;
 &lt;h2&gt;Entorno&lt;/h2&gt;
 &lt;p&gt;Vamos a suponer que ya tenés tu sitio en un repositorio y que lo que estás
@@ -632,7 +654,7 @@ tenés en &lt;code&gt;/home/bitson/mi_sitio&lt;/code&gt;.&lt;/p&gt;
 
 
 &lt;hr&gt;
-&lt;p&gt;Fácil? Dejanos tu comentario&lt;/p&gt;&lt;/div&gt;</description><category>deploy</category><category>devops</category><category>git</category><guid>http://blog.bitson.com.ar/posts/deployando-directamente-con-git/</guid><pubDate>Thu, 08 Feb 2018 01:52:17 GMT</pubDate></item><item><title>Alias &amp; Pretty URL con Nginx</title><link>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
+&lt;p&gt;Fácil? Dejanos tu comentario&lt;/p&gt;&lt;/div&gt;</description><category>deploy</category><category>devops</category><category>git</category><guid>http://blog.bitson.group/posts/deployando-directamente-con-git/</guid><pubDate>Thu, 08 Feb 2018 01:52:17 GMT</pubDate></item><item><title>Alias &amp; Pretty URL con Nginx</title><link>http://blog.bitson.group/posts/alias-pretty-url-con-nginx/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
 diferentes carpetas con archivos estáticos de tu sitio.&lt;/p&gt;
 &lt;h2&gt;Primer deploy&lt;/h2&gt;
 &lt;p&gt;Supongamos que tenemos un sitio estático, por ejemplo, el sitio institucional
@@ -726,10 +748,4 @@ queremos acceder en nuestro sitio. Sólo tenemos que agregar una sentencia de
 &lt;p&gt;Así, si queremos entrar a &lt;code&gt;https://bitson.group/slides/presentacion1.html&lt;/code&gt;
 podremos hacerlo con sólo ir a &lt;code&gt;https://bitson.group/slides/presentacion1&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Espero que les haya gustado! Los leemos en los comentarios!&lt;/p&gt;&lt;/div&gt;</description><category>alias</category><category>deploy</category><category>devops</category><category>nginx</category><guid>http://blog.bitson.com.ar/posts/alias-pretty-url-con-nginx/</guid><pubDate>Thu, 08 Feb 2018 01:24:22 GMT</pubDate></item><item><title>Empezando con Pipenv</title><link>http://blog.bitson.com.ar/posts/empezando-con-pipenv/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este brevísimo artículo te explicamos cómo empezar a usar &lt;code&gt;pipenv&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Instalado Pipenv&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; es una herramienta para manejar paquetes y entornos virtuales de
-manera sencilla en tu entorno de desarrollo. Te recomiendo que le eches un ojo
-a la &lt;a href="http://pipenv.readthedocs.io/en/latest/"&gt;Documentacion Oficila&lt;/a&gt;.
-Ahora te voy a mostrar cómo instalar &lt;code&gt;pipenv&lt;/code&gt; y cómo usarlo en tus proyectos.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.bitson.com.ar/posts/empezando-con-pipenv/"&gt;Leer más…&lt;/a&gt; (quedan 1 minutos de lectura)&lt;/p&gt;&lt;/div&gt;</description><category>python pipenv virtualenv</category><guid>http://blog.bitson.com.ar/posts/empezando-con-pipenv/</guid><pubDate>Wed, 31 Jan 2018 15:26:18 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Espero que les haya gustado! Los leemos en los comentarios!&lt;/p&gt;&lt;/div&gt;</description><category>alias</category><category>deploy</category><category>devops</category><category>nginx</category><guid>http://blog.bitson.group/posts/alias-pretty-url-con-nginx/</guid><pubDate>Thu, 08 Feb 2018 01:24:22 GMT</pubDate></item></channel></rss>
