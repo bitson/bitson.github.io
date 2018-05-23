@@ -28,7 +28,7 @@ Agregar el píxel de facebook a nuestra web es relativamente sencillo, basta con
 
 ![imagen](/img/pixel/confi-pixel.png)
 
-2) Acontinuación ingresamos a las configuraciones del píxel y hacemos click en "instala el código manualmente".
+2) A continuación ingresamos a las configuraciones del píxel y hacemos click en "Instala el código manualmente".
 
 ![imagen](/img/pixel/instalacion-manual.png)
 
@@ -41,11 +41,11 @@ Seleccionamos el código que nos brinda la configuración y lo pegamos en el enc
 
 #Agregando píxel de Google Analytics
 
-Para agregar este píxel debemos ingresar a: [Google Analytics](https://developers.google.com/analytics "Google Analytics") aquí encontraremos las diferentes opciones de configuración que nos brinda esta herramienta, debemos elegir la opción de: **Configurar Google Analytics**. 
+Para agregar este píxel debemos ingresar a [Google Analytics](https://developers.google.com/analytics "Google Analytics") aquí encontraremos las diferentes opciones de configuración que nos brinda esta herramienta, debemos elegir la opción de [Configurar Google Analytics](https://developers.google.com/analytics/devguides/collection/?hl=es-419 "Configurar Google Analytics"). 
 
 ![imagen](/img/pixel/google-analytics.png)	
 
-Cuando accedemos con esta opción, acontinuación nos muestra que configuración esta disponible para ser usada. En nuestro caso vamos a usar la opción gtag.js.
+Cuando accedemos con esta opción, acontinuación nos muestra que configuración esta disponible para ser usada. En nuestro caso vamos a usar la opción [gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/?hl=es-419 "gtag.js").
 
 ![imagen](/img/pixel/gtag.png)
 
