@@ -266,7 +266,7 @@ p, ul, ol, dl {
 }
 
 ol, ul {
-    padding-left: 19rem;
+    padding-left: 1rem;
 }
 
 ol ol, ul ul,
@@ -727,7 +727,7 @@ body.nav-opened .nav {
     position: absolute;
     z-index: 100;
     bottom: 17px;
-    left: 48%;
+    left: 53%;
     margin-left: -16px;
     width: 34px;
     height: 34px;
@@ -867,7 +867,7 @@ body.nav-opened .menu-button .word {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 108px 162px 0 0;
+    margin: 108px -8px 0 0;
     font-size: 2rem;
     letter-spacing: 7px;
     font-weight: 700;
@@ -924,7 +924,7 @@ body.nav-opened .menu-button .word {
     position: relative;
     width: 80%;
     max-width: 1236px;
-    margin:14rem auto;
+    margin:1rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
@@ -968,7 +968,7 @@ article {
 }
 
 body:not(.post-template) .post-title {
-    font-size: 5.6rem;
+    font-size: 2.0rem;
 }
 
 .post-title a {
@@ -993,6 +993,7 @@ body:not(.post-template) .post-title {
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
+
 }
 
 .author-thumb {
@@ -1004,7 +1005,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-    color: #9EABB3;
+    color: #02679A ;
     text-decoration: none;
 }
 
