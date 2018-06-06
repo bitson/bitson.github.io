@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.</title><link>http://blog.bitson.group/</link><description> Blog...</description><atom:link type="application/rss+xml" href="http://blog.bitson.group/rss.xml" rel="self"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.group"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 May 2018 18:53:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Píxel de seguimiento</title><link>http://blog.bitson.group/posts/pixel-de-seguimiento/</link><dc:creator>@maleCuervo</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post voy a mostrar como agregar un píxel de Facebook y Google Analitycs a nuestro sitio web.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.</title><link>http://blog.bitson.group/</link><description> Blog...</description><atom:link rel="self" href="http://blog.bitson.group/rss.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.group"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Wed, 06 Jun 2018 04:59:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Usando Python en funciones de Postgresql</title><link>http://blog.bitson.group/posts/usando-python-en-funciones-de-postgresql/</link><dc:creator>Cooperativa de Trabajo BITSON Ltda.</dc:creator><description>&lt;div&gt;&lt;p&gt;Usando Python en funciones de Postgresql&lt;/p&gt;
+&lt;p&gt;Además de ser súper robusto a muy bajo costo, Postgresql, posee una muy buena característica, que es poder generar distintos tipos de funciones haciendo uso del lenguaje procedural, en este caso vamos a hablar de PL/Python, el cual, como pueden deducir por el titulpo del post, nos permite escribir codigo python dentro de las funciones.&lt;/p&gt;
+&lt;p&gt;En el post de hoy nos vamos a concentrar en dejar la extensión disponible para una base de datos en particular y también haremos un pequeño ejemplo de uso para poder sacarnos las ganas.
+&lt;/p&gt;&lt;p&gt;&lt;a href="http://blog.bitson.group/posts/usando-python-en-funciones-de-postgresql/"&gt;Leer más…&lt;/a&gt; (quedan 1 minutos de lectura)&lt;/p&gt;&lt;/div&gt;</description><category>postgresql python functions sql bitson</category><guid>http://blog.bitson.group/posts/usando-python-en-funciones-de-postgresql/</guid><pubDate>Wed, 06 Jun 2018 02:57:46 GMT</pubDate></item><item><title>Píxel de seguimiento</title><link>http://blog.bitson.group/posts/pixel-de-seguimiento/</link><dc:creator>@maleCuervo</dc:creator><description>&lt;div&gt;&lt;p&gt;En este post voy a mostrar como agregar un píxel de Facebook y Google Analitycs a nuestro sitio web.&lt;/p&gt;
 &lt;p&gt;¿Qué son y para qué sirven los píxeles de seguimiento?&lt;/p&gt;
 &lt;p&gt;Los píxeles de seguimiento son una herramienta de análisis con la que podemos medir la eficacia de nuestras publicacines y entender las acciones que las personas realizan en nuestro sitio web.&lt;/p&gt;
 &lt;hr&gt;
@@ -654,98 +657,4 @@ tenés en &lt;code&gt;/home/bitson/mi_sitio&lt;/code&gt;.&lt;/p&gt;
 
 
 &lt;hr&gt;
-&lt;p&gt;Fácil? Dejanos tu comentario&lt;/p&gt;&lt;/div&gt;</description><category>deploy</category><category>devops</category><category>git</category><guid>http://blog.bitson.group/posts/deployando-directamente-con-git/</guid><pubDate>Thu, 08 Feb 2018 01:52:17 GMT</pubDate></item><item><title>Alias &amp; Pretty URL con Nginx</title><link>http://blog.bitson.group/posts/alias-pretty-url-con-nginx/</link><dc:creator>lecovi</dc:creator><description>&lt;div&gt;&lt;p&gt;En este artículo te voy a contar cómo hacer para publicar en un mismo servidor
-diferentes carpetas con archivos estáticos de tu sitio.&lt;/p&gt;
-&lt;h2&gt;Primer deploy&lt;/h2&gt;
-&lt;p&gt;Supongamos que tenemos un sitio estático, por ejemplo, el sitio institucional
-de &lt;a href="https://bitson.group"&gt;bitson&lt;/a&gt;. Eso lo tenemos en un repo y es un conjunto
-de archivos de texto (HTML, js, css y demás) que conforman el sitio.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Se le dice &lt;strong&gt;estático&lt;/strong&gt; no porque esté &lt;em&gt;"quieto"&lt;/em&gt; sino porque sólo contiene
-archivos de texto y no necesita correr un &lt;em&gt;backend&lt;/em&gt; para funcionar.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Supongamos que tenemos los archivos en https://github.com/bitson/sitio1.git
-clonamos el repo en el server y tendremos una configuración del Nginx que será
-algo similar a:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;server &lt;span class="o"&gt;{&lt;/span&gt;
-    listen &lt;span class="m"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    listen &lt;span class="o"&gt;[&lt;/span&gt;::&lt;span class="o"&gt;]&lt;/span&gt;:80&lt;span class="p"&gt;;&lt;/span&gt;
-    server_name bitson.group www.bitson.group&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="m"&gt;301&lt;/span&gt; https://&lt;span class="nv"&gt;$host&lt;/span&gt;/&lt;span class="nv"&gt;$request_uri&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-server &lt;span class="o"&gt;{&lt;/span&gt;
-    listen &lt;span class="m"&gt;443&lt;/span&gt; ssl&lt;span class="p"&gt;;&lt;/span&gt;
-    listen &lt;span class="o"&gt;[&lt;/span&gt;::&lt;span class="o"&gt;]&lt;/span&gt;:443 ssl&lt;span class="p"&gt;;&lt;/span&gt;
-
-    root /home/bitson/sitio1&lt;span class="p"&gt;;&lt;/span&gt;
-
-    server_name bitson.group www.bitson.group&lt;span class="p"&gt;;&lt;/span&gt;
-
-    location / &lt;span class="o"&gt;{&lt;/span&gt;
-        try_files &lt;span class="nv"&gt;$uri&lt;/span&gt; &lt;span class="nv"&gt;$uri&lt;/span&gt;/ &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;404&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-    ssl_certificate         /etc/letsencrypt/live/bitson.group/fullchain.pem&lt;span class="p"&gt;;&lt;/span&gt;
-    ssl_certificate_key     /etc/letsencrypt/live/bitson.group/privkey.pem&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Esta configuración hace que todas las peticiones que lleguen vía HTTP sean
-redireccionadas al HTTPS y se sirvan del directorio &lt;code&gt;/home/bitson/sitio1&lt;/code&gt; donde
-tenemos clonado el repo.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Para los certificados usamos Let's Encrypt y esa es la ruta usual en donde
-se guardan en un sistema Debian.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Además en esta configuración vemos una sentencia de &lt;code&gt;try_files&lt;/code&gt; para la
-locación de la raíz (&lt;code&gt;/&lt;/code&gt;). Lo que nos quiere decir esto es que cuando alquien
-haga una petición a, por ejemplo: &lt;code&gt;bitson.group/saraza&lt;/code&gt; Nginx tiene que buscar
-si existe el archivo &lt;code&gt;/home/bitson/sitio1/saraza&lt;/code&gt; o si existe el directorio
-&lt;code&gt;/home/bitson/sitio1/saraza/&lt;/code&gt;. En caso de que no exista ninguno entonces el
-Nginx responderá con un 404, el código de HTTP que corresponde a &lt;code&gt;Not Found&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;Agregando el alias&lt;/h2&gt;
-&lt;p&gt;Supongamos ahora que tenemos otro repositorio, por ejemplo,
-https://github.com/bitson/presentaciones.git y queremos publicarlo en el mismo
-servidor. Algo así como lo que podemos ver en
-&lt;a href="https://bitson.group/slides/"&gt;bitson.group/slides&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Para no tener que publicarlo en otro server, podemos aprovechar un alias de
-Nginx. Suponiendo que tenemos ese repositorio en el server en
-&lt;code&gt;/home/bitson/presentaciones&lt;/code&gt; tenemos que poner una configuración como:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;server &lt;span class="o"&gt;{&lt;/span&gt;
-    listen &lt;span class="m"&gt;443&lt;/span&gt; ssl&lt;span class="p"&gt;;&lt;/span&gt;
-    listen &lt;span class="o"&gt;[&lt;/span&gt;::&lt;span class="o"&gt;]&lt;/span&gt;:443 ssl&lt;span class="p"&gt;;&lt;/span&gt;
-
-    root /home/bitson/sitio1&lt;span class="p"&gt;;&lt;/span&gt;
-
-    server_name bitson.group www.bitson.group&lt;span class="p"&gt;;&lt;/span&gt;
-
-    location / &lt;span class="o"&gt;{&lt;/span&gt;
-        try_files &lt;span class="nv"&gt;$uri&lt;/span&gt; &lt;span class="nv"&gt;$uri&lt;/span&gt;/ &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;404&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-    location /slides &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="nb"&gt;alias&lt;/span&gt; /home/bitson/presentaciones&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-    ssl_certificate         /etc/letsencrypt/live/bitson.group/fullchain.pem&lt;span class="p"&gt;;&lt;/span&gt;
-    ssl_certificate_key     /etc/letsencrypt/live/bitson.group/privkey.pem&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h2&gt;Pretty URLs&lt;/h2&gt;
-&lt;p&gt;Si queremos omitir tener que poner el &lt;code&gt;.html&lt;/code&gt; en cada una de las URLs a las que
-queremos acceder en nuestro sitio. Sólo tenemos que agregar una sentencia de
-&lt;code&gt;try_files&lt;/code&gt; en nuestra configuración. Por ejemlo:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    location /slides &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="nb"&gt;alias&lt;/span&gt; /home/bitson/presentaciones&lt;span class="p"&gt;;&lt;/span&gt;
-        try_files &lt;span class="nv"&gt;$uri&lt;/span&gt; &lt;span class="nv"&gt;$uri&lt;/span&gt;.html &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;404&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Así, si queremos entrar a &lt;code&gt;https://bitson.group/slides/presentacion1.html&lt;/code&gt;
-podremos hacerlo con sólo ir a &lt;code&gt;https://bitson.group/slides/presentacion1&lt;/code&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Espero que les haya gustado! Los leemos en los comentarios!&lt;/p&gt;&lt;/div&gt;</description><category>alias</category><category>deploy</category><category>devops</category><category>nginx</category><guid>http://blog.bitson.group/posts/alias-pretty-url-con-nginx/</guid><pubDate>Thu, 08 Feb 2018 01:24:22 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Fácil? Dejanos tu comentario&lt;/p&gt;&lt;/div&gt;</description><category>deploy</category><category>devops</category><category>git</category><guid>http://blog.bitson.group/posts/deployando-directamente-con-git/</guid><pubDate>Thu, 08 Feb 2018 01:52:17 GMT</pubDate></item></channel></rss>
