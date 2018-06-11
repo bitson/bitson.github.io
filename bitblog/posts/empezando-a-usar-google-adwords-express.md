@@ -7,7 +7,7 @@
 .. link: 
 .. description: Empezando a usar Google AdWords Express para nuestras campañas
 .. type: text
-.. author: @nespino
+.. author: nespino
 -->
 
 El día de hoy vamos a ver cómo empezar a usar [Google AdWords Express](https://adwords.google.com/express "Google AdWords Express"), aprovechando los descuentos que ofrecen y andan dando vueltas. En caso de no haber recibido uno, podés ponerte en contacto y hacer ruido de que tenés una empresa o un dominio o aparición en internet y te lo envían.
