@@ -7,7 +7,7 @@
 .. link: 
 .. description: Cómo crear un artículo para el blog de bitson con Nikola
 .. type: text
-.. author: @nespino
+.. author: nespino
 -->
 
 Hoy les presentamos nuestro primer post recursivo. 

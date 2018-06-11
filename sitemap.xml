@@ -7,222 +7,270 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.bitson.group/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T06:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/2018/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/archive.html</loc>
-  <lastmod>2018-06-06T04:30:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/</loc>
-  <lastmod>2018-06-06T04:30:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/abrunacci/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-22T20:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/cooperativa-de-trabajo-bitson-ltda/</loc>
-  <lastmod>2018-06-06T04:30:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/cuberti/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/d/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T03:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/lecovi/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/malecuervo/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/nespino/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/</loc>
-  <lastmod>2018-06-06T04:59:00Z</lastmod>
+  <lastmod>2018-06-11T06:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/adwordsexpress/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/ai/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/alias/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/android/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/artificial-inteligence/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/blog/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_comunicacion/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-01T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_database-tricks/</loc>
-  <lastmod>2018-06-06T04:59:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_dev-python/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_devops-git/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_opinion-valores-convicciones/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/cat_programacion/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_tutorial-nginx-devops/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cat_tutorial-ssh/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/comunicacion/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-01T17:33:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/cooperativismo/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/deploy/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/devops-ssh-root/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/devops/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/feminismo/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/git/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/google/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-01T17:33:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/ia/</loc>
+  <lastmod>2018-06-11T06:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/inteligencia-artificial/</loc>
+  <lastmod>2018-06-11T06:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/javascript/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/machine-learning/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/marketing/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/nginx/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/nikola/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/numpy/</loc>
+  <lastmod>2018-06-11T06:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/postgresql-python-functions-sql-bitson/</loc>
-  <lastmod>2018-06-06T04:59:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/preprocessing/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/publicidad/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/python-pipenv-virtualenv/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/python/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/react-native/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/react/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/scikit/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/categories/scipy/</loc>
+  <lastmod>2018-06-11T06:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/sem/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/categories/software-libre/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/index-1.html</loc>
-  <lastmod>2018-06-06T04:30:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/acceso-root-ssh-desde-ip-o-dominio/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/alias-pretty-url-con-nginx/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/cooperativismo-software-libre-y-feminismo/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/creando-articulos-en-nikola/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/debugueando-react-native-en-android/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-04-04T19:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/deployando-directamente-con-git/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/empezando-a-usar-google-adwords-express/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T12:21:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/empezando-con-android-y-react-native/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-03-05T03:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/empezando-con-pipenv/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-19T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/evitando-las-malas-practicas/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-02-22T20:31:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/pixel-de-seguimiento/</loc>
-  <lastmod>2018-06-06T02:51:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/posts/preprocesando-datos-para-machine-learning/</loc>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/usando-python-en-funciones-de-postgresql/</loc>
-  <lastmod>2018-06-06T04:30:00Z</lastmod>
+  <lastmod>2018-06-11T05:40:00Z</lastmod>
  </url>
 </urlset>

@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.group/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/usando-python-en-funciones-de-postgresql/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/preprocesando-datos-para-machine-learning/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -64,7 +64,157 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/usando-python-en-funciones-de-postgresql/" class="u-url">Usando Python en funciones de Postgresql</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/preprocesando-datos-para-machine-learning/" class="u-url">Preprocesando datos para Machine Learning</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/nespino/">nespino</a>
+            </span></p>
+            <p class="dateline"><a href="posts/preprocesando-datos-para-machine-learning/" rel="bookmark"><time class="published dt-published" datetime="2018-06-11T02:30:15-03:00" title="2018-06-11 02:30">2018-06-11 02:30</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/preprocesando-datos-para-machine-learning/#disqus_thread" data-disqus-identifier="cache/posts/preprocesando-datos-para-machine-learning.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>A todos nos gustaría llegar a casa y que la cena esté lista. A los algoritmos de <a href="https://es.wikipedia.org/wiki/Aprendizaje_autom%C3%A1tico" title="¿Qué es Machine Learning?">Machine Learning</a> también, por eso es que hoy vamos a dejarles cuatro recetas para que puedan alimentar en forma eficiente a sus procesos de entrenamiento.</p>
+<p>Las recetas que repasaremos el día de hoy son:</p>
+<ul>
+<li>Binarización</li>
+<li>Eliminación del valor medio</li>
+<li>Escalando</li>
+<li>Normalización</li>
+</ul>
+<blockquote>
+<p>Cada caso puede requerir el uso de uno o más de estos métodos en forma combinada.</p>
+</blockquote>
+<p>Para simplificarnos las tareas matemáticas, vamos a hacer uso de dos paquetes <a href="https://es.wikipedia.org/wiki/Software_libre_y_de_c%C3%B3digo_abierto" title="Diferencias entre Software Libre y Código Abierto">Open Source</a> para desarrollos científicos:</p>
+<ul>
+<li>
+<a href="http://www.numpy.org/" title="Numpy">Numpy</a>, el cual se puede instalar junto a las de herramientas de <a href="https://www.scipy.org/install.html" title="¿Cómo instalar SciPy?">SciPy</a>
+</li>
+<li>El paquete de aprendizaje de Machine Learning <a href="http://scikit-learn.org/stable/install.html" title="Scikit Learn">scikit</a>
+</li>
+</ul>
+<p>Ambos se pueden instalar fácilmente desde <strong>pip</strong> con los siguientes comandos:</p>
+<blockquote>
+<p>pip install scipy</p>
+<p>pip install scikit-learn</p>
+</blockquote>
+<p>Primero vamos a importar las librerías necesarias y definir una matriz de ejemplo en numpy para usar en cada uno de los métodos que explicaremos a continuación</p>
+<blockquote>
+<p>import numpy as np</p>
+<p>from sklearn import preprocessing</p>
+<p>matriz_ejemplo = np.array([[2.3, 2.9, -1.3, 5.2],</p>
+<p>                        
+                   [1.3, -3.8, 2.1, 4.3],</p>
+<p>                        
+                   [-8.9, 2.4, -1.1, 0],</p>
+<p>                        
+                   [4.1, -3.9, 2.5, 2.1]])</p>
+</blockquote>
+<h2>Binarización</h2>
+<p>Este método es comparable al que utilizan las entradas de las <a href="https://es.wikipedia.org/wiki/Puerta_l%C3%B3gica" title="Compuertas Lógicas">Compuertas Lógicas</a> con las que están hechas todos nuestros dispositivos electrónicos, en el que, habiendo definido un valor de umbral, podemos separar a los datos que ingresan de manera que los menores a ese umbral correspondan a 0 (False) y los mayores correspondan a 1 (True). Vamos a transformar esos valores numéricos en valores booleanos, usando un umbral de 2.4 con la función Binarizer:</p>
+<blockquote>
+<p>matriz_binarizada = preprocessing.Binarizer(threshold=2.4).transform(matriz_ejemplo)</p>
+<p>print("Matriz binarizada:\n", matriz_binarizada)</p>
+</blockquote>
+<p>y el resultado será:</p>
+<blockquote>
+<p>Matriz binarizada:</p>
+<p>  [[0. 1. 0. 1.]</p>
+<p>  [0. 0. 0. 1.]</p>
+<p>  [0. 0. 0. 0.]</p>
+<p>  [1. 0. 1. 0.]]</p>
+</blockquote>
+<p>Observen que el segundo elemento de la tercer fila de la matriz de ejemplo es 2.4, y al binarizarlo con el umbral 2.4 se obtiene un 0 en la misma posición.</p>
+<p><em>Pueden encontrar el código completo de este método en el archivo de ejemplo <a href="code/ai/binarizacion.py" download>binarizacion.py</a>.</em></p>
+<h2>Eliminación del valor medio</h2>
+<p>Este método es muy usado en preprocesamiento de datos para Machine Learning, con el cual se elimina el sesgo de las características en nuestro vector característico. La función que nos permite esta transformación se llama <strong>scale</strong> y es muy sencilla de usar. Para verificar los resultados paso a paso incluímos algunos <strong>prints</strong>.</p>
+<blockquote>
+<p>print("Matriz de ejemplo:")</p>
+<p>print(matriz_ejemplo)</p>
+<p>print("Promedio =", matriz_ejemplo.mean(axis=0))</p>
+<p>print("Desviación típica =", matriz_ejemplo.std(axis=0))</p>
+<p> </p>
+<p>promedio_eliminado = preprocessing.scale(matriz_ejemplo)</p>
+<p>print("\nMatriz procesada:")</p>
+<p>print(promedio_eliminado)</p>
+<p>print("Promedio =", promedio_eliminado.mean(axis=0))</p>
+<p>print("Desviación Típica =", promedio_eliminado.std(axis=0))</p>
+</blockquote>
+<p>Lo que debería darnos como resultado:</p>
+<blockquote>
+<p>Matriz de ejemplo:</p>
+<p> [[ 2.1  2.9 -1.3  5.2]</p>
+<p> [ 1.3 -3.8  2.1  4.3]</p>
+<p> [-8.9  2.4 -1.1  0. ]</p>
+<p> [ 4.1 -3.9  2.5  2.1]]</p>
+<p>Promedio = [-0.35 -0.6   0.55  2.9 ]</p>
+<p>Desviación típica = [5.04058528 3.25499616 1.75712834 2.01866292]</p>
+<p> </p>
+<p>Matriz procesada:</p>
+<p> [[ 0.48605467  1.07527009 -1.05285423  1.13936803]</p>
+<p> [ 0.32734294 -0.98310408  0.88212111  0.69352837]</p>
+<p> [-1.69623159  0.92166007 -0.93903215 -1.43659447]</p>
+<p> [ 0.88283399 -1.01382608  1.10976527 -0.39630192]]</p>
+<p>Promedio = [ 0.00000000e+00  0.00000000e+00 -1.11022302e-16  4.16333634e-17]</p>
+<p>Desviación Típica = [1. 1. 1. 1.]</p>
+</blockquote>
+<p>Como pueden observar el promedio en la matriz procesada está cerca de 0 y la desviación típica es 1.</p>
+<p><em>Pueden encontrar el código completo de este método en el archivo de ejemplo <a href="code/ai/eliminar_valor_medio.py" download>eliminar_valor_medio.py</a>.</em></p>
+<h2>Escalando</h2>
+<p>Es posible que nuestro vector característico incluya valores extremadamente altos y/o extremadamente bajos, por eso es importante escalar esos valores para que nuestro algoritmo opere con valores cercanos, y así evitamos características con valores desorbitantes.</p>
+<blockquote>
+<p>datos_escalados = preprocessing.MinMaxScaler(feature_range=(0, 1))</p>
+<p>datos_escalados = datos_escalados.fit_transform(matriz_ejemplo)</p>
+<p>print("Datos escalados:\n", datos_escalados)</p>
+</blockquote>
+<p>Podemos comprobar que cada fila fue escalada para que sus valores mínimos y máximos sean 0 y 1 respectivamente, y los demás se transformaron en forma proporcional:</p>
+<blockquote>
+<p>Datos escalados:</p>
+<p> [[0.84615385 1.                 0.
+                1.                  ]</p>
+<p>  [0.78461538  0.01470588 0.89473684 0.82692308 ]</p>
+<p>  [0.                  0.92647059 0.05263158 0.
+                ]</p>
+<p>  [1.                  0.
+                1.
+                0.40384615 ]]</p>
+</blockquote>
+<p><em>Pueden encontrar el código completo de este método en el archivo de ejemplo <a href="code/ai/escalando.py" download>escalando.py</a>.</em></p>
+<h2>Normalización</h2>
+<p>La normalización se usa para modificar los valores en el vector característico y así poder medirlos en una escala común. Existen varios métodos para esto, así que vamos a presentarles los dos más comunes.</p>
+<p><strong>Normalización L1</strong>: Busca las menores desviaciones absolutas, y funciona asegurándose que la suma de los valores absolutos en cada fila sea 1.</p>
+<p><strong>Normalización L2</strong>: Busca los menores cuadrados, y funciona asegurándose que la suma de los cuadrados sea 1.</p>
+<p>En general el método de Normalización L1 se considera más robusto que el de Normalización L2, porque el primero es más resistente a valores atípicos en los datos de origen. Es frecuente encontrar valores atípicos y no hay nada que podamos hacer al respecto, por eso buscamos técnicas que los ignoren de forma segura y efectiva durante los cálculos. En cambio, si los valores atípicos son importantes para el problema que estamos resolviendo, podríamos inclinarnos a usar la Normalización L2.</p>
+<blockquote>
+<p>datos_normalizados_l1 = preprocessing.normalize(matriz_ejemplo, norm='l1')</p>
+<p>datos_normalizados_l2 = preprocessing.normalize(matriz_ejemplo, norm='l2')</p>
+<p>print("Datos con Normalización L1:\n", datos_normalizados_l1)</p>
+<p>print("\nDatos con Normalización L2:\n", datos_normalizados_l2)</p>
+</blockquote>
+<p>Usamos la función <strong>normalize</strong>, indicando el tipo de normalización, y así podremos apreciar la diferencia por pantalla:</p>
+<blockquote>
+<p>Datos con Normalización L1:</p>
+<p>[[ 0.1826087   0.25217391 -0.11304348  0.45217391]</p>
+<p>[ 0.11304348 -0.33043478  0.1826087   0.37391304]</p>
+<p>[-0.71774194  0.19354839 -0.08870968  0.        ]</p>
+<p>[ 0.32539683 -0.30952381  0.1984127   0.16666667]]</p>
+<p> </p>
+<p>Datos con Normalización L2:</p>
+<p>[[ 0.32578702  0.44989636 -0.20167768  0.80671072]</p>
+<p>[ 0.20808658 -0.60825309  0.33613986  0.68828639]</p>
+<p>[-0.95870891  0.25852824 -0.11849211  0.        ]</p>
+<p>[ 0.62758369 -0.59696986  0.38267298  0.32144531]]</p>
+</blockquote>
+<p><em>Pueden encontrar el código completo de este método en el archivo de ejemplo <a href="code/ai/normalizacion.py" download>normalizacion.py</a>.</em></p>
+<p>Espero que con estos métodos le den un merecido banquete a sus algoritmos, y que tengan ustedes una deliciosa y nutritiva cena.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/usando-python-en-funciones-de-postgresql/" class="u-url">Usando Python en funciones de Postgresql</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/cooperativa-de-trabajo-bitson-ltda/">Cooperativa de Trabajo BITSON Ltda.</a>
@@ -278,7 +428,7 @@ Por ejemplo vayamos al <code>&lt;Button&gt;</code> dentro del explorador de elem
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/empezando-a-usar-google-adwords-express/" class="u-url">Empezando a usar Google AdWords Express</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/nespino/">@nespino</a>
+                <a href="authors/nespino/">nespino</a>
             </span></p>
             <p class="dateline"><a href="posts/empezando-a-usar-google-adwords-express/" rel="bookmark"><time class="published dt-published" datetime="2018-03-01T14:24:36-03:00" title="2018-03-01 14:24">2018-03-01 14:24</time></a></p>
                 <p class="commentline">
@@ -627,7 +777,7 @@ la sorpresa de que dudosamente una parte del código escrito logra aprobar el "e
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/creando-articulos-en-nikola/" class="u-url">Creando artículos en Nikola</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/nespino/">@nespino</a>
+                <a href="authors/nespino/">nespino</a>
             </span></p>
             <p class="dateline"><a href="posts/creando-articulos-en-nikola/" rel="bookmark"><time class="published dt-published" datetime="2018-02-16T16:10:50-03:00" title="2018-02-16 16:10">2018-02-16 16:10</time></a></p>
                 <p class="commentline">
@@ -813,95 +963,6 @@ al posicionar el cursor del mouse sobre la misma. </p>
 <p>Animate a ejecutar <strong>pipenv --jumbotron</strong></p>
 </li>
 </ul>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/deployando-directamente-con-git/" class="u-url">Deployando directamente con git</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/lecovi/">lecovi</a>
-            </span></p>
-            <p class="dateline"><a href="posts/deployando-directamente-con-git/" rel="bookmark"><time class="published dt-published" datetime="2018-02-07T22:52:17-03:00" title="2018-02-07 22:52">2018-02-07 22:52</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/deployando-directamente-con-git/#disqus_thread" data-disqus-identifier="cache/posts/deployando-directamente-con-git.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>Hoy les quiero contar cómo se puede configurar <code>git</code> para que deployemos
-directamente con un <code>push</code> en nuestro server.</p>
-<h2>Entorno</h2>
-<p>Vamos a suponer que ya tenés tu sitio en un repositorio y que lo que estás
-haciendo ahora en tu ciclo de <em>deploy</em> es algo similar a esto:</p>
-<ol>
-<li>Hacés tus cambios en tu repo y commiteás a <strong>master</strong>.</li>
-<li>Te conectás por <code>ssh</code> a tu server y te parás en el directorio donde tenés tu
-   sitio</li>
-<li>Hacés un <code>git pull</code> para descargar tu nuevo sitio.</li>
-</ol>
-<p>Si bien no es algo complejo, puede llegar a ser medio tedioso. Y qué mejor si
-se puede hacer un deploy simplemente haciendo <code>git push</code>, no? xD.</p>
-<h2>Configuración</h2>
-<h3>Server</h3>
-<p>Vamos a suponer que estás sirviendo tus archivos con un Apache o un Nginx en el
-directorio <code>/home/bitson/mi_sitio/</code>. 
-Para poder llevar adelante esta configuración, vamos a separar por un lado los
-archivos del sitio y por el otro los archivos del control de versiones.
-Necesitamos tener un nuevo repo en <code>/home/bitson/mi_sitio.git</code>. Para eso nos
-conectamos al server por ssh como siempre y ejecutamos:</p>
-<pre class="code literal-block"><span></span>mkdir -p /home/bitson/mi_sitio.git
-<span class="nb">cd</span> /home/bitson/mi_sitio.git
-git init --bare
-</pre>
-
-
-<blockquote>
-<p>Con el parámetro <code>--bare</code> le decimos que no vamos a tener los archivos con
-código fuente, sólo los archivos <em>internos</em> de <code>git</code>.</p>
-</blockquote>
-<h4>Hooks</h4>
-<p>Ahora que tenemos el repositorio creado, tenemos que tener un directorio
-<code>hooks</code>. Ahí dentro vamos a crear un archivo que se llame <code>post-receive</code> con el
-con permisos de ejecución siguiente contenido:</p>
-<pre class="code literal-block"><span></span><span class="ch">#!/bin/sh</span>
-git --work-tree<span class="o">=</span>/home/bitson/mi_sitio --git-dir<span class="o">=</span>/home/bitson/mi_sitio.git checkout -f 
-</pre>
-
-
-<blockquote>
-<p>Para darle permisos de ejecución, corré el comando: <code>chmod a+x post-receive</code></p>
-</blockquote>
-<p>Ahora cuando hagamos un <code>push</code> a este repositorio en <code>mi_sitio.git</code> se va a
-ejecutar el <code>hook</code> que acabamos de crear en <code>post-receive</code>.</p>
-<h3>Máquina local</h3>
-<p>Ahora lo que tenés que hacer es agregar un repositorio remoto a tu repositorio
-local: </p>
-<pre class="code literal-block"><span></span>git remote add deploy ssh://usuario@tu_dominio.com/home/bitson/mi_sitio.git
-</pre>
-
-
-<p>Ahora trabajamos localmente y cuando queremos deployar lo que vamos a hacer es:</p>
-<pre class="code literal-block"><span></span>git push deploy master
-</pre>
-
-
-<p>Y <em>voilà!</em> Asunto resuelto.</p>
-<h2>Limpieza</h2>
-<p>Si tu entorno era similar a lo que describimos al principio del artículo, si te
-conectás al server, te parás en <code>/home/bitson/mi_sitio</code> y tirás un <code>git status</code>
-te va a decir que hubo cambios. Porque claramente ese repositorio no sabe que
-se actualizó... De hecho ya no necesitás tener ese repositorio porque los
-archivos de <code>git</code> los tenés en <code>/home/bitson/mi_sitio.git</code>. </p>
-<p>Así que lo que podés hacer para evitar confusiones es borrar el <code>.git</code> que
-tenés en <code>/home/bitson/mi_sitio</code>.</p>
-<pre class="code literal-block"><span></span>rm -rf /home/bitson/mi_sitio/.git
-</pre>
-
-
-<hr>
-<p>Fácil? Dejanos tu comentario</p>
 </div>
     </div>
     </article>
