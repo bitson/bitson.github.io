@@ -42,7 +42,7 @@
     
     <footer class="post-meta">
             % if author_pages_generated:
-                <a href="${_link('author', post.author())}"><img src="/assets/img/bitson.png");">${post.author()|h}</a>
+                <a href="${_link('author', post.author())}"><img src="/assets/img/${post.author()}.png";>${post.author()|h}</a>
             % else:
                 ${post.author()|h}
             % endif

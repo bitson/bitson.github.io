@@ -470,7 +470,7 @@ margin on the iframe, cause it breaks stuff. */
     position: absolute;
     width: 80%;
     max-width: 600px;
-    margin: 144px 0px 0 -31px;
+    margin: -469px 55px 0 59px;
 }
 
 /* Centres vertically yo. (IE8+) */
@@ -726,9 +726,8 @@ body.nav-opened .nav {
     display: block;
     position: absolute;
     z-index: 100;
-    bottom: 17px;
-    left: 53%;
-    margin-left: -16px;
+    bottom: -28px;
+    left: 49%;
     width: 34px;
     height: 34px;
     font-size: 44px;
@@ -867,7 +866,7 @@ body.nav-opened .menu-button .word {
 
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
-    margin: 108px -8px 0 0;
+    margin: 623px -8px 0 0;
     font-size: 2rem;
     letter-spacing: 7px;
     font-weight: 700;

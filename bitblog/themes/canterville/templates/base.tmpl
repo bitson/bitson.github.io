@@ -29,13 +29,37 @@ ${header.html_navigation_links()}
             <div class="main-header-content inner">
                 % if GITHUB_URL:
                 <a  href="${GITHUB_URL}" target="_blank">
-                    <span class="icon-github" style="color:white;font-size:2em"></span>
+                    <span class="icon-github"></span>
                 </a>
                 &nbsp;
                 % endif
                 % if TWITTER_URL:
                 <a class="bloglogo" href=${TWITTER_URL} target="_blank">
-                    <span class="icon-twitter" style="color:white;font-size:2em"></span>
+                    <span class="icon-twitter"></span>
+                </a>
+                &nbsp;
+                % endif
+                 % if FACEBOOK_URL:
+                <a class="bloglogo" href=${FACEBOOK_URL} target="_blank">
+                    <span class="icon-facebook"></span>
+                </a>
+                &nbsp;
+                % endif
+                 % if INSTAGRAM_URL:
+                <a class="bloglogo" href=${INSTAGRAM_URL} target="_blank">
+                    <span class="icon-instagram"></span>
+                </a>
+                &nbsp;
+                % endif
+                 % if LINKEDIN_URL:
+                <a class="bloglogo" href=${LINKEDIN_URL} target="_blank">
+                    <span class="icon-linkedin"></span>
+                </a>
+                &nbsp;
+                % endif
+                  % if BITSON_URL:
+                <a class="bloglogo" href=${BITSON_URL} target="_blank">
+                    <span class="icon-link"></span>
                 </a>
                 &nbsp;
                 % endif
