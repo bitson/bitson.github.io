@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Introducción a internacionalización y localización en Django">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Django: Introducción a internacionalización y localización | Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#236ab7">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://blog.bitson.group/posts/django-introduccion-a-internacionalizacion-y-localizacion/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="marcosdmyr">
+<link rel="prev" href="../preprocesando-datos-para-machine-learning/" title="Preprocesando datos para Machine Learning" type="text/html">
+<meta property="og:site_name" content="Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.">
+<meta property="og:title" content="Django: Introducción a internacionalización y localización">
+<meta property="og:url" content="http://blog.bitson.group/posts/django-introduccion-a-internacionalizacion-y-localizacion/">
+<meta property="og:description" content="Introducción a internacionalización y localización en Django">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-06-18T22:02:41-03:00">
+<meta property="article:tag" content="django">
+<meta property="article:tag" content="internacionalización">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="localización">
+<meta property="article:tag" content="localization">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Mostrar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://blog.bitson.group/">
+
+                <span id="blog-title">Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../../categories/">Etiquetas</a>
+                </li>
+<li>
+<a href="../../rss.xml">Canal RSS</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Código fuente</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Django: Introducción a internacionalización y localización</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../authors/marcosdmyr/">marcosdmyr</a>
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2018-06-18T22:02:41-03:00" itemprop="datePublished" title="2018-06-18 22:02">2018-06-18 22:02</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/django-introduccion-a-internacionalizacion-y-localizacion.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h2>Django: Introducción a internacionalización y localización</h2>
+<p>Cuando escribimos código, solemos hacerlo por defecto en inglés, ya que es el lenguaje predominante. Sin embargo, sucede que en algunos casos los usuarios de nuestro desarrollo necesitan ver la aplicación en su lenguaje local y este no es el inglés. Este artículo no es más que una breve guía o bitácora de las acciones a seguir para conseguir aprovechar las capacidades de traducción de Django.</p>
+<p>Particularmente los ejemplos serán en función de Django 2, y la documentación se encuentra disponible en el <a href="https://docs.djangoproject.com/en/2.0/topics/i18n/">sitio oficial</a></p>
+<!-- TEASER_END -->
+
+<p>Los pasos para conseguir traducir una aplicación web escrita en Django son los siguientes:</p>
+<ul>
+<li><a href="#configuracion-del-sitio">Configurar el sitio</a></li>
+<li>
+<a href="#marcar-las-cadenas">Marcar las cadenas de caracteres</a> (<em>Strings</em>) que deseamos que sean traducibles</li>
+<li>
+<a href="#crear-archivos-de-traduccion">Crear los archivos de traducción</a> (<em>Archivos con extensión po</em>)</li>
+<li>
+<a href="#compilar-los-mensajes">Compilar los mensajes</a> o cadenas de caracteres para que la aplicación pueda mostrarlos</li>
+</ul>
+<p>Ahora, si te interesa abordar los fundamentos, de qué tratan estos dos conceptos comunes a casi cualquier framework moderno?</p>
+<p>El objetivo de la internacionalización y localización es que una aplicación web disponga de contenido en lenguajes y formatos relacionados con sus usuarios.</p>
+<p>En principio Django hace dos cosas:</p>
+<ul>
+<li>Permite a los desarrolladores <em>marcar</em> qué partes de la aplicación deberían ser traducibles o formateadas en lenguajes locales (<strong>internacionalización</strong>)</li>
+<li>Usa estas marcas para localizar la aplicación web en correspondencia con el usuario (<strong>localización</strong>)</li>
+</ul>
+<p><em>(Sólo a modo de aclaración, ya que evaluamos que los usuarios disponen de los navegadores de mayor uso. La intención de traducir a un lenguajes depende en última instancia de que el navegador acepte el header <strong>Accpet-Language</strong>)</em></p>
+<h3 id="configuracion-del-sitio">Configuración del sitio</h3>
+<p>Antes de empezar a traducir el sitio, debemos indicarle a Django qué lenguajes están disponibles, y cómo encontrar las traducciones. Estas dos cosas se hacen en el archivo de configuración <strong>settings.py</strong>.</p>
+<p>Veamos como ejemplo, un sitio que queremos traducir al español.</p>
+<pre class="code literal-block"><span></span><span class="c1"># The LocaleMiddleware check's the incoming request for the </span>
+<span class="c1"># user's preferred language settings. Add the LocaleMiddleware</span>
+<span class="c1"># after SessionMiddleware and CacheMiddleware, and before the </span>
+<span class="c1"># CommonMiddleware.</span>
+<span class="n">MIDDLEWARE_CLASSES</span> <span class="o">=</span> <span class="p">(</span>
+   <span class="s1">'django.contrib.sessions.middleware.SessionMiddleware'</span><span class="p">,</span>
+   <span class="s1">'django.middleware.locale.LocaleMiddleware'</span><span class="p">,</span>
+   <span class="s1">'django.middleware.common.CommonMiddleware'</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Provide a lists of languages which your site supports.</span>
+<span class="n">LANGUAGES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">'en'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'English'</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">'es'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Spanish'</span><span class="p">)),</span>
+<span class="p">)</span>
+<span class="c1"># Set the default language for your site.</span>
+<span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">'en'</span>
+<span class="c1"># Tell Django where the project's translation files should be.</span>
+<span class="n">LOCALE_PATHS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'locale'</span><span class="p">),</span>
+<span class="p">)</span>
+</pre>
+
+
+<p>Si bien las instrucciones están documentadas a través de los comentarios, veamos los detalles:</p>
+<ul>
+<li>
+<strong>LocalMiddleware</strong> debe estar después de <strong>SessionMiddleware</strong> y antes de <strong>SessionMiddleware</strong>
+</li>
+<li>
+<strong>LANGUAGES</strong> es una tupla de tuplas, donde cada una indica el código del lenguaje y un nombre detallado</li>
+<li>
+<strong>LANGUAGE_CODE</strong> es el lenguaje por defecto en el sitio</li>
+<li>
+<strong>LOCALE_PATH</strong> es la ruta donde se encuentran los archivos de traducción</li>
+</ul>
+<h3 id="marcar-las-cadenas">Marcar las cadenas de caracteres</h3>
+<p>En este punto, Django es capaz de determinar el lenguaje del usuario y ubicar los archivos de traducción. Para simplificar, siguiendo con el ejemplo de un sitio que queremos que esté disponible en español, veamos cómo marcar una cadena como traducible en un template.</p>
+<pre class="code literal-block"><span></span>{% load i18n %}
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{% trans 'Title' %}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre>
+
+
+<p>En esta instancia estamos haciendo dos cosas:</p>
+<ul>
+<li>Indicamos que vamos a realizar trauducciones al incluir el tag <em>{% load i18n %}</em>. Esto se debe hacer al principio del arhivo, inclusive si el template extendie a otro que ya lo tiene.</li>
+<li>Además, marcamos la cadena <strong>Title</strong> como traducible</li>
+</ul>
+<h3 id="crear-archivos-de-traduccion">Crear los archivos de traducción</h3>
+<p>En este paso, una vez que marcamos los textos a traducir, creamos los archivos de traducción desde la línea de comando de la siguiente manera:</p>
+<pre class="code literal-block"><span></span>&gt; python manage.py makemessages -l 'es'
+</pre>
+
+
+<p>Esto sencillamente crea un archivo <strong>.po</strong> dentro de <strong>locale</strong>.</p>
+<pre class="code literal-block"><span></span>locale/
+    es/
+        LOCALE_MESSAGES/
+            django.po
+</pre>
+
+
+<pre class="code literal-block"><span></span>#: your-template-or-py-file:the-line-number
+msgid "Title"
+msgstr ""
+</pre>
+
+
+<p>Y después de actualizar el archivo .po:</p>
+<pre class="code literal-block"><span></span>#: your-template-or-py-file:the-line-number
+msgid "Title"
+msgstr "Título"
+</pre>
+
+
+<h3 id="compilar-los-mensajes">Compilar las traducciones</h3>
+<p>Como último paso, es necesario entender que Django buscará las traducciones en un archivo compilado con extensión <strong>.mo</strong>. Este archivo nuevamente lo generamos desde la línea de comando:</p>
+<pre class="code literal-block"><span></span>&gt; python manage.py compilemessages
+</pre>
+
+
+<p>Podemos ver el nuevo archivo generado en la misma ruta que el correspondiente <strong>.po</strong>.</p>
+<pre class="code literal-block"><span></span>locale/
+    es/
+        LOCALE_MESSAGES/
+            django.po
+            django.mo
+</pre>
+
+
+<p>Una vez completado el primer paso, durante el proceso de traducción estaremos ciclando sobre el resto, es decir, marcando textos como traducibles, actualizando el <strong>.po</strong> y compilando las traducciones.</p>
+<p>Finalmente, cualquier texto generado en Django tiene que ser traducible, por lo que sólo hace falta algo de paciencia para ver cuál es el lugar adecuado. Esta reseña tomó como ejemplo, una cadena en un template, pero también es posible traducir cualquier sección del administrador de Django.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/django/" rel="tag">django</a></li>
+            <li><a class="tag p-category" href="../../categories/internacionalizacion/" rel="tag">internacionalización</a></li>
+            <li><a class="tag p-category" href="../../categories/internationalization/" rel="tag">internationalization</a></li>
+            <li><a class="tag p-category" href="../../categories/localizacion/" rel="tag">localización</a></li>
+            <li><a class="tag p-category" href="../../categories/localization/" rel="tag">localization</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../preprocesando-datos-para-machine-learning/" rel="prev" title="Preprocesando datos para Machine Learning">Publicación anterior</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comentarios</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="blog-bitson",
+            disqus_url="http://blog.bitson.group/posts/django-introduccion-a-internacionalizacion-y-localizacion/",
+        disqus_title="Django: Introducci\u00f3n a internacionalizaci\u00f3n y localizaci\u00f3n",
+        disqus_identifier="cache/posts/django-introduccion-a-internacionalizacion-y-localizacion.html",
+        disqus_config = function () {
+            this.language = "es_ES";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="blog-bitson";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:info@bitson.group">Cooperativa de Trabajo BITSON Ltda.</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("es");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
