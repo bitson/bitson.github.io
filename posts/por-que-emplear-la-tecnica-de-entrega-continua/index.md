@@ -8,8 +8,8 @@
 .. description: 
 .. type: text
 .. author: cuberti
-
 -->
+
 #¿Por qué emplear la técnica de Entrega Continua?
 
 La técnica de Entrega Continua (CD)  trae como consecuencia mayor velocidad y menor complejidad en el proceso de desarrollo de software. A su vez, permite lanzamientos mucho más seguidos, proporcionando retroalimentación inmediata.
