@@ -7,7 +7,7 @@
 .. link: 
 .. description: 
 .. type: text
-.. author: @maleCuervo
+.. author: maleCuervo
 -->
 
 En este post voy a mostrar como agregar un píxel de Facebook y Google Analitycs a nuestro sitio web.
