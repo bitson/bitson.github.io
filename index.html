@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://blog.bitson.group/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/django-introduccion-a-internacionalizacion-y-localizacion/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/por-que-emplear-la-tecnica-de-entrega-continua/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -64,7 +64,31 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/django-introduccion-a-internacionalizacion-y-localizacion/" class="u-url">Django: Introducción a internacionalización y localización</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/por-que-emplear-la-tecnica-de-entrega-continua/" class="u-url">¿Por qué emplear la técnica de Entrega Continua?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="authors/cuberti/">cuberti</a>
+            </span></p>
+            <p class="dateline"><a href="posts/por-que-emplear-la-tecnica-de-entrega-continua/" rel="bookmark"><time class="published dt-published" datetime="2018-07-05T11:09:48-03:00" title="2018-07-05 11:09">2018-07-05 11:09</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/por-que-emplear-la-tecnica-de-entrega-continua/#disqus_thread" data-disqus-identifier="cache/posts/por-que-emplear-la-tecnica-de-entrega-continua.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>--&gt;</p>
+<h2>¿Por qué emplear la técnica de Entrega Continua?</h2>
+<p>La técnica de Entrega Continua (CD)  trae como consecuencia mayor velocidad y menor complejidad en el proceso de desarrollo de software. A su vez, permite lanzamientos mucho más seguidos, proporcionando retroalimentación inmediata.</p>
+<p>Implementar este proceso suele ser difícil para las organizaciones esto se debe principalmente a que no es un cambio en el proyecto tecnológico sino un cambio organizacional.</p>
+<p>La entrega continua automatiza todo el proceso de publicación de software. Cada revisión efectuada activa un proceso automatizado que crea, prueba y almacena la actualización. Las pruebas pueden incluir pruebas de la UI, de carga, de integración, de fiabilidad de la API, etc. De este modo, los desarrolladores pueden validar las actualizaciones de forma más exhaustiva y descubrir problemas por anticipado. Con la nube, resulta sencillo y rentable automatizar la creación y replicación de varios entornos de pruebas, algo que anteriormente era complicado en las instalaciones. La decisión definitiva de implementarla en un entorno de producción en vivo la toma el desarrollador.</p>
+<p>Cuando se la entrega continua se implementa de manera adecuada, los desarrolladores dispondrán siempre de un artefacto listo para su implementación que se ha sometido a un proceso de pruebas estandarizado. Esto significa mayor autonomía para el desarrollado. </p>
+<p>Con la entrega continua, todos los cambios en el código se crean, se prueban y se envían a un entorno de almacenamiento o pruebas de no producción. Pueden efectuarse varias pruebas al mismo tiempo antes de la implementación en producción. La diferencia entre la entrega continua y la implementación continua es la diferencia de aprobación manual para actualizar la producción. Con la implementación continua, la producción tiene lugar de manera automática, sin aprobación explícita. </p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/django-introduccion-a-internacionalizacion-y-localizacion/" class="u-url">Django: Introducción a internacionalización y localización</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="authors/marcosdmyr/">marcosdmyr</a>
@@ -715,84 +739,6 @@ Fuentes y ayudas:
 <li><a href="https://stackoverflow.com/questions/26256279/how-to-set-android-home-path-in-ubuntu-please-provide-the-steps">Este link de stackoferflow</a></li>
 <li><a href="https://nodejs.org/es/download/package-manager/#distribuciones-de-linux-basadas-en-debian-y-ubuntu">Instalar node</a></li>
 </ul>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/evitando-las-malas-practicas/" class="u-url">Evitando las malas prácticas en Python</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="authors/abrunacci/">Abrunacci</a>
-            </span></p>
-            <p class="dateline"><a href="posts/evitando-las-malas-practicas/" rel="bookmark"><time class="published dt-published" datetime="2018-02-21T22:57:25-03:00" title="2018-02-21 22:57">2018-02-21 22:57</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/evitando-las-malas-practicas/#disqus_thread" data-disqus-identifier="cache/posts/evitando-las-malas-practicas.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>Cuando uno empieza a programar en Python suele suceder que incurrimos en errores que son considerados 
-"leves" a nivel programación pero que a la hora de inspeccionar nuestro código y ver si cumple con las 
-<a href="https://www.fing.edu.uy/inco/cursos/fpr/wiki/index.php/Python_PEP8">reglas PEP8</a> nos encontramos con 
-la sorpresa de que dudosamente una parte del código escrito logra aprobar el "examen".</p>
-<p>A continuación un breve listado de cosas que podés estar haciendo mal sin saber.   </p>
-<div class="img-with-text" style="text-align:justify; width: 720px;">
-    <img src="https://static.simpsonswiki.com/images/4/46/KnifeSafetyBook.png" alt="10 'SI' y 500 'NO' de la seguridad con las navajas" style="margin:0; display:block;"><p><code>No niego ni confirmo haber escrito este post solo para utlizar esta imágen.</code></p>
-</div>
-
-<ul>
-<li>
-<h3><em>Real programmers don't use TABs</em></h3>
-</li>
-</ul>
-<blockquote>
-<p>O sí, pero decídanse por uno y sigan siempre con ese. 4 espacios o TABs, pero si vamos variando las indentaciones 
-   de nuestros módulos con unos y otros, no estaríamos cumpliendo con las primeras dos reglas de PEP8</p>
-</blockquote>
-<ul>
-<li>
-<h3><em>Respete los espacios</em></h3>
-</li>
-</ul>
-<blockquote>
-<p>Evite dejar espacios en blanco en las siguientes situaciones:  </p>
-</blockquote>
-<pre class="code literal-block"><span></span>  - Dentro de paréntesis curvos, llaves, o paréntesis rectos
-  - Antes de una coma o punto y coma
-  - Antes del paréntesis que abre la lista de argumentos en el llamado a una función
-  - Más de un espacio alrededor de una asignación del operador para alinearlo con otro
-</pre>
-
-
-<ul>
-<li>
-<h3><em>79 Máxima</em></h3>
-</li>
-</ul>
-<p>A la hora de codear en Python debemos tener en cuenta el largo de las líneas ya que, como bien lo dice <a href="http://www.python.org.ar/wiki/PythonZen" title="El Zen de Python">el zen de python</a>,
-   la legibilidad cuenta.</p>
-<p>Y para que podamos tener código mas legible, PEP8 recomienda que el máximo de caracteres por linea sean 79.</p>
-<ul>
-<li>
-<h3><em>KISS</em></h3>
-</li>
-</ul>
-<p>Keep it simple, <del>stupid</del> Sir.  </p>
-<blockquote>
-<p>Las sentencias compuestas (varias instrucciones en la misma línea) son generalmente tomadas como malas prácticas de programación.</p>
-</blockquote>
-<p>Aunque a veces está bien poner if/for/while con una pequeña instrucción en la misma línea, no hacer esto para las declaraciones con múltiples instrucciones</p>
-<ul>
-<li>
-<h3><em>Usted tiene 1934 actualizaciones pendientes...</em></h3>
-</li>
-</ul>
-<p>El código debería estar comentado y que esos comentarios no contradigan lo que la función esta haciendo. 
-   El código mal comentado es peor que el que no lo está. Procuren mantener actualizados los comentarios para que cualquiera
-   que lo lea lo pueda interpretar correctamente y no tenga que adivinar qué es lo que hace cada función.</p>
-<p>Eso es todo por ahora, más adelante subiré otros consejos sobre Python.</p>
-<p>Saludos!</p>
 </div>
     </div>
     </article>
