@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://blog.bitson.group/authors/abrunacci.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/cooperativa-de-trabajo-bitson-ltda.xml</loc>
@@ -15,15 +15,15 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/cuberti.xml</loc>
-  <lastmod>2018-07-05T14:37:00Z</lastmod>
+  <lastmod>2018-07-13T14:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/d.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/lecovi.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/malecuervo.xml</loc>
@@ -35,11 +35,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/authors/nespino.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/adwordsexpress.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/ai.xml</loc>
@@ -47,11 +47,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/alias.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/android.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/artificial-inteligence.xml</loc>
@@ -59,11 +59,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/blog.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_comunicacion.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_database-tricks.xml</loc>
@@ -71,11 +71,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_dev-python.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_devops-git.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_django.xml</loc>
@@ -83,7 +83,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_opinion-valores-convicciones.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_programacion.xml</loc>
@@ -91,31 +91,31 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_tutorial-nginx-devops.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cat_tutorial-ssh.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/comunicacion.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/cooperativismo.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/deploy.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/devops-ssh-root.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/devops.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/django.xml</loc>
@@ -123,15 +123,15 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/feminismo.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/git.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/google.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/ia.xml</loc>
@@ -151,7 +151,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/javascript.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/localizacion.xml</loc>
@@ -167,15 +167,15 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/marketing.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/nginx.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/nikola.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/numpy.xml</loc>
@@ -191,11 +191,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/publicidad.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/python-pipenv-virtualenv.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/python.xml</loc>
@@ -203,11 +203,11 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/react-native.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/react.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/scikit.xml</loc>
@@ -219,18 +219,18 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/sem.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/categories/software-libre.xml</loc>
-  <lastmod>2018-07-05T14:17:00Z</lastmod>
+  <lastmod>2018-07-13T13:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/rss.xml</loc>
-  <lastmod>2018-07-05T14:37:00Z</lastmod>
+  <lastmod>2018-07-13T14:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.bitson.group/sitemap.xml</loc>
-  <lastmod>2018-07-05T14:37:00Z</lastmod>
+  <lastmod>2018-07-13T14:13:00Z</lastmod>
  </sitemap>
 </sitemapindex>
