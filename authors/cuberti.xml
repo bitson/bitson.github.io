@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva. (Publicaciones de cuberti)</title><link>http://blog.bitson.group/</link><description></description><atom:link rel="self" href="http://blog.bitson.group/authors/cuberti.xml" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.group"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 26 Jul 2018 15:27:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Historias de usuarios</title><link>http://blog.bitson.group/posts/historias-de-usuarios/</link><dc:creator>cuberti</dc:creator><description>&lt;div&gt;&lt;h2&gt;Historias de usuarios&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog Bitson. Aprendimos de unos. Enseñamos a otros. Apostamos a la cultura colectiva. (Publicaciones de cuberti)</title><link>http://blog.bitson.group/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://blog.bitson.group/authors/cuberti.xml"></atom:link><language>es</language><copyright>Contents © 2018 &lt;a href="mailto:info@bitson.group"&gt;Cooperativa de Trabajo BITSON Ltda.&lt;/a&gt; </copyright><lastBuildDate>Thu, 02 Aug 2018 14:02:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SCRUM ¿Cómo aplicarlo?</title><link>http://blog.bitson.group/posts/scrum-como-aplicarlo/</link><dc:creator>cuberti</dc:creator><description>&lt;div&gt;&lt;h2&gt;SCRUM ¿Cómo aplicarlo?&lt;/h2&gt;
+&lt;p&gt;Ya conocemos qué es &lt;a href="http://blog.bitson.group/posts/origenes-del-scrum/" title="Scrum"&gt;Scrum&lt;/a&gt; pero ahora falta profundizar sobre qué fases tiene esta metodología.&lt;/p&gt;
+&lt;p&gt;En Scrum un proyecto se ejecuta en ciclos temporales cortos y de duración fija (sprint -iteraciones- que normalmente son de 2 semanas, aunque en algunos equipos son de 3 y hasta 4 semanas, límite máximo de feedback de producto real y reflexión). Cada sprint tiene que proporcionar un resultado completo, un incremento de producto final que sea susceptible de ser entregado con el mínimo esfuerzo al cliente cuando lo solicite.&lt;/p&gt;
+&lt;p&gt;Dentro de cada sprint tenemos las siguientes etapas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Planificación del sprint: duración, objetivo y cómo realizarlo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scrum diario. Se basa en poner en común y sincronizar actividades para elaborar el plan del día.
+Trabajo de desarrollo durante el sprint. Nos aseguramos que los objetivos se están cumpliendo, que no se producen cambios que alteran el objetivo del sprint y se mantiene un feedback constante con el cliente o dueño del proyecto.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Revisión del sprint. Reunión con el cliente o dueño del proyecto, en la que se estudia y revisa el Product Backlog del sprint. Se definen los aspectos a cambiar, en caso necesario, de mayor valor o probables para planificarlo en el siguiente Sprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Retrospectiva del proyecto. Oportunidad del equipo de desarrollo para mejorar su proceso de trabajo y aplicar los cambios en los siguientes sprints.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Utilizar esta metodología también significa definir roles y responsabilidades para los implicados. Son los siguientes:&lt;/p&gt;
+&lt;h4&gt;Project Owner:&lt;/h4&gt;
+&lt;p&gt;Se asegura de que el proyecto se esté desarrollando acorde con la estrategia del negocio. Escribe &lt;a href="http://blog.bitson.group/posts/historias-de-usuarios/" title="historias de uuario"&gt;historias de usuario&lt;/a&gt;, las prioriza, y las coloca en el Product Backlog.&lt;/p&gt;
+&lt;h4&gt;Srcum Master:&lt;/h4&gt;
+&lt;p&gt;Elimina los obstáculos que impiden que el equipo cumpla con su objetivo. Su misión es que los equipos de trabajo alcancen sus objetivos hasta llegar a la fase de “sprint final”, eliminando cualquier dificultad que puedan encontrar en el camino.&lt;/p&gt;
+&lt;h4&gt;Equipo:&lt;/h4&gt;
+&lt;p&gt;Los encargados de crear el producto para que pueda estar listo con los requerimientos necesarios.&lt;/p&gt;&lt;/div&gt;</description><guid>http://blog.bitson.group/posts/scrum-como-aplicarlo/</guid><pubDate>Thu, 02 Aug 2018 13:49:14 GMT</pubDate></item><item><title>Historias de usuarios</title><link>http://blog.bitson.group/posts/historias-de-usuarios/</link><dc:creator>cuberti</dc:creator><description>&lt;div&gt;&lt;h2&gt;Historias de usuarios&lt;/h2&gt;
 &lt;p&gt;Hace más de un año comenzamos el camino de utilizar metodologías ágiles. El cambio significó modificar nuestra forma de trabajar e incluso nuestra cultura pero sabíamos que era el camino correcto en pos de buscar la eficiencia en nuestro trabajo. &lt;/p&gt;
 &lt;p&gt;Trabajar con Scrum nos hizo conocer las “historias de usuarios”, las cuales se enfocan en definir lo que el usuario necesita hacer, sin describir el cómo, por lo que representa el inicio y no el final de las conversaciones. De esta manera dejamos atrás la forma menos práctica de levantar los requerimientos de los usuarios mediante documentación detallada que sólo representa el final de las conversaciones. &lt;/p&gt;
 &lt;p&gt;Utilizando esta metodología se establece que el encargado de elaborar los elementos del Product Backlog es el Product Owner. Pero el Scrum Master 
