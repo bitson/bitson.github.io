@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.group/archive.html</loc>
-  <lastmod>2018-08-15T15:01:00Z</lastmod>
+  <lastmod>2018-08-22T15:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/authors/</loc>
@@ -251,7 +251,7 @@
  </url>
  <url>
   <loc>http://blog.bitson.group/index-2.html</loc>
-  <lastmod>2018-08-15T15:01:00Z</lastmod>
+  <lastmod>2018-08-22T15:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/acceso-root-ssh-desde-ip-o-dominio/</loc>
@@ -308,6 +308,10 @@
  <url>
   <loc>http://blog.bitson.group/posts/kanban/</loc>
   <lastmod>2018-08-08T16:47:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.bitson.group/posts/kimai/</loc>
+  <lastmod>2018-08-22T15:59:00Z</lastmod>
  </url>
  <url>
   <loc>http://blog.bitson.group/posts/origenes-del-scrum/</loc>
